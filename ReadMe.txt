@@ -1,0 +1,1 @@
+It will allow writing down daily notes, synchronizing social updates..
