@@ -2,8 +2,8 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
 
-    <Style x:Key="smallControlBtnStyle" TargetType="Button">
-        <Setter Property="Background" Value="#FF4982DB" />
+    <Style x:Key="PlainBtnStyle" TargetType="Button">
+        <Setter Property="Background" Value="#FF5E5555" />
         <Setter Property="Foreground" Value="#FFF9F9EC" />
         <Setter Property="FontWeight" Value="Bold" />
         <Setter Property="BorderBrush" Value="#FFC4C458" />
@@ -11,59 +11,28 @@
         <Setter Property="OpacityMask" Value="White" />
         <Setter Property="Cursor" Value="Hand" />
     </Style>
-    
-    <Style x:Key="labelStyle" TargetType="Label">
-        <!--<Setter Property="Background" Value="#FF4982DB" />
-        <Setter Property="Foreground" Value="#FFE9F9DE" />
-        <Setter Property="FontSize" Value="16" />-->
-        <Setter Property="FontWeight" Value="Bold" />
-        <!--<Setter Property="Height" Value="100" />-->
-        <!--<Setter Property="HorizontalContentAlignment" Value="Center" />-->
-        <Setter Property="VerticalContentAlignment" Value="Center" />
-        <!--<Setter Property="Margin" Value="10"/>-->
-    </Style>
 
-    <Style x:Key="ComboBoxStyle" TargetType="ComboBox">
-        <Setter Property="Background" Value="#FF4982DB" />
+    <Style x:Key="TItemStyle" TargetType="TabItem">
+        <Setter Property="Width" Value="80" />
+        <Setter Property="Background" Value="#FFF9F9EC" />
         <Setter Property="BorderBrush" Value="#FFC4C458" />
-        <Setter Property="FontWeight" Value="Bold" />
-        <Setter Property="Foreground" Value="#FFF9F9EC" />
-        <Setter Property="SelectedIndex" Value="0" />
-        <Setter Property="Margin" Value="10"/>
-        <Setter Property="HorizontalContentAlignment" Value="Center" />
-        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Foreground" Value="#000000" />
     </Style>
 
-    <Style x:Key="ComboBoxItemStyle" TargetType="ComboBoxItem">
-        <Setter Property="Background" Value="#FF4982DB" />
-        <!--<Setter Property="Foreground" Value="#FFE9F9DE" />
-        <Setter Property="FontSize" Value="20" />
-        <Setter Property="FontWeight" Value="Bold" />
-        <Setter Property="BorderBrush" Value="#FF3DC43D" />
-        <Setter Property="OpacityMask" Value="White" />-->
+    <Style x:Key="CheckBtyle" TargetType="CheckBox">
+        <Setter Property="Width" Value="80" />
+        <Setter Property="Background" Value="#FFF9F9EC" />
+        <Setter Property="BorderBrush" Value="#FFC4C458" />
+        <Setter Property="Foreground" Value="#000000" />
     </Style>
 
-    <Style x:Key="DatePickerStyle" TargetType="DatePicker" >
-        <Setter Property="Background" Value="#FF4982DB" />
-        <Setter Property="Margin" Value="10" />
-        <Setter Property="VerticalContentAlignment" Value="Center" />
-        <Setter Property="Foreground" Value="#FF4982DB" />
-        <Setter Property="FontWeight" Value="Bold" />
+    <Style x:Key="TBtyle" TargetType="TextBox">
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="AcceptsReturn" Value="True" />
+        <Setter Property="VerticalScrollBarVisibility" Value="Visible" />
+        <Setter Property="SpellCheck.IsEnabled" Value="True" />
     </Style>
 
-    <Style x:Key="TextBoxStyle" TargetType="TextBox">
-        <Setter Property="Background" Value="#FF4982DB" />
-        <Setter Property="Margin" Value="10" />
-        <Setter Property="VerticalContentAlignment" Value="Center" />
-        <Setter Property="Foreground" Value="#FFF9F9EC" />
-        <Setter Property="FontWeight" Value="Bold" />
-    </Style>
 
-    <Style x:Key="PasswordBoxStyle" TargetType="PasswordBox">
-        <Setter Property="Background" Value="#FF4982DB" />
-        <Setter Property="Margin" Value="10" />
-        <Setter Property="VerticalContentAlignment" Value="Center" />
-        <Setter Property="Foreground" Value="#FFF9F9EC" />
-        <Setter Property="FontWeight" Value="Bold" />
-    </Style>
+
 </ResourceDictionary>
