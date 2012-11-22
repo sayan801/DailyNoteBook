@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace DNBSNGUI
 {
     /// <summary>
@@ -22,6 +23,7 @@ namespace DNBSNGUI
         public MainWindow()
         {
             InitializeComponent();
+            this.MouseLeftButtonDown += delegate { this.DragMove(); };
         }
 
         private void kolkataBtn_Click(object sender, RoutedEventArgs e)
@@ -31,8 +33,20 @@ namespace DNBSNGUI
 
         private void gcalenderBtn_Click(object sender, RoutedEventArgs e)
         {
-            gCalenderWb.NavigateToString("<html><body><iframe src=\"https://www.google.com/calendar/feeds/an.anirban%40gmail.com/public/basic\" width=\"1100\" height=\"480\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading...</iframe></body></html>");
-            //<iframe src="https://www.google.com/calendar/embed?src=an.anirban%40gmail.com&ctz=Asia/Calcutta" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+            gCalenderWb.NavigateToString("<html><body><iframe src=\"https://www.facebook.com/connect/login_success.html#access_token=THE_TOKEN&expires_in=7180\" width=\"1100\" height=\"480\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading...</iframe></body></html>");
+            // fb like url https://www.facebook.com/plugins/like.php?href=https://www.facebook.com/technicise\
+
         }
+
+        private void Image_ImageFailed(object sender, ExceptionRoutedEventArgs e)
+        {
+
+        }
+
+        private void closeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }

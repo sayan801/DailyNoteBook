@@ -3,8 +3,8 @@
 
 
     <Style x:Key="PlainBtnStyle" TargetType="Button">
-        <Setter Property="Background" Value="#FF5E5555" />
-        <Setter Property="Foreground" Value="#FFF9F9EC" />
+        <Setter Property="Background" Value="#FFE3DDDD" />
+        <Setter Property="Foreground" Value="Black" />
         <Setter Property="FontWeight" Value="Bold" />
         <Setter Property="BorderBrush" Value="#FFC4C458" />
         <Setter Property="Margin" Value="10"/>
@@ -33,6 +33,28 @@
         <Setter Property="SpellCheck.IsEnabled" Value="True" />
     </Style>
 
-
+    <Style x:Key="TitlebarBTN" TargetType="Button">
+        <Setter Property="OverridesDefaultStyle" Value="True"/>
+        <Setter Property="Margin" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Name="border" 
+                            BorderThickness="1"
+                            Padding="4,2" 
+                            BorderBrush="White" 
+                            CornerRadius="3" 
+                            Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="Black" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
 </ResourceDictionary>
