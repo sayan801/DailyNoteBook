@@ -10,13 +10,33 @@
         <Setter Property="Margin" Value="10"/>
         <Setter Property="OpacityMask" Value="White" />
         <Setter Property="Cursor" Value="Hand" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Name="border" 
+                            BorderThickness="1"
+                            Padding="4,2" 
+                            BorderBrush="White" 
+                            CornerRadius="0" 
+                            Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
     </Style>
 
     <Style x:Key="TItemStyle" TargetType="TabItem">
         <Setter Property="Width" Value="80" />
         <Setter Property="Background" Value="#FFF9F9EC" />
-        <Setter Property="BorderBrush" Value="#FFC4C458" />
-        <Setter Property="Foreground" Value="#000000" />
+        <Setter Property="BorderBrush" Value="Gray" />
     </Style>
 
     <Style x:Key="CheckBtyle" TargetType="CheckBox">
@@ -43,7 +63,7 @@
                             BorderThickness="1"
                             Padding="4,2" 
                             BorderBrush="White" 
-                            CornerRadius="3" 
+                            CornerRadius="0" 
                             Background="{TemplateBinding Background}">
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                     </Border>
@@ -55,6 +75,14 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+    </Style>
+
+    <Style x:Key="{x:Type ToolTip}" TargetType="{x:Type ToolTip}">
+        <Setter Property="Background" Value="Black"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="Padding" Value="7" />
+        <Setter Property="FontWeight" Value="Bold" />
     </Style>
 
 </ResourceDictionary>

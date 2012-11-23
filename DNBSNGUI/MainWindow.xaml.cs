@@ -48,5 +48,10 @@ namespace DNBSNGUI
             this.Close();
         }
 
+        private void minimizeBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
     }
 }
