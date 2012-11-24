@@ -53,5 +53,20 @@ namespace DNBSNGUI
 
         }
 
+        private void virtualKeyboardDateBtn_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("calc");
+        }
+
+        private void minimizeBtn_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void maximizeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Maximized;
+        }
+
     }
 }

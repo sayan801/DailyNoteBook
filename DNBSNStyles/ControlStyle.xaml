@@ -3,13 +3,14 @@
 
 
     <Style x:Key="PlainBtnStyle" TargetType="Button">
-        <Setter Property="Background" Value="#FFE3DDDD" />
+        <Setter Property="Background" Value="#D8D8D8" />
         <Setter Property="Foreground" Value="Black" />
         <Setter Property="FontWeight" Value="Bold" />
         <Setter Property="BorderBrush" Value="#FFC4C458" />
         <Setter Property="Margin" Value="10"/>
         <Setter Property="OpacityMask" Value="White" />
         <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Padding" Value="7" />
 
         <Setter Property="Template">
             <Setter.Value>
@@ -24,7 +25,9 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="border" Property="BorderBrush" Value="Gray" />
+                            <Setter TargetName="border" Property="BorderBrush" Value="#2E9AFE" />
+                            <Setter Property="Button.Background" Value="#2E9AFE" />
+                            <Setter Property="Button.Foreground" Value="White" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -37,6 +40,7 @@
         <Setter Property="Width" Value="80" />
         <Setter Property="Background" Value="#FFF9F9EC" />
         <Setter Property="BorderBrush" Value="Gray" />
+        
     </Style>
 
     <Style x:Key="CheckBtyle" TargetType="CheckBox">
@@ -52,10 +56,17 @@
         <Setter Property="VerticalScrollBarVisibility" Value="Visible" />
         <Setter Property="SpellCheck.IsEnabled" Value="True" />
     </Style>
+    <Style x:Key="smallTBtyle" TargetType="TextBox">
+        <Setter Property="AcceptsReturn" Value="True" />
+        <Setter Property="VerticalScrollBarVisibility" Value="Visible" />
+        <Setter Property="SpellCheck.IsEnabled" Value="True" />
+
+    </Style>
 
     <Style x:Key="TitlebarBTN" TargetType="Button">
         <Setter Property="OverridesDefaultStyle" Value="True"/>
         <Setter Property="Margin" Value="0"/>
+        <Setter Property="FontWeight" Value="Bold" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
@@ -69,7 +80,8 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="border" Property="BorderBrush" Value="Black" />
+                            <Setter TargetName="border" Property="BorderBrush" Value="White" />
+                            <Setter Property="Button.Background" Value="#D8D8D8" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -83,6 +95,34 @@
         <Setter Property="Foreground" Value="White" />
         <Setter Property="Padding" Value="7" />
         <Setter Property="FontWeight" Value="Bold" />
+        <!--<Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="ToolTip">
+                    <Canvas Width="200" Height="100">
+                    <Path x:Name="Container"
+                          Canvas.Left="0"
+                          Canvas.Top="0"
+                          Margin="20"
+                          Data="M 0,40 L15,50 15,80 150,80 150,0 15,0 15,30"
+                          Fill="{TemplateBinding Background}"
+                          Stroke="Black">
+                        <Path.Effect>
+                            <DropShadowEffect BlurRadius="10"
+                                              Opacity="0.5"
+                                              ShadowDepth="4" />
+                        </Path.Effect>
+                    </Path>
+                    <TextBlock Canvas.Left="50"
+                               Canvas.Top="28"
+                               Width="100"
+                               Height="65"
+                               Text="{TemplateBinding Content}"
+                               TextWrapping="Wrapwithoverflow" />
+                </Canvas>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>-->
     </Style>
+
 
 </ResourceDictionary>

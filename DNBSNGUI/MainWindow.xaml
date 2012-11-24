@@ -17,27 +17,18 @@
     <DockPanel LastChildFill="True" Margin="1" Background="White">
 
         <UniformGrid DockPanel.Dock="Top" HorizontalAlignment="Right" Rows="1">
-
-            <Button Style="{StaticResource TitlebarBTN}" Width="30" Height="30" Name="minimizeBtn" ToolTip="minimize" Foreground="{x:Null}" Click="minimizeBtn_Click">
-                <Button.Background>
-                    <ImageBrush ImageSource="/DNBSNGUI;component/Images/cross_15-20110903142132-00020%20-%20Copy.png" Stretch="Uniform" TileMode="None" />
-                </Button.Background>
-            </Button>
-            <Button Style="{StaticResource TitlebarBTN}" Width="30" Height="30" Name="closeBtn" ToolTip="close" Click="closeBtn_Click" Foreground="{x:Null}">
-                <Button.Background>
-                    <ImageBrush ImageSource="/DNBSNGUI;component/Images/cross_15-20110903142132-00020.png" Stretch="Uniform" TileMode="None" />
-                </Button.Background>
-            </Button>
-            
+            <Button Margin="0" Width="30" Height="30" Name="minimizeBtn" ToolTip="minimize" Style="{StaticResource TitlebarBTN}" Click="minimizeBtn_Click_1">_</Button>
+            <!--<Button Margin="0" Width="30" Height="30" Name="maximizeBtn" ToolTip="maximize" Style="{StaticResource TitlebarBTN}" Click="maximizeBtn_Click">👉</Button>-->
+            <Button Margin="0" Width="30" Height="30" Name="closeBtn" ToolTip="close" Style="{StaticResource TitlebarBTN}" Click="closeBtn_Click">X</Button>
         </UniformGrid>
 
-        <TextBlock DockPanel.Dock="Bottom" Background="WhiteSmoke" VerticalAlignment="Center" Text="{Binding Source={x:Static sys:DateTime.Today}, StringFormat='{}{0:dddd, MMMM dd, yyyy}'}" Foreground="Black" />
+        <TextBlock DockPanel.Dock="Bottom" Height="25" Padding="7,1,0,0" Background="WhiteSmoke" VerticalAlignment="Center" Text="{Binding Source={x:Static sys:DateTime.Today}, StringFormat='{}{0:dddd, MMMM dd, yyyy}'}" Foreground="Black" ></TextBlock>
 
         <DockPanel DockPanel.Dock="Top" LastChildFill="True">
             <Expander Width="200" DockPanel.Dock="Left" ExpandDirection="Right" IsExpanded="True" Header="H&#x0a; I&#x0a;D&#x0a;E&#x0a;/&#x0a;U&#x0a;N&#x0a;H&#x0a; I&#x0a;D&#x0a;E">
                 <UniformGrid Columns="1">
                     <DockPanel>
-                        <Calendar DockPanel.Dock="Top" BorderBrush="Gray">
+                        <Calendar DockPanel.Dock="Top" BorderBrush="#FFE9E0E0">
                             <Calendar.Background>
                                 <ImageBrush ImageSource="/DNBSNGUI;component/Images/monotone_pen_write.png" Opacity="0.3"/>
                             </Calendar.Background>
@@ -89,6 +80,8 @@
                             <Button Name="saveToExcelBtn" ToolTip="save to cxcel" Style="{StaticResource PlainBtnStyle}">Save To Excel</Button>
                             <DatePicker ToolTip="select a date" Margin="10" Name="goToDateDP"></DatePicker>
                             <Button Name="goToDateBtn" ToolTip="go to date" Style="{StaticResource PlainBtnStyle}">Go To Date</Button>
+                            <Button Name="virtualKeyboardDateBtn" ToolTip="Virtual Keyboard" Style="{StaticResource PlainBtnStyle}" Click="virtualKeyboardDateBtn_Click">Virtual Keyboard</Button>
+                            
                         </StackPanel>
 
                         <DockPanel DockPanel.Dock="Bottom">
@@ -143,7 +136,7 @@
                                             <Label Margin="10" Width="150">Facebook User Name</Label>
                                             <Label Margin="10" Width="150">Password</Label>
                                             <Label></Label>
-                                            <TextBox Name="fbUserNameTB" Margin="10" Width="150"></TextBox>
+                                            <TextBox Name="fbUserNameTB" Margin="10"  Width="150" ></TextBox>
                                             <PasswordBox Name="fbPB" Width="150" Margin="10"></PasswordBox>
                                             <Button Name="fbLoginBtn" Width="100" Style="{StaticResource PlainBtnStyle}">Login</Button>
                                             <Label></Label>
