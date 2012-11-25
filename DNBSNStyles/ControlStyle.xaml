@@ -9,7 +9,6 @@
         <Setter Property="BorderBrush" Value="#FFC4C458" />
         <Setter Property="Margin" Value="10"/>
         <Setter Property="OpacityMask" Value="White" />
-        <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Padding" Value="7" />
 
         <Setter Property="Template">
@@ -29,6 +28,11 @@
                             <Setter Property="Button.Background" Value="#2E9AFE" />
                             <Setter Property="Button.Foreground" Value="White" />
                         </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="White" />
+                            <Setter Property="Button.Background" Value="#D8D8D8" />
+                        </Trigger>
+                        
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
@@ -39,9 +43,12 @@
     <Style x:Key="TItemStyle" TargetType="TabItem">
         <Setter Property="Width" Value="80" />
         <Setter Property="Background" Value="#FFF9F9EC" />
-        <Setter Property="BorderBrush" Value="Gray" />
+        <Setter Property="BorderBrush" Value="#FFE9E0E0" />
         
+
     </Style>
+
+
 
     <Style x:Key="CheckBtyle" TargetType="CheckBox">
         <Setter Property="Width" Value="80" />
@@ -83,6 +90,10 @@
                             <Setter TargetName="border" Property="BorderBrush" Value="White" />
                             <Setter Property="Button.Background" Value="#D8D8D8" />
                         </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="White" />
+                            <Setter Property="Button.Background" Value="#2E9AFE" />
+                        </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
@@ -95,6 +106,8 @@
         <Setter Property="Foreground" Value="White" />
         <Setter Property="Padding" Value="7" />
         <Setter Property="FontWeight" Value="Bold" />
+        
+        
         <!--<Setter Property="Template">
         <Setter.Value>
             <ControlTemplate TargetType="ToolTip">
@@ -124,5 +137,6 @@
     </Setter>-->
     </Style>
 
+    
 
 </ResourceDictionary>

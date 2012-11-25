@@ -129,9 +129,6 @@
     <Resource Include="Images\3cdcab91d9bb76e45289d9c0fb54f37c.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\foursquare-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\monotone_pen_write.png" />
   </ItemGroup>
   <ItemGroup>
@@ -139,6 +136,15 @@
       <Project>{20AEEBC4-15DE-4D4A-ADB6-DA959E61A98A}</Project>
       <Name>DNBSNStyles</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\foursquare-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\password_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Task Report Hot.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
