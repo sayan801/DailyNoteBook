@@ -33,11 +33,57 @@
                                 <ImageBrush ImageSource="/DNBSNGUI;component/Images/monotone_pen_write.png" Opacity="0.3"/>
                             </Calendar.Background>-->
                         </Calendar>
-                        <TextBox Name="postTB" Height="100" Style="{StaticResource TBtyle}"></TextBox>
+                        <TextBox Height="100" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" SpellCheck.IsEnabled="True">
+                            <TextBox.Style>
+                                <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                                    <Style.Resources>
+                                        <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Top" Stretch="None">
+                                            <VisualBrush.Visual>
+                                                <Label Content="what's on your mind?" Foreground="LightGray" />
+                                            </VisualBrush.Visual>
+                                        </VisualBrush>
+                                    </Style.Resources>
+                                    <Style.Triggers>
+                                        <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                                        </Trigger>
+                                        <Trigger Property="Text" Value="{x:Null}">
+                                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                                        </Trigger>
+                                        <Trigger Property="IsKeyboardFocused" Value="True">
+                                            <Setter Property="Background" Value="White" />
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBox.Style>
+                        </TextBox>
                     </DockPanel>
                     <DockPanel LastChildFill="True">
                         <UniformGrid DockPanel.Dock="Bottom" Rows="1">
-                            <TextBox Name="searchTB" DockPanel.Dock="Bottom" Height="40" Width="80" Style="{StaticResource TBtyle}"></TextBox>
+                            <TextBox DockPanel.Dock="Bottom" Height="40" Width="85"  TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" SpellCheck.IsEnabled="True">
+                                <TextBox.Style>
+                                    <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                                        <Style.Resources>
+                                            <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Top" Stretch="None">
+                                                <VisualBrush.Visual>
+                                                    <Label Content="keyword" Foreground="LightGray" />
+                                                </VisualBrush.Visual>
+                                            </VisualBrush>
+                                        </Style.Resources>
+                                        <Style.Triggers>
+                                            <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                                                <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                                            </Trigger>
+                                            <Trigger Property="Text" Value="{x:Null}">
+                                                <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                                            </Trigger>
+                                            <Trigger Property="IsKeyboardFocused" Value="True">
+                                                <Setter Property="Background" Value="White" />
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBox.Style>
+                            </TextBox>
                             <Button Name="goBtn" ToolTip="go" Content="Go" Style="{StaticResource PlainBtnStyle}">
                                 <Button.LayoutTransform>
                                     <RotateTransform Angle="45"  />
@@ -64,9 +110,9 @@
             </Expander>
             <TabControl Name="tabControl1" Margin="3" BorderBrush="#FFE9E0E0">
 
-                <TabItem Name="notesTabItem" ToolTip="note book" Style="{StaticResource TItemStyle}">
-                    <TabItem.Header>
-                        <StackPanel Orientation="Vertical">
+                <TabItem Name="notesTabItem"  Style="{StaticResource TItemStyle}">
+                    <TabItem.Header >
+                        <StackPanel Orientation="Vertical" ToolTip="note book">
                             <Image Height="40" Source="/DNBSNGUI;component/Images/steampunk_diary_icon_for_lotus_organiser_mkiii_by_yereverluvinuncleber-d590ojl.png" Width="50" />
                             <!--<TextBlock Text="Facebook" Margin="0,0,0,0" VerticalAlignment="Center" Foreground="CadetBlue" />-->
                         </StackPanel>
@@ -118,9 +164,9 @@
                     </DockPanel>
 
                 </TabItem>
-                <TabItem Name="fbTabItem" ToolTip="facebook" Style="{StaticResource TItemStyle}">
+                <TabItem Name="fbTabItem"  Style="{StaticResource TItemStyle}">
                     <TabItem.Header>
-                        <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Vertical" ToolTip="facebook">
                             <Image Height="40" Source="/DNBSNGUI;component/Images/facebook-icon.png" Width="50" />
                             <!--<TextBlock Text="Facebook" Margin="0,0,0,0" VerticalAlignment="Center" Foreground="CadetBlue" />-->
                         </StackPanel>
@@ -136,7 +182,10 @@
                                             <Label Margin="10" Width="150">Facebook User Name</Label>
                                             <Label Margin="10" Width="150">Password</Label>
                                             <Label></Label>
-                                            <TextBox Name="fbUserNameTB" Margin="10"  Width="150" ></TextBox>
+
+                                            <TextBox Margin="10" Width="150" Tag="enter user name" Style="{StaticResource commonTBtyle}" />
+                                                
+                                            
                                             <PasswordBox Name="fbPB" Width="150" Margin="10"></PasswordBox>
                                             <Button Name="fbLoginBtn" Width="100" Style="{StaticResource PlainBtnStyle}">Login</Button>
                                             <Label></Label>
@@ -151,9 +200,9 @@
                         <ListView></ListView>
                     </DockPanel>
                 </TabItem>
-                <TabItem Name="twitterTabItem" ToolTip="twitter" Style="{StaticResource TItemStyle}">
+                <TabItem Name="twitterTabItem"  Style="{StaticResource TItemStyle}">
                     <TabItem.Header>
-                        <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Vertical" ToolTip="twitter">
                             <Image Height="40" Source="/DNBSNGUI;component/Images/icon_twitter_official.png" Width="50" />
                             <!--<TextBlock Text="Facebook" Margin="0,0,0,0" VerticalAlignment="Center" Foreground="CadetBlue" />-->
                         </StackPanel>
@@ -169,7 +218,7 @@
                                             <Label Margin="10" Width="150">Twitter User Name</Label>
                                             <Label Margin="10" Width="150">Password</Label>
                                             <Label></Label>
-                                            <TextBox Name="twitterUserNameTB" Margin="10" Width="150"></TextBox>
+                                            <TextBox Margin="10" Width="150" Tag="enter user name" Style="{StaticResource commonTBtyle}" />
                                             <PasswordBox Name="twitterPB" Width="150" Margin="10"></PasswordBox>
                                             <Button Name="twitterLoginBtn" Width="100" Style="{StaticResource PlainBtnStyle}">Login</Button>
                                             <Label></Label>
@@ -185,9 +234,9 @@
                         <ListView></ListView>
                     </DockPanel>
                 </TabItem>
-                <TabItem Name="linkedInTabItem" ToolTip="linkedIn" Style="{StaticResource TItemStyle}">
+                <TabItem Name="linkedInTabItem" Style="{StaticResource TItemStyle}">
                     <TabItem.Header>
-                        <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Vertical" ToolTip="linkedIn" >
                             <Image Height="40" Source="/DNBSNGUI;component/Images/linkedin-icon.png" Width="50" />
                             <!--<TextBlock Text="Facebook" Margin="0,0,0,0" VerticalAlignment="Center" Foreground="CadetBlue" />-->
                         </StackPanel>
@@ -203,7 +252,7 @@
                                             <Label Margin="10" Width="150">LinkedIn User Name</Label>
                                             <Label Margin="10" Width="150">Password</Label>
                                             <Label></Label>
-                                            <TextBox Margin="10" Width="150"></TextBox>
+                                            <TextBox Margin="10" Width="150" Tag="enter user name" Style="{StaticResource commonTBtyle}" />
                                             <PasswordBox Width="150" Margin="10"></PasswordBox>
                                             <Button Width="100" Style="{StaticResource PlainBtnStyle}">Login</Button>
                                             <Label></Label>
@@ -219,9 +268,9 @@
                         <ListView></ListView>
                     </DockPanel>
                 </TabItem>
-                <TabItem Name="googlePlusTabItem" ToolTip="google+" Style="{StaticResource TItemStyle}">
+                <TabItem Name="googlePlusTabItem" Style="{StaticResource TItemStyle}">
                     <TabItem.Header>
-                        <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Vertical" ToolTip="google+">
                             <Image Height="40" Source="/DNBSNGUI;component/Images/google_plus_icon.png" Width="50" />
                             <!--<TextBlock Text="Facebook" Margin="0,0,0,0" VerticalAlignment="Center" Foreground="CadetBlue" />-->
                         </StackPanel>
@@ -237,7 +286,7 @@
                                             <Label Margin="10" Width="150">Google+ User Name</Label>
                                             <Label Margin="10" Width="150">Password</Label>
                                             <Label></Label>
-                                            <TextBox Margin="10" Width="150"></TextBox>
+                                            <TextBox Margin="10" Width="150" Tag="enter user name" Style="{StaticResource commonTBtyle}" />
                                             <PasswordBox Width="150" Margin="10"></PasswordBox>
                                             <Button Width="100" Style="{StaticResource PlainBtnStyle}">Login</Button>
                                             <Label></Label>
@@ -253,9 +302,9 @@
                         <ListView></ListView>
                     </DockPanel>
                 </TabItem>
-                <TabItem Name="foursquareTabItem" ToolTip="foursquare" Style="{StaticResource TItemStyle}">
+                <TabItem Name="foursquareTabItem"  Style="{StaticResource TItemStyle}">
                     <TabItem.Header>
-                        <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Vertical" ToolTip="foursquare">
                             <Image Height="40" Source="/DNBSNGUI;component/Images/foursquare-icon.png" Width="50" />
                             <!--<TextBlock Text="Facebook" Margin="0,0,0,0" VerticalAlignment="Center" Foreground="CadetBlue" />-->
                         </StackPanel>
@@ -271,7 +320,7 @@
                                             <Label Margin="10" Width="150">LinkedIn User Name</Label>
                                             <Label Margin="10" Width="150">Password</Label>
                                             <Label></Label>
-                                            <TextBox Margin="10" Width="150"></TextBox>
+                                            <TextBox Margin="10" Width="150" Tag="enter user name" Style="{StaticResource commonTBtyle}" />
                                             <PasswordBox Width="150" Margin="10"></PasswordBox>
                                             <Button Width="100" Style="{StaticResource PlainBtnStyle}">Login</Button>
                                             <Label></Label>
@@ -287,9 +336,9 @@
                         <ListView></ListView>
                     </DockPanel>
                 </TabItem>
-                <TabItem Name="googleCalendarTabItem" ToolTip="google calendar" Style="{StaticResource TItemStyle}">
+                <TabItem Name="googleCalendarTabItem" Style="{StaticResource TItemStyle}">
                     <TabItem.Header>
-                        <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Vertical" ToolTip="google calendar" >
                             <Image Height="40" Source="/DNBSNGUI;component/Images/Google%20Calendar.png" Width="50" ImageFailed="Image_ImageFailed" />
                             <!--<TextBlock Text="Facebook" Margin="0,0,0,0" VerticalAlignment="Center" Foreground="CadetBlue" />-->
                         </StackPanel>
@@ -305,9 +354,9 @@
                         <WebBrowser Name="gCalenderWb"></WebBrowser>
                     </DockPanel>
                 </TabItem>
-                <TabItem Name="liveChatTabItem" ToolTip="chat" Style="{StaticResource TItemStyle}">
+                <TabItem Name="liveChatTabItem" Style="{StaticResource TItemStyle}">
                     <TabItem.Header>
-                        <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Vertical" ToolTip="chat">
                             <Image Height="40" Source="/DNBSNGUI;component/Images/Chat.png" Width="50" />
                             <!--<TextBlock Text="Facebook" Margin="0,0,0,0" VerticalAlignment="Center" Foreground="CadetBlue" />-->
                         </StackPanel>
@@ -328,7 +377,7 @@
                                             <ComboBoxItem>Facebook</ComboBoxItem>
                                             <ComboBoxItem>Yahoo</ComboBoxItem>
                                         </ComboBox>
-                                        <TextBox Margin="10" Width="150"></TextBox>
+                                        <TextBox Margin="10" Width="150" Tag="enter user name" Style="{StaticResource commonTBtyle}" />
                                         <PasswordBox Width="150" Margin="10"></PasswordBox>
                                         <Button Width="100" Style="{StaticResource PlainBtnStyle}">Login</Button>
                                         <Label></Label>
@@ -343,9 +392,9 @@
                     </DockPanel>
                 </TabItem>
                 
-                <TabItem Name="googleMapTabItem"  ToolTip="google map" Style="{StaticResource TItemStyle}">
+                <TabItem Name="googleMapTabItem"  Style="{StaticResource TItemStyle}">
                     <TabItem.Header>
-                        <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Vertical" ToolTip="google map">
                             <Image Height="40" Source="/DNBSNGUI;component/Images/google_maps_icon.png" Width="50" />
                             <!--<TextBlock Text="Facebook" Margin="0,0,0,0" VerticalAlignment="Center" Foreground="CadetBlue" />-->
                         </StackPanel>
@@ -361,9 +410,9 @@
                         <WebBrowser Name="mapWb"></WebBrowser>
                     </DockPanel>
                 </TabItem>
-                <TabItem Name="phoneBookTabItem" ToolTip="phone book" Style="{StaticResource TItemStyle}">
+                <TabItem Name="phoneBookTabItem" Style="{StaticResource TItemStyle}">
                     <TabItem.Header>
-                        <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Vertical" ToolTip="phone book">
                             <Image Height="40" Source="/DNBSNGUI;component/Images/phone_book_edit.png" Width="50" />
                             <!--<TextBlock Text="Facebook" Margin="0,0,0,0" VerticalAlignment="Center" Foreground="CadetBlue" />-->
                         </StackPanel>
@@ -375,23 +424,32 @@
 
                                     <DockPanel Width="650" >
 
-                                        <UniformGrid Columns="4"  DockPanel.Dock="Left">
+                                        <UniformGrid Columns="4"  DockPanel.Dock="Left" Width="647">
                                             <Label Margin="10" Width="150">Name</Label>
-                                            <TextBox Margin="10" Width="150"></TextBox>
+
+                                            <TextBox Margin="10" Width="140" Tag="enter name" Style="{StaticResource commonTBtyle}" />
+                                            
                                             <Label Margin="10" Width="150">Mobile Number</Label>
-                                            <TextBox Margin="10" Width="150"></TextBox>
+                                            <TextBox Margin="10" Width="140" Tag="enter mobile number" Style="{StaticResource commonTBtyle}" />
+                                            
                                             <Label Margin="10" Width="150">EMail</Label>
-                                            <TextBox Margin="10" Width="150"></TextBox>
+                                            <TextBox Margin="10" Width="140" Tag="enter email address" Style="{StaticResource commonTBtyle}" />
+                                            
                                             <Label Margin="10" Width="150">Home Number</Label>
-                                            <PasswordBox Width="150" Margin="10"></PasswordBox>
+                                            <TextBox Margin="10" Width="140" Tag="enter home number" Style="{StaticResource commonTBtyle}" />
+                                            
                                             <Label Margin="10" Width="150">Address</Label>
-                                            <TextBox Margin="10" Width="150"></TextBox>
+                                            <TextBox Margin="10" Width="140" Tag="enter address" Style="{StaticResource commonTBtyle}" />
+                                            
                                             <Label Margin="10" Width="150">Office Number</Label>
-                                            <TextBox Margin="10" Width="150"></TextBox>
+                                            <TextBox Margin="10" Width="140" Tag="enter office number" Style="{StaticResource commonTBtyle}" />
+                                            
                                             <Label Margin="10" Width="150">Remarks</Label>
-                                            <TextBox Margin="10" Width="150"></TextBox>
+                                            <TextBox Margin="10" Width="140" Tag="enter remarks" Style="{StaticResource commonTBtyle}" />
+                                            
                                             <Label Margin="10" Width="150">Fax Number</Label>
-                                            <TextBox Margin="10" Width="150"></TextBox>
+                                            <TextBox Margin="10" Width="140" Tag="enter fax number" Style="{StaticResource commonTBtyle}" />
+                                            
                                             <Label></Label>
                                             <Label></Label>
                                             <Button Content="Cancel" Style="{StaticResource PlainBtnStyle}" />
@@ -416,9 +474,9 @@
                         <ListView></ListView>
                     </DockPanel>
                 </TabItem>
-                <TabItem Name="passTabItem" ToolTip="password manager" Style="{StaticResource TItemStyle}">
+                <TabItem Name="passTabItem" Style="{StaticResource TItemStyle}">
                     <TabItem.Header>
-                        <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Vertical" ToolTip="password manager">
                             <Image Height="40" Source="/DNBSNGUI;component/Images/password_icon.png" Width="50" />
                             <!--<TextBlock Text="Facebook" Margin="0,0,0,0" VerticalAlignment="Center" Foreground="CadetBlue" />-->
                         </StackPanel>
@@ -455,23 +513,84 @@
                                 <Button Content="Delete Contact" Style="{StaticResource PlainBtnStyle}" />
                             </UniformGrid>
                         </DockPanel>
-                        <ListView></ListView>
+                        <ListView>
+                            
+                        </ListView>
                     </DockPanel>
                 </TabItem>
-                <TabItem Name="taskTabItem" ToolTip="task manager" Style="{StaticResource TItemStyle}">
+                <TabItem Name="taskTabItem" Style="{StaticResource TItemStyle}">
                     <TabItem.Header>
-                        <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Vertical" ToolTip="task manager">
                             <Image Height="40" Source="/DNBSNGUI;component/Images/Task%20Report%20Hot.png" Width="50" />
                             <!--<TextBlock Text="Facebook" Margin="0,0,0,0" VerticalAlignment="Center" Foreground="CadetBlue" />-->
                         </StackPanel>
                     </TabItem.Header>
                     <DockPanel LastChildFill="True">
+                        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+                            <Expander DockPanel.Dock="Top" ExpandDirection="Down" IsExpanded="False" Header="Add Contact" VerticalAlignment="Center">
+                                <UniformGrid Columns="1">
 
+                                    <DockPanel Width="650" Height="197">
+
+                                        <UniformGrid Columns="4"  DockPanel.Dock="Left" Width="647" Height="198">
+                                            <Label Margin="10" Width="150" VerticalAlignment="Center">Task Value</Label>
+                                            <ComboBox Margin="10" Width="142" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" SelectedIndex="1">
+                                                <ComboBoxItem>High</ComboBoxItem>
+                                                <ComboBoxItem>Medium</ComboBoxItem>
+                                                <ComboBoxItem>Low</ComboBoxItem>
+                                            </ComboBox>
+
+                                            <Label Margin="10" Width="150" VerticalAlignment="Center">About Task</Label>
+                                            <TextBox Height="100" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" SpellCheck.IsEnabled="True">
+                                                <TextBox.Style>
+                                                    <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                                                        <Style.Resources>
+                                                            <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Top" Stretch="None">
+                                                                <VisualBrush.Visual>
+                                                                    <Label Content="what to do?" Foreground="LightGray" />
+                                                                </VisualBrush.Visual>
+                                                            </VisualBrush>
+                                                        </Style.Resources>
+                                                        <Style.Triggers>
+                                                            <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                                                                <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                                                            </Trigger>
+                                                            <Trigger Property="Text" Value="{x:Null}">
+                                                                <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                                                            </Trigger>
+                                                            <Trigger Property="IsKeyboardFocused" Value="True">
+                                                                <Setter Property="Background" Value="White" />
+                                                            </Trigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </TextBox.Style>
+                                            </TextBox>
+                                            <Label></Label>
+                                            <Label></Label>
+                                            <Button Content="Cancel" Style="{StaticResource PlainBtnStyle}" Height="25" Width="130" />
+                                            <Button Content="Save" Style="{StaticResource PlainBtnStyle}" Height="25" Width="130" />
+                                        </UniformGrid>
+                                    </DockPanel>
+                                </UniformGrid>
+                            </Expander>
+
+
+                        </StackPanel>
+                        <DockPanel DockPanel.Dock="Bottom">
+                            <UniformGrid Rows="1">
+                                <Label></Label>
+                                <Label></Label>
+                                <Label></Label>
+                                <Label></Label>
+                                <Button Content="Edit Task" Style="{StaticResource PlainBtnStyle}" />
+                                <Button Content="Delete Task" Style="{StaticResource PlainBtnStyle}" />
+                            </UniformGrid>
+                        </DockPanel>
                         <ListView Name="taskView" HorizontalAlignment="Stretch">
                             <ListView.View>
                                 <GridView>
                                     <GridViewColumn Width="80" Header="Value" >
-                                        
+
                                     </GridViewColumn>
                                     <GridViewColumn Width="140" Header="Task"  />
                                     <GridViewColumn Width="200" Header="Status"   />
@@ -479,6 +598,7 @@
                             </ListView.View>
                         </ListView>
                     </DockPanel>
+          
                 </TabItem>
 
 
