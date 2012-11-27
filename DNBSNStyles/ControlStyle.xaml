@@ -44,7 +44,7 @@
     <Style x:Key="TItemStyle" TargetType="TabItem">
         <Setter Property="Width" Value="80" />
         <Setter Property="Background" Value="#FFF9F9EC" />
-        <Setter Property="BorderBrush" Value="#FFE9E0E0" />
+        <Setter Property="BorderBrush" Value="white" />
         
 
     </Style>
@@ -105,11 +105,10 @@
 
     <Style x:Key="{x:Type ToolTip}" TargetType="{x:Type ToolTip}">
         <Setter Property="Background" Value="Black"/>
-        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="#D8D8D8"/>
         <Setter Property="Foreground" Value="White" />
         <Setter Property="Padding" Value="7" />
         <Setter Property="FontWeight" Value="Bold" />
-        
         
         <!--<Setter Property="Template">
         <Setter.Value>
