@@ -25,11 +25,26 @@
 
         <UniformGrid DockPanel.Dock="Bottom" Rows="1">
             <TextBlock  Height="25" Padding="7,1,0,0" Background="WhiteSmoke" VerticalAlignment="Center" Text="{Binding Source={x:Static sys:DateTime.Today}, StringFormat='{}{0:dddd, MMMM dd, yyyy}'}" Foreground="Black" ></TextBlock>
-            <TextBlock  Height="25" Padding="7,1,10,0" Background="WhiteSmoke" HorizontalAlignment="Right">Copyright 2012, Anorban Nandy</TextBlock>
+            <TextBlock  Height="25" Padding="7,1,10,0" Background="WhiteSmoke" HorizontalAlignment="Right">Copyright 2012, Anirban Nandy</TextBlock>
         </UniformGrid>
 
         <DockPanel DockPanel.Dock="Top" LastChildFill="True">
-            <Expander Width="200" DockPanel.Dock="Left" Padding="2,0,0,0"  ExpandDirection="Right" IsExpanded="True" Header="H&#x0a; I&#x0a;D&#x0a;E&#x0a;/&#x0a;U&#x0a;N&#x0a;H&#x0a; I&#x0a;D&#x0a;E">
+            <DockPanel >
+                <Expander Name="loginExpndr" DockPanel.Dock="Top" IsExpanded="True" Header="Login in DNBSN">
+                    <UniformGrid Columns="1" >
+
+                        <DockPanel Height="130" Width="186">
+
+                            <UniformGrid DockPanel.Dock="Left" Height="131" Columns="1">
+                                <TextBox Name="dNBSNUserIDTB" Margin="20,8,0,8" Tag="enter user name" Style="{StaticResource commonTBtyle}"/>
+                                <PasswordBox Name="dNBSNpassPB" Margin="20,8,0,8"></PasswordBox>
+                                <Button Name="dNBSNLoginBtn" Margin="130,9,0,9" ToolTip="login" Style="{StaticResource PlainBtnStyle}" Click="dNBSNLoginBtn_Click">Login</Button>
+
+                            </UniformGrid>
+                        </DockPanel>
+                    </UniformGrid>
+                </Expander>
+              <Expander Name="mainLeftExpndr" IsEnabled="False" IsExpanded="False" Width="200" DockPanel.Dock="Top" Padding="2,0,0,0"  ExpandDirection="Right" Header="H&#x0a; I&#x0a;D&#x0a;E&#x0a;/&#x0a;U&#x0a;N&#x0a;H&#x0a; I&#x0a;D&#x0a;E">
                 <UniformGrid Columns="1">
                     <DockPanel>
                         <Calendar DockPanel.Dock="Top" BorderBrush="#FFE9E0E0">
@@ -112,7 +127,8 @@
                     </DockPanel>
                 </UniformGrid>
             </Expander>
-            <TabControl Name="tabControl1" Margin="3" BorderBrush="#FFE9E0E0">
+            </DockPanel>
+            <TabControl Name="mainTabControl" IsEnabled="False" Margin="3" BorderBrush="#FFE9E0E0">
 
                 <TabItem Name="notesTabItem"  Style="{StaticResource TItemStyle}">
                     <TabItem.Header >
@@ -122,7 +138,7 @@
                         </StackPanel>
                     </TabItem.Header>
                     <DockPanel LastChildFill="True">
-                        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+                        <UniformGrid DockPanel.Dock="Top" Rows="1">
                             <Button Name="viewAllBtn" ToolTip="view all" Style="{StaticResource PlainBtnStyle}">View All</Button>
                             <Button Name="dailyViewBtn" ToolTip="daily view" Style="{StaticResource PlainBtnStyle}">Daily View</Button>
                             <Button Name="weeklyViewBtn" ToolTip="weekly view" Style="{StaticResource PlainBtnStyle}">Weekly View</Button>
@@ -132,7 +148,7 @@
                             <Button Name="goToDateBtn" ToolTip="go to date" Style="{StaticResource PlainBtnStyle}">Go To Date</Button>
                             <Button Name="virtualKeyboardDateBtn" ToolTip="Virtual Keyboard" Style="{StaticResource PlainBtnStyle}" Click="virtualKeyboardDateBtn_Click">Virtual Keyboard</Button>
 
-                        </StackPanel>
+                        </UniformGrid>
 
                         <DockPanel DockPanel.Dock="Bottom">
                             <UniformGrid Rows="1">
@@ -147,7 +163,7 @@
 
 
 
-                        <TextBox Name="notesTB" TextBlock.LineHeight="20" TextBlock.LineStackingStrategy="BlockLineHeight" Padding="20,10,20,20" Style="{StaticResource TBtyle}">
+                        <TextBox Name="notesTB" TextBlock.LineHeight="20" TextBlock.LineStackingStrategy="BlockLineHeight" Padding="20,10,20,20">
                             <TextBox.Background>
                                 <DrawingBrush TileMode="Tile" Stretch="None" Viewport="0,0,20,20" ViewportUnits="Absolute" Opacity="1">
                                     <DrawingBrush.Drawing>
@@ -191,7 +207,7 @@
 
 
 
-                                            <PasswordBox Name="fbPB" PasswordChar="a" Width="150" Margin="10"></PasswordBox>
+                                            <PasswordBox Name="fbPB" Tag="••••••" Style="{StaticResource pBstyle}" Width="150" Margin="10"></PasswordBox>
                                             <Button Name="fbLoginBtn" Width="100" Style="{StaticResource PlainBtnStyle}">Login</Button>
                                             <Label></Label>
                                             <CheckBox Name="fbStayLoginCheckBox" Margin="10" Width="150">Stay logged in</CheckBox>
@@ -362,7 +378,7 @@
                 <TabItem Name="liveChatTabItem" Style="{StaticResource TItemStyle}">
                     <TabItem.Header>
                         <StackPanel Orientation="Vertical" ToolTip="chat">
-                            <Image Height="40" Source="/DNBSNGUI;component/Images/Chat.png" Width="50" />
+                            <Image Height="40" Source="/DNBSNGUI;component/Images/chat.png" Width="50" />
                             <!--<TextBlock Text="Facebook" Margin="0,0,0,0" VerticalAlignment="Center" Foreground="CadetBlue" />-->
                         </StackPanel>
                     </TabItem.Header>
@@ -457,8 +473,8 @@
 
                                             <Label></Label>
                                             <Label></Label>
-                                            <Button Content="Cancel" Style="{StaticResource PlainBtnStyle}" />
-                                            <Button Content="Save" Style="{StaticResource PlainBtnStyle}" />
+                                            <Button Content="Clear Fields" ToolTip="clear fields" Style="{StaticResource PlainBtnStyle}" />
+                                            <Button Content="Save" ToolTip="save info" Style="{StaticResource PlainBtnStyle}" />
                                         </UniformGrid>
                                     </DockPanel>
                                 </UniformGrid>
@@ -472,8 +488,8 @@
                                 <Label></Label>
                                 <Label></Label>
                                 <Label></Label>
-                                <Button Content="Edit Contacts" Style="{StaticResource PlainBtnStyle}" />
-                                <Button Content="Delete Contact" Style="{StaticResource PlainBtnStyle}" />
+                                <Button Content="Edit Contacts" ToolTip="edit selected contact details" Style="{StaticResource PlainBtnStyle}" />
+                                <Button Content="Delete Contact" ToolTip="delete selected contact details" Style="{StaticResource PlainBtnStyle}" />
                             </UniformGrid>
                         </DockPanel>
                         <ListView Name="contactView" HorizontalAlignment="Stretch">
@@ -501,7 +517,7 @@
                     </TabItem.Header>
                     <DockPanel LastChildFill="True">
                         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
-                            <Expander Name="loginpassExpndr" DockPanel.Dock="Top" ExpandDirection="Down" IsExpanded="False" Header="Login to Facebook" VerticalAlignment="Center">
+                            <Expander Name="loginpassPassExpndr" DockPanel.Dock="Top" ExpandDirection="Down" IsExpanded="False" Header="Login" VerticalAlignment="Center" >
                                 <UniformGrid Columns="1">
 
                                     <DockPanel Width="600" >
@@ -512,7 +528,7 @@
                                             <Label></Label>
                                             <TextBox Name="passwordMUserIdTB" Margin="10" Width="150" Tag="enter user name" Style="{StaticResource commonTBtyle}" />
                                             <PasswordBox Name="passwordMPassBtnPB" Width="150" Margin="10"></PasswordBox>
-                                            <Button Name="passwordMLoginBtn" Width="100" Style="{StaticResource PlainBtnStyle}">Login</Button>
+                                            <Button Name="passwordMLoginBtn" ToolTip="login" Width="100" Style="{StaticResource PlainBtnStyle}" Click="passwordMLoginBtn_Click">Login</Button>
 
                                         </UniformGrid>
                                     </DockPanel>
@@ -521,9 +537,9 @@
 
 
                         </StackPanel>
-                        <DockPanel LastChildFill="True">
+                        <DockPanel Name="mainPassDP" IsEnabled="False" LastChildFill="True">
 
-                            <Expander Name="loginExpander" Header="Add" DockPanel.Dock="Top">
+                            <Expander Header="Add" DockPanel.Dock="Top">
                                 <UniformGrid Columns="4">
                                     <Label Margin="10">Name</Label>
                                     <TextBox Margin="10" Tag="enter name" Style="{StaticResource commonTBtyle}" />
@@ -543,19 +559,20 @@
                                     <Label Margin="10">Others Info</Label>
                                     <TextBox Margin="10" Tag="enter others info" Style="{StaticResource commonTBtyle}" />
                                     <Button ToolTip="clear all fields" Width="150" Style="{StaticResource PlainBtnStyle}">Clear Fields</Button>
-                                    <Button ToolTip="submit details" Width="150" Style="{StaticResource PlainBtnStyle}">Submit</Button>
+                                    <Button ToolTip="save info" Width="150" Style="{StaticResource PlainBtnStyle}">Save</Button>
                                 </UniformGrid>
                             </Expander>
 
-                            <UniformGrid DockPanel.Dock="Bottom" Columns="6">
+                            <UniformGrid DockPanel.Dock="Bottom" Columns="6" Name="logoutDP" IsEnabled="False">
                                 <Label></Label>
                                 <Label></Label>
                                 <Label></Label>
                                 <Label></Label>
                                 <Label></Label>
-                                <Button Content="Logout"  Style="{StaticResource PlainBtnStyle}" />
+                                <Button Content="Please Log In First" Name="logoutPassBtn" ToolTip="logout" Style="{StaticResource PlainBtnStyle}" />
                             </UniformGrid>
                             <UniformGrid DockPanel.Dock="Top">
+                                <Expander Header="All Details" Name="allDetailsExpndr">
                                 <ListView Name="passView" HorizontalAlignment="Stretch">
                                     <ListView.View>
                                         <GridView>
@@ -569,6 +586,7 @@
                                         </GridView>
                                     </ListView.View>
                                 </ListView>
+                                </Expander>
                             </UniformGrid>
                         </DockPanel>
 
@@ -623,7 +641,7 @@
                                             </TextBox>
                                             <Label></Label>
                                             <Label></Label>
-                                            <Button Content="Cancel" ToolTip="cancel" Style="{StaticResource PlainBtnStyle}" Height="25" Width="130" />
+                                            <Button Content="Clear" ToolTip="clear field" Style="{StaticResource PlainBtnStyle}" Height="25" Width="130" />
                                             <Button Content="Save" ToolTip="save task" Style="{StaticResource PlainBtnStyle}" Height="25" Width="130" />
                                         </UniformGrid>
                                     </DockPanel>

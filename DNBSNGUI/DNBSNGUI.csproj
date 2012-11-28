@@ -55,6 +55,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="ErrorMessage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -62,6 +66,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ErrorMessage.xaml.cs">
+      <DependentUpon>ErrorMessage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -93,12 +100,6 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\reload.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\refresh.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\icon_twitter_official.png" />
   </ItemGroup>
   <ItemGroup>
@@ -115,9 +116,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\google_maps_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Chat.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\phone_book_edit.png" />
@@ -145,6 +143,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Task Report Hot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\chat.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

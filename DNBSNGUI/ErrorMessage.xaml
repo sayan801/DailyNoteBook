@@ -1,0 +1,17 @@
+﻿<Window x:Class="DNBSNGUI.ErrorMessage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        AllowsTransparency="True" ResizeMode="NoResize" Background="#FFE9E0E0" 
+        WindowStyle="None" WindowStartupLocation="CenterScreen" Height="175" Width="300" >
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/DNBSNStyles;component/ControlStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid Height="137" Width="281">
+        <Label Content="Please Enter correct Password" Height="28" HorizontalAlignment="Left" Margin="59,41,0,0" Name="label1" VerticalAlignment="Top" Width="204" />
+        <Button Content="OK" Height="25" Width="60" Name="viewAllBtn" ToolTip="view all" Style="{StaticResource PlainBtnStyle}" Margin="107,75,111,36" Click="viewAllBtn_Click" />
+    </Grid>
+</Window>

@@ -68,5 +68,47 @@ namespace DNBSNGUI
             this.WindowState = WindowState.Maximized;
         }
 
+        private void passwordMLoginBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if ((passwordMUserIdTB.Text.Equals("1")) && (passwordMPassBtnPB.Password.Equals("1")))
+            {
+                mainPassDP.IsEnabled = true;
+                passwordMPassBtnPB.Password = string.Empty;
+                loginpassPassExpndr.IsExpanded = false;
+                loginpassPassExpndr.IsEnabled = false;
+                loginpassPassExpndr.Header = "Logged In";
+                loginpassPassExpndr.ToolTip = "Logged In";
+                allDetailsExpndr.IsExpanded = true;
+                logoutPassBtn.Content = "Logout";
+            }
+            else
+            {
+                //MessageBox.Show("Please Enter correct Password");
+                DNBSNGUI.ErrorMessage ErrorMessageObj = new DNBSNGUI.ErrorMessage();
+                ErrorMessageObj.Show();
+                passwordMPassBtnPB.Password = string.Empty;
+            }
+        }
+
+        private void dNBSNLoginBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if ((dNBSNUserIDTB.Text.Equals("1")) && (dNBSNpassPB.Password.Equals("1")))
+            {
+                mainLeftExpndr.IsEnabled = true;
+                mainLeftExpndr.IsExpanded = true;
+                dNBSNpassPB.Password = string.Empty;
+                mainTabControl.IsEnabled = true;
+                loginExpndr.IsEnabled = false;
+                loginExpndr.Header = "Logged In";
+                loginExpndr.IsExpanded = false;
+            }
+            else
+            {
+                //MessageBox.Show("Please Enter correct Password");
+                DNBSNGUI.ErrorMessage ErrorMessageObj = new DNBSNGUI.ErrorMessage();
+                ErrorMessageObj.Show();
+                dNBSNpassPB.Password = string.Empty;
+            }
+        }
     }
 }
