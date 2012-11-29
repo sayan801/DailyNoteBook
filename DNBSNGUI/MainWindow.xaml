@@ -16,13 +16,18 @@
     </Window.Resources>
 
     <DockPanel LastChildFill="True" Margin="2" Background="White">
-
-        <UniformGrid DockPanel.Dock="Top" HorizontalAlignment="Right" Rows="1">
-            <Button Margin="0" Width="30" Height="30" Name="minimizeBtn" ToolTip="minimize" Style="{StaticResource TitlebarBTN}" Click="minimizeBtn_Click_1">_</Button>
+        <DockPanel DockPanel.Dock="Top">
+            
+            <UniformGrid DockPanel.Dock="Right" HorizontalAlignment="Right" Rows="1">
+            
+            <Button Width="30" Height="30" Name="minimizeBtn" ToolTip="minimize" Style="{StaticResource TitlebarBTN}" Click="minimizeBtn_Click">_</Button>
             <!--<Button Margin="0" Width="30" Height="30" Name="maximizeBtn" ToolTip="maximize" Style="{StaticResource TitlebarBTN}" Click="maximizeBtn_Click">👉</Button>-->
-            <Button Margin="0" Width="30" Height="30" Name="closeBtn" ToolTip="close" Style="{StaticResource TitlebarBTN}" Click="closeBtn_Click">X</Button>
+            <Button Width="30" Height="30" Name="closeBtn" ToolTip="close" Style="{StaticResource TitlebarBTN}" Click="closeBtn_Click">X</Button>
         </UniformGrid>
-
+            <UniformGrid DockPanel.Dock="Right" HorizontalAlignment="Right">
+                <Button Margin="0" Width="70" Height="30" Name="logoutDnbsnBtn" IsEnabled="False" Style="{StaticResource TitlebarBTN}" Click="logoutDnbsnBtn_Click"></Button>
+            </UniformGrid>
+        </DockPanel>
         <UniformGrid DockPanel.Dock="Bottom" Rows="1">
             <TextBlock  Height="25" Padding="7,1,0,0" Background="WhiteSmoke" VerticalAlignment="Center" Text="{Binding Source={x:Static sys:DateTime.Today}, StringFormat='{}{0:dddd, MMMM dd, yyyy}'}" Foreground="Black" ></TextBlock>
             <TextBlock  Height="25" Padding="7,1,10,0" Background="WhiteSmoke" HorizontalAlignment="Right">Copyright 2012, Anirban Nandy</TextBlock>
@@ -30,7 +35,7 @@
 
         <DockPanel DockPanel.Dock="Top" LastChildFill="True">
             <DockPanel >
-                <Expander Name="loginExpndr" DockPanel.Dock="Top" IsExpanded="True" Header="Login in DNBSN">
+                <Expander Name="loginExpndr" DockPanel.Dock="Top" IsExpanded="True" Header="Login in DNBSN" Padding="2,0,0,0">
                     <UniformGrid Columns="1" >
 
                         <DockPanel Height="130" Width="186">
@@ -517,7 +522,7 @@
                     </TabItem.Header>
                     <DockPanel LastChildFill="True">
                         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
-                            <Expander Name="loginpassPassExpndr" DockPanel.Dock="Top" ExpandDirection="Down" IsExpanded="False" Header="Login" VerticalAlignment="Center" >
+                            <Expander Name="loginpassPassExpndr" DockPanel.Dock="Top" ExpandDirection="Down" IsExpanded="True" Header="Login" VerticalAlignment="Center" >
                                 <UniformGrid Columns="1">
 
                                     <DockPanel Width="600" >
@@ -539,7 +544,7 @@
                         </StackPanel>
                         <DockPanel Name="mainPassDP" IsEnabled="False" LastChildFill="True">
 
-                            <Expander Header="Add" DockPanel.Dock="Top">
+                            <Expander Header="Login To Add Info" Name="addInfoExpndr" DockPanel.Dock="Top">
                                 <UniformGrid Columns="4">
                                     <Label Margin="10">Name</Label>
                                     <TextBox Margin="10" Tag="enter name" Style="{StaticResource commonTBtyle}" />
@@ -563,16 +568,16 @@
                                 </UniformGrid>
                             </Expander>
 
-                            <UniformGrid DockPanel.Dock="Bottom" Columns="6" Name="logoutDP" IsEnabled="False">
+                            <UniformGrid DockPanel.Dock="Bottom" Columns="6" Name="logoutDP">
                                 <Label></Label>
                                 <Label></Label>
                                 <Label></Label>
                                 <Label></Label>
                                 <Label></Label>
-                                <Button Content="Please Log In First" Name="logoutPassBtn" ToolTip="logout" Style="{StaticResource PlainBtnStyle}" />
+                                <Button Content="Please Log In First" Name="logoutPassBtn"  IsEnabled="False" ToolTip="logout" Style="{StaticResource PlainBtnStyle}" Click="logoutPassBtn_Click" />
                             </UniformGrid>
                             <UniformGrid DockPanel.Dock="Top">
-                                <Expander Header="All Details" Name="allDetailsExpndr">
+                                <Expander Header="Login To Show All Details" Name="allDetailsExpndr">
                                 <ListView Name="passView" HorizontalAlignment="Stretch">
                                     <ListView.View>
                                         <GridView>

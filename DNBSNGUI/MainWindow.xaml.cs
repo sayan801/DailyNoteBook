@@ -48,25 +48,22 @@ namespace DNBSNGUI
             this.Close();
         }
 
-        private void minimizeBtn_Click(object sender, RoutedEventArgs e)
-        {
 
-        }
 
         private void virtualKeyboardDateBtn_Click(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Process.Start("calc");
         }
 
-        private void minimizeBtn_Click_1(object sender, RoutedEventArgs e)
+        private void minimizeBtn_Click(object sender, RoutedEventArgs e)
         {
             this.WindowState = WindowState.Minimized;
         }
 
-        private void maximizeBtn_Click(object sender, RoutedEventArgs e)
-        {
-            this.WindowState = WindowState.Maximized;
-        }
+        //private void maximizeBtn_Click(object sender, RoutedEventArgs e)
+        //{
+        //    this.WindowState = WindowState.Maximized;
+        //}
 
         private void passwordMLoginBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -80,6 +77,9 @@ namespace DNBSNGUI
                 loginpassPassExpndr.ToolTip = "Logged In";
                 allDetailsExpndr.IsExpanded = true;
                 logoutPassBtn.Content = "Logout";
+                allDetailsExpndr.Header = "All Details";
+                addInfoExpndr.Header = "Add Info";
+                logoutPassBtn.IsEnabled = true;
             }
             else
             {
@@ -88,6 +88,21 @@ namespace DNBSNGUI
                 ErrorMessageObj.Show();
                 passwordMPassBtnPB.Password = string.Empty;
             }
+        }
+
+        private void logoutDnbsnBtn_Click(object sender, RoutedEventArgs e)
+        {
+            dNBSNUserIDTB.Text = string.Empty;
+            dNBSNpassPB.Password = string.Empty;
+            mainLeftExpndr.IsExpanded = false;
+            mainLeftExpndr.IsEnabled = false;
+            mainTabControl.IsEnabled = false;
+            logoutDnbsnBtn.IsEnabled = false;
+            logoutDnbsnBtn.Content = "";
+            loginExpndr.IsExpanded = true;
+            loginExpndr.IsEnabled = true;
+            
+
         }
 
         private void dNBSNLoginBtn_Click(object sender, RoutedEventArgs e)
@@ -101,6 +116,9 @@ namespace DNBSNGUI
                 loginExpndr.IsEnabled = false;
                 loginExpndr.Header = "Logged In";
                 loginExpndr.IsExpanded = false;
+                logoutDnbsnBtn.IsEnabled = true;
+                logoutDnbsnBtn.Content = "LOG OUT";
+                logoutDnbsnBtn.ToolTip = "log out";
             }
             else
             {
@@ -109,6 +127,33 @@ namespace DNBSNGUI
                 ErrorMessageObj.Show();
                 dNBSNpassPB.Password = string.Empty;
             }
+        }
+
+        private void logoutPassBtn_Click(object sender, RoutedEventArgs e)
+        {
+            mainPassDP.IsEnabled = false;
+            passwordMPassBtnPB.Password = string.Empty;
+            passwordMUserIdTB.Text = string.Empty;
+            loginpassPassExpndr.IsExpanded = true;
+            loginpassPassExpndr.IsEnabled = true;
+            //loginpassPassExpndr.Header = "Logged In";
+            //loginpassPassExpndr.ToolTip = "Logged In";
+            allDetailsExpndr.IsExpanded = false;
+            logoutPassBtn.Content = "Please Log In First";
+            addInfoExpndr.Header = "Login To Add Info";
+            allDetailsExpndr.Header = "Login To Show All Details";
+            //allDetailsExpndr.Header = "All Details";
+            //addInfoExpndr.Header = "Add Info";
+            logoutPassBtn.IsEnabled = false;
+
+
+            //mainLeftExpndr.IsEnabled = false;
+            //mainLeftExpndr.IsExpanded = false;
+            //dNBSNpassPB.Password = string.Empty;
+            //mainTabControl.IsEnabled = false;
+            //loginExpndr.IsEnabled = true;
+            //loginExpndr.Header = "Logged In";
+            //loginExpndr.IsExpanded = true;
         }
     }
 }
