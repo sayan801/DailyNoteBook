@@ -85,7 +85,7 @@ namespace DNBSNGUI
             {
                 //MessageBox.Show("Please Enter correct Password");
                 DNBSNGUI.ErrorMessage ErrorMessageObj = new DNBSNGUI.ErrorMessage();
-                ErrorMessageObj.Show();
+                ErrorMessageObj.ShowDialog();
                 passwordMPassBtnPB.Password = string.Empty;
             }
         }
@@ -124,7 +124,7 @@ namespace DNBSNGUI
             {
                 //MessageBox.Show("Please Enter correct Password");
                 DNBSNGUI.ErrorMessage ErrorMessageObj = new DNBSNGUI.ErrorMessage();
-                ErrorMessageObj.Show();
+                ErrorMessageObj.ShowDialog();
                 dNBSNpassPB.Password = string.Empty;
             }
         }

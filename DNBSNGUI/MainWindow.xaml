@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:sys="clr-namespace:System;assembly=mscorlib"   
         Title="DNBSN"
-        MinHeight="650" MinWidth="1250" AllowsTransparency="True" ResizeMode="CanResizeWithGrip" Background="#FFE9E0E0" 
+        MinHeight="650" MinWidth="1250" AllowsTransparency="True" ResizeMode="CanResizeWithGrip" Background="Transparent" 
         WindowStyle="None" WindowStartupLocation="CenterScreen" Icon="/DNBSNGUI;component/Images/monotone_pen_write.png">
 
 
@@ -14,7 +14,13 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
-
+    <Border Margin="10">
+        <Border.Effect>
+        <DropShadowEffect Color="Black"
+                              Direction="270"
+                              BlurRadius="15"
+                              ShadowDepth="3" />
+    </Border.Effect>
     <DockPanel LastChildFill="True" Margin="2" Background="White">
         <DockPanel DockPanel.Dock="Top">
             
@@ -28,9 +34,9 @@
                 <Button Margin="0" Width="70" Height="30" Name="logoutDnbsnBtn" IsEnabled="False" Style="{StaticResource TitlebarBTN}" Click="logoutDnbsnBtn_Click"></Button>
             </UniformGrid>
         </DockPanel>
-        <UniformGrid DockPanel.Dock="Bottom" Rows="1">
-            <TextBlock  Height="25" Padding="7,1,0,0" Background="WhiteSmoke" VerticalAlignment="Center" Text="{Binding Source={x:Static sys:DateTime.Today}, StringFormat='{}{0:dddd, MMMM dd, yyyy}'}" Foreground="Black" ></TextBlock>
-            <TextBlock  Height="25" Padding="7,1,10,0" Background="WhiteSmoke" HorizontalAlignment="Right">Copyright 2012, Anirban Nandy</TextBlock>
+            <UniformGrid DockPanel.Dock="Bottom" Rows="1" Background="WhiteSmoke">
+            <TextBlock  Height="25" Padding="7,1,0,0"  VerticalAlignment="Center" Text="{Binding Source={x:Static sys:DateTime.Today}, StringFormat='{}{0:dddd, MMMM dd, yyyy}'}" Foreground="Black" ></TextBlock>
+            <TextBlock  Height="25" Padding="7,1,10,0"  HorizontalAlignment="Right">Copyright 2012, Anirban Nandy</TextBlock>
         </UniformGrid>
 
         <DockPanel DockPanel.Dock="Top" LastChildFill="True">
@@ -686,5 +692,5 @@
     </DockPanel>
 
 
-
+</Border>
 </Window>
