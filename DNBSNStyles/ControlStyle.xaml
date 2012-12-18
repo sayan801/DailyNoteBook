@@ -30,16 +30,107 @@
                             <Setter TargetName="border" Property="BorderBrush" Value="White" />
                             <Setter Property="Button.Background" Value="#D8D8D8" />
                         </Trigger>
+                        
                     </ControlTemplate.Triggers>
+                    
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
 
     <Style x:Key="TItemStyle" TargetType="TabItem">
-        <Setter Property="Width" Value="80" />
+        <Setter Property="Width" Value="115" />
+        <Setter Property="Height" Value="33" />
         <Setter Property="Background" Value="#D8D8D8" />
         <Setter Property="BorderBrush" Value="white" />
+
+            <!--<Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TabItem">
+                    <Border Name="border" 
+                            BorderThickness="1"
+                            Padding="4,2" 
+                            BorderBrush="White" 
+                            CornerRadius="0" 
+                            Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="#2E9AFE" />
+                            <Setter Property="Button.Background" Value="#2E9AFE" />
+                            <Setter Property="Button.Foreground" Value="White" />
+                        </Trigger>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="White" />
+                            <Setter Property="Button.Background" Value="#D8D8D8" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>-->
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TabItem}">
+                    <Grid>
+                        <Border Name="Border" Margin="0,0,0,0" Background="#D8D8D8"
+                  BorderBrush="#D8D8D8" BorderThickness="1,1,1,1" CornerRadius="0">
+                            <ContentPresenter x:Name="ContentSite" VerticalAlignment="Center"
+                              HorizontalAlignment="Center"
+                              ContentSource="Header" Margin="12,2,12,2"
+                              RecognizesAccessKey="True">
+                                <ContentPresenter.LayoutTransform>
+                                    <RotateTransform Angle="0" />
+                                </ContentPresenter.LayoutTransform>
+                            </ContentPresenter>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <!--<Setter Property="Panel.ZIndex" Value="100" />-->
+                            <Setter TargetName="Border" Property="Background" Value="#2E9AFE" />
+                            <!--<Setter TargetName="Border" Property="BorderThickness" Value="1,0,1,0" />-->
+                            <!--<Setter TargetName="Border" Property="BorderBrush" Value="White" />-->
+                            <!--<Setter Property="Button.Background" Value="White" />-->
+                            <Setter Property="Button.Foreground" Value="White" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Border" Property="BorderBrush" Value="#2E9AFE" />
+                            <Setter TargetName="Border" Property="Background" Value="#2E9AFE" />
+                            <Setter Property="Button.Foreground" Value="White" />
+                        </Trigger>
+                        <!--<Trigger Property="IsEnabled" Value="True">
+                            <Setter TargetName="Border" Property="Background" Value="#D8D8D8" />
+                            <Setter TargetName="Border" Property="BorderBrush" Value="White" />
+                            <Setter Property="Foreground" Value="DarkGray" />
+                        </Trigger>-->
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="HeaderTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Border x:Name="grid" >
+                        <ContentPresenter>
+                            <ContentPresenter.Content>
+                                <TextBlock Margin="4" FontSize="15" Text="{TemplateBinding Content}"/>
+                            </ContentPresenter.Content>
+                            <!--<ContentPresenter.LayoutTransform>
+                                <RotateTransform Angle="270" />
+                            </ContentPresenter.LayoutTransform>-->
+                        </ContentPresenter>
+
+                    </Border>
+
+                    <!--<DataTemplate.Triggers>
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type TabItem}},Path=IsSelected}" Value="True">
+                            <Setter TargetName="grid" Property="Background" Value="Green"/>
+                        </DataTrigger>
+                    </DataTemplate.Triggers>-->
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
     </Style>
 
     <Style x:Key="CheckBtyle" TargetType="CheckBox">
