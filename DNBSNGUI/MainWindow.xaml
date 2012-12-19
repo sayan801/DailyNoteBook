@@ -35,7 +35,7 @@
             </UniformGrid>
         </DockPanel>
             <UniformGrid DockPanel.Dock="Bottom" Rows="1" Background="WhiteSmoke">
-            <TextBlock  Height="25" Padding="7,1,0,0"  VerticalAlignment="Center" Text="{Binding Source={x:Static sys:DateTime.Today}, StringFormat='{}{0:dddd, MMMM dd, yyyy}'}" Foreground="Black" ></TextBlock>
+            <TextBlock  Height="25" Padding="7,1,0,0"  VerticalAlignment="Center" Text="{Binding Source={x:Static sys:DateTime.Today}, StringFormat='{}{0:hh mm ss dddd, MMMM dd, yyyy}'}" Foreground="Black" ></TextBlock>
             <TextBlock  Height="25" Padding="7,1,10,0"  HorizontalAlignment="Right">Copyright 2012, Anirban Nandy</TextBlock>
         </UniformGrid>
 
