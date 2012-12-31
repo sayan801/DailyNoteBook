@@ -1,0 +1,293 @@
+<Project>
+  <Name>DNB</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>Untitled</Name>
+    <Language>CSharp</Language>
+    <Entities />
+    <Relationships />
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>DNBData.dll</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>LinkedInDetails</Name>
+        <Access>Public</Access>
+        <Location left="842" top="858" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public List&lt;String&gt; updates</Member>
+        <Member type="Field">public DateTime lastLoginTime</Member>
+        <Member type="Property">public String Appid { get; set; }</Member>
+        <Member type="Property">public String username { get; set; }</Member>
+        <Member type="Property">public String password { get; set; }</Member>
+        <Member type="Constructor">public LinkedInDetails()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>GoogleCalenderDetails</Name>
+        <Access>Public</Access>
+        <Location left="630" top="858" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public List&lt;String&gt; updates</Member>
+        <Member type="Field">public DateTime lastLoginTime</Member>
+        <Member type="Property">public String Appid { get; set; }</Member>
+        <Member type="Property">public String username { get; set; }</Member>
+        <Member type="Property">public String password { get; set; }</Member>
+        <Member type="Constructor">public GoogleCalenderDetails()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>TwitterDetails</Name>
+        <Access>Public</Access>
+        <Location left="418" top="858" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public List&lt;String&gt; updates</Member>
+        <Member type="Field">public DateTime lastLoginTime</Member>
+        <Member type="Property">public String Appid { get; set; }</Member>
+        <Member type="Property">public String username { get; set; }</Member>
+        <Member type="Property">public String password { get; set; }</Member>
+        <Member type="Constructor">public TwitterDetails()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>FacebookDetails</Name>
+        <Access>Public</Access>
+        <Location left="206" top="858" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public List&lt;String&gt; updates</Member>
+        <Member type="Field">public DateTime lastLoginTime</Member>
+        <Member type="Property">public String Appid { get; set; }</Member>
+        <Member type="Property">public String username { get; set; }</Member>
+        <Member type="Property">public String password { get; set; }</Member>
+        <Member type="Constructor">public FacebookDetails()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>GoogleMapDetails</Name>
+        <Access>Public</Access>
+        <Location left="630" top="1143" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public List&lt;String&gt; updates</Member>
+        <Member type="Field">public DateTime lastLoginTime</Member>
+        <Member type="Property">public String Appid { get; set; }</Member>
+        <Member type="Property">public String username { get; set; }</Member>
+        <Member type="Property">public String password { get; set; }</Member>
+        <Member type="Constructor">public GoogleMapDetails()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>NoteDetails</Name>
+        <Access>Public</Access>
+        <Location left="206" top="1127" />
+        <Size width="162" height="247" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public List&lt;String&gt; updates</Member>
+        <Member type="Field">public DateTime lastLoginTime</Member>
+        <Member type="Field">public Boolean isFbSynced</Member>
+        <Member type="Field">public Boolean isTwitterSynced</Member>
+        <Member type="Field">public Boolean isLinkedInSynced</Member>
+        <Member type="Field">public Boolean isGoogleCalenderSynced</Member>
+        <Member type="Property">public String Appid { get; set; }</Member>
+        <Member type="Property">public String username { get; set; }</Member>
+        <Member type="Property">public String password { get; set; }</Member>
+        <Member type="Constructor">public NoteDetails()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>FacebookController</Name>
+        <Access>Public</Access>
+        <Location left="821" top="570" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public List&lt;FacebookDetails&gt; fbs</Member>
+        <Member type="Constructor">public FacebookController()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>TwitterController</Name>
+        <Access>Public</Access>
+        <Location left="805" top="259" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public List&lt;TwitterDetails&gt; twits</Member>
+        <Member type="Constructor">public TwitterController()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>LinkedInController</Name>
+        <Access>Public</Access>
+        <Location left="484" top="597" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public List&lt;LinkedInDetails&gt; linkedin</Member>
+        <Member type="Constructor">public LinkedInController()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>GoogleMapController</Name>
+        <Access>Public</Access>
+        <Location left="224" top="278" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public List&lt;GoogleMapDetails&gt; map</Member>
+        <Member type="Constructor">public GoogleMapController()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>GoogleCalenderController</Name>
+        <Access>Public</Access>
+        <Location left="206" top="597" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public List&lt;GoogleCalenderDetails&gt; calender</Member>
+        <Member type="Constructor">public GoogleCalenderController()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ReportInfo</Name>
+        <Access>Public</Access>
+        <Location left="842" top="1127" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">public String id { get; set; }</Member>
+        <Member type="Property">public DateTime date { get; set; }</Member>
+        <Member type="Property">public ReportType type { get; set; }</Member>
+        <Member type="Property">public String description { get; set; }</Member>
+        <Member type="Constructor">public ReportInfo()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>DaliyNoteBookController</Name>
+        <Access>Public</Access>
+        <Location left="506" top="259" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public List&lt;NoteDetails&gt; notes</Member>
+        <Member type="Field">public GoogleCalenderController GoogleCalenderController</Member>
+        <Member type="Field">public GoogleMapController GoogleMapController</Member>
+        <Member type="Field">public LinkedInController LinkedInController</Member>
+        <Member type="Field">public FacebookController FacebookController</Member>
+        <Member type="Field">public TwitterController TwitterController</Member>
+        <Member type="Field">public MemberManager MemberManager</Member>
+        <Member type="Constructor">public DaliyNoteBookController()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>MemberInfo</Name>
+        <Access>Public</Access>
+        <Location left="805" top="10" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public List&lt;PreferenceInfo&gt; prefs</Member>
+        <Member type="Property">public String id { get; set; }</Member>
+        <Member type="Property">public String name { get; set; }</Member>
+        <Member type="Property">public String address { get; set; }</Member>
+        <Member type="Property">public String contact { get; set; }</Member>
+        <Member type="Constructor">public MemberInfo()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>MemberManager</Name>
+        <Access>Public</Access>
+        <Location left="506" top="12" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public List&lt;MemberInfo&gt; members</Member>
+        <Member type="Constructor">public MemberManager()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>PreferenceInfo</Name>
+        <Access>Public</Access>
+        <Location left="224" top="12" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private String name</Member>
+        <Member type="Field">private String Description</Member>
+        <Member type="Field">private DateTime date</Member>
+        <Member type="Constructor">public PreferenceInfo()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Enum">
+        <Name>ReportType</Name>
+        <Access>Public</Access>
+        <Location left="431" top="1143" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Value>Single = 0</Value>
+        <Value>Daily = 1</Value>
+        <Value>Weekly = 2</Value>
+        <Value>Monthly = 3</Value>
+        <Value>Quarterly = 4</Value>
+        <Value>Yearly = 5</Value>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="12" second="10">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartRole>GoogleCalenderController</StartRole>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="12" second="9">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartRole>GoogleMapController</StartRole>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="12" second="8">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartRole>LinkedInController</StartRole>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="12" second="6">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartRole>FacebookController</StartRole>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="12" second="7">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartRole>TwitterController</StartRole>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="12" second="14">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartRole>MemberManager</StartRole>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
