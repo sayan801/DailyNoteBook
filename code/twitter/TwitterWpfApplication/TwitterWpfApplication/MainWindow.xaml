@@ -1,0 +1,13 @@
+﻿<Window x:Class="TwitterWpfApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <DockPanel LastChildFill="True">
+        <Button DockPanel.Dock="Top"  Content="Launch Twitter App" Height="35" HorizontalAlignment="Center"  Name="launchTwitterAppButton" Click="launchTwitterAppButton_Click" />
+        <UniformGrid Rows="1" Height="35" DockPanel.Dock="Top">
+            <TextBox Name="verificationCodeTxtBox"></TextBox>
+            <Button Name="verifyTwitterApp" Click="verifyTwitterApp_Click">Verify Twitter App</Button>
+        </UniformGrid>
+        <TextBlock   Name="tweetsTextBlock"  DockPanel.Dock="Bottom" />
+    </DockPanel>
+</Window>
