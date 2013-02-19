@@ -235,6 +235,17 @@
                                         <Expander Name="logintotwitterExpndr" DockPanel.Dock="Top" ExpandDirection="Down" IsExpanded="False" Header="Login to Twitter" VerticalAlignment="Center">
                                             <UniformGrid Columns="1">
                                                 <DockPanel Width="600" >
+                                                    <UniformGrid Rows="1">
+                                                        <Button Content="Launch Twitter App" Name="launchTwitterAppButton" Style="{StaticResource PlainBtnStyle}" Click="launchTwitterAppButton_Click" />
+                                                        <TextBox Name="verificationCodeTxtBox" Tag="enter apps code" Margin="20,8,0,8" Style="{StaticResource commonTBtyle}"></TextBox>
+                                                        <Button Name="verifyTwitterApp" Style="{StaticResource PlainBtnStyle}" Click="verifyTwitterApp_Click">Verify Twitter Apps Code</Button>
+                                                    </UniformGrid>
+                                                    
+                                                </DockPanel>
+                                            </UniformGrid>
+                                            
+                                            <!--<UniformGrid Columns="1">
+                                                <DockPanel Width="600" >
                                                     <UniformGrid Columns="3"  DockPanel.Dock="Left">
                                                         <Label Margin="10" Width="150">Twitter User Name</Label>
                                                         <Label Margin="10" Width="150">Password</Label>
@@ -247,12 +258,12 @@
                                                         <Label></Label>
                                                     </UniformGrid>
                                                 </DockPanel>
-                                            </UniformGrid>
+                                            </UniformGrid>-->
                                         </Expander>
-                                        <Button Name="refreshTwitterBtn" Content="Refresh Twitter Status" ToolTip="refresh" Style="{StaticResource PlainBtnStyle}"/>
+                                        <!--<Button Name="refreshTwitterBtn" Content="Refresh Twitter Status" ToolTip="refresh" Style="{StaticResource PlainBtnStyle}"/>-->
 
                                     </StackPanel>
-                                    <ListView></ListView>
+                                    <TextBlock   Name="tweetsTextBlock" Foreground="#FF8E6A6A" Background="#FFD06D6D" OpacityMask="#FF2F545F" />
                                 </DockPanel>
                             </TabItem>
                             <TabItem Name="linkedInTabItem" Style="{StaticResource TItemStyle}" Header="LinkedIn" ToolTip="linkedIn" >
