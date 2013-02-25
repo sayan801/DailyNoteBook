@@ -22,7 +22,7 @@
                               ShadowDepth="3" />
         </Border.Effect>
         <DockPanel LastChildFill="True" Margin="2" Background="White">
-            <DockPanel DockPanel.Dock="Top">
+            <DockPanel DockPanel.Dock="Top" LastChildFill="True">
 
                 <UniformGrid DockPanel.Dock="Right" HorizontalAlignment="Right" Rows="1">
 
@@ -33,6 +33,8 @@
                 <UniformGrid DockPanel.Dock="Right" HorizontalAlignment="Right">
                     <Button Margin="0" Width="70" Height="30" Name="logoutDnbsnBtn" IsEnabled="False" Style="{StaticResource TitlebarBTN}" Click="logoutDnbsnBtn_Click"></Button>
                 </UniformGrid>
+
+                <Label DockPanel.Dock="Left" Name="hntLginLbl" HorizontalContentAlignment="Left" Style="{StaticResource LblStyle}"> Login first to use Daily Note Book with Social Networking Updater </Label>
             </DockPanel>
             <UniformGrid DockPanel.Dock="Bottom" Rows="1" Background="WhiteSmoke">
                 <TextBlock  Height="25" Padding="7,1,0,0"  VerticalAlignment="Center" Text="{Binding Source={x:Static sys:DateTime.Today}, StringFormat='{}{0:hh mm ss dddd, MMMM dd, yyyy}'}" Foreground="Black" ></TextBlock>
@@ -47,7 +49,7 @@
                             <DockPanel Height="130" Width="186">
 
                                 <UniformGrid DockPanel.Dock="Left" Height="131" Columns="1">
-                                    <TextBox Name="dNBSNUserIDTB" Margin="20,8,0,8" Tag="enter user name" Style="{StaticResource commonTBtyle}"/>
+                                    <TextBox x:Name="dNBSNUserIDTB" Margin="20,8,0,8" Tag="enter user name" Style="{StaticResource commonTBtyle}"/>
                                     <PasswordBox Name="dNBSNpassPB" Margin="20,8,0,8"></PasswordBox>
                                     <Button Name="dNBSNLoginBtn" Margin="130,9,0,9" ToolTip="login" Style="{StaticResource PlainBtnStyle}" Click="dNBSNLoginBtn_Click">Login</Button>
 
@@ -141,7 +143,7 @@
                 </DockPanel>
                 <TabControl Name="mainTabControl" IsEnabled="False" Margin="3" BorderBrush="#FFE9E0E0">
 
-                    <TabItem Name="notesTabItem"  Style="{StaticResource TItemStyle}" Header="Note Book" ToolTip="note book">
+                    <TabItem Name="notesTabItem"  Style="{StaticResource TItemStyle}" Header="Note Book" ToolTip="note book" Background="red">
                         <!--<TabItem.Header >
                         <StackPanel Orientation="Vertical" ToolTip="note book">
                             <Image Height="40" Source="/DNBSNGUI;component/Images/steampunk_diary_icon_for_lotus_organiser_mkiii_by_yereverluvinuncleber-d590ojl.png" Width="50" />
@@ -637,4 +639,6 @@
 
 
     </Border>
+
+    
 </Window>

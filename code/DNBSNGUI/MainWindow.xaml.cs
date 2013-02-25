@@ -27,6 +27,7 @@ namespace DNBSNGUI
         {
             InitializeComponent();
             this.MouseLeftButtonDown += delegate { this.DragMove(); };
+            FocusManager.SetFocusedElement(this, dNBSNUserIDTB); 
         }
 
         private void kolkataBtn_Click(object sender, RoutedEventArgs e)
@@ -122,6 +123,7 @@ namespace DNBSNGUI
                 logoutDnbsnBtn.IsEnabled = true;
                 logoutDnbsnBtn.Content = "LOG OUT";
                 logoutDnbsnBtn.ToolTip = "log out";
+                hntLginLbl.Content = "";
             }
             else
             {
@@ -190,4 +192,13 @@ namespace DNBSNGUI
             }
         }
     }
+
+    //public class MyTextBox : TextBox
+    //{
+    //    public static DependencyProperty LabelTextProperty =
+    //        DependencyProperty.Register(
+    //            "LabelText",
+    //            typeof(string),
+    //            typeof(MyTextBox));
+    //}
 }

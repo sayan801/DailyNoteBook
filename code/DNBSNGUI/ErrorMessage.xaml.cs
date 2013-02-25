@@ -22,6 +22,7 @@ namespace DNBSNGUI
         {
             InitializeComponent();
             this.MouseLeftButtonDown += delegate { this.DragMove(); };
+            
         }
 
         private void viewAllBtn_Click(object sender, RoutedEventArgs e)
