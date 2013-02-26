@@ -34,7 +34,7 @@
                     <Button Margin="0" Width="70" Height="30" Name="logoutDnbsnBtn" IsEnabled="False" Style="{StaticResource TitlebarBTN}" Click="logoutDnbsnBtn_Click"></Button>
                 </UniformGrid>
 
-                <Label DockPanel.Dock="Left" Name="hntLginLbl" HorizontalContentAlignment="Left" Style="{StaticResource LblStyle}"> Login first to use Daily Note Book with Social Networking Updater </Label>
+                <Label DockPanel.Dock="Left" Name="hntLginLbl"  Style="{StaticResource LblStyle}"> Login first to use Daily Note Book with Social Networking Updater </Label>
             </DockPanel>
             <UniformGrid DockPanel.Dock="Bottom" Rows="1" Background="WhiteSmoke">
                 <TextBlock  Height="25" Padding="7,1,0,0"  VerticalAlignment="Center" Text="{Binding Source={x:Static sys:DateTime.Today}, StringFormat='{}{0:hh mm ss dddd, MMMM dd, yyyy}'}" Foreground="Black" ></TextBlock>
@@ -46,14 +46,21 @@
                     <Expander Name="loginExpndr" DockPanel.Dock="Top" IsExpanded="True" Header="Login in DNBSN" Padding="2,0,0,0">
                         <UniformGrid Columns="1" >
 
-                            <DockPanel Height="130" Width="186">
+                            <DockPanel Height="95" Width="186">
+                                <DockPanel LastChildFill="True" DockPanel.Dock="Top">
+                                    <Label DockPanel.Dock="left" Width="70" Style="{StaticResource LblStyle}">User ID :</Label>
+                                    <TextBox x:Name="dNBSNUserIDTB" DockPanel.Dock="Right" Margin="2" ToolTip="enter user id" Tag="enter user name" Style="{StaticResource commonTBtyle}"/>
+                                </DockPanel>
 
-                                <UniformGrid DockPanel.Dock="Left" Height="131" Columns="1">
-                                    <TextBox x:Name="dNBSNUserIDTB" Margin="20,8,0,8" Tag="enter user name" Style="{StaticResource commonTBtyle}"/>
-                                    <PasswordBox Name="dNBSNpassPB" Margin="20,8,0,8"></PasswordBox>
-                                    <Button Name="dNBSNLoginBtn" Margin="130,9,0,9" ToolTip="login" Style="{StaticResource PlainBtnStyle}" Click="dNBSNLoginBtn_Click">Login</Button>
-
-                                </UniformGrid>
+                                <DockPanel LastChildFill="True" DockPanel.Dock="Top">
+                                    <Label DockPanel.Dock="left" Width="70" Style="{StaticResource LblStyle}">Password :</Label>
+                                    <PasswordBox Name="dNBSNpassPB" Margin="2"></PasswordBox>
+                                </DockPanel>
+                                
+                                    <Button DockPanel.Dock="Bottom" Name="dNBSNLoginBtn" Margin="130,9,0,9" Height="25" ToolTip="login" Style="{StaticResource PlainBtnStyle}" Click="dNBSNLoginBtn_Click">Login</Button>
+                                
+                                
+                                
                             </DockPanel>
                         </UniformGrid>
                     </Expander>
@@ -61,9 +68,7 @@
                         <UniformGrid Columns="1">
                             <DockPanel>
                                 <Calendar DockPanel.Dock="Top" BorderBrush="#FFE9E0E0">
-                                    <!--<Calendar.Background>
-                                <ImageBrush ImageSource="/DNBSNGUI;component/Images/monotone_pen_write.png" Opacity="0.3"/>
-                            </Calendar.Background>-->
+                                    
                                 </Calendar>
                                 <TextBox Height="100" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" SpellCheck.IsEnabled="True">
                                     <TextBox.Style>
@@ -143,61 +148,104 @@
                 </DockPanel>
                 <TabControl Name="mainTabControl" IsEnabled="False" Margin="3" BorderBrush="#FFE9E0E0">
 
-                    <TabItem Name="notesTabItem"  Style="{StaticResource TItemStyle}" Header="Note Book" ToolTip="note book" Background="red">
-                        <!--<TabItem.Header >
-                        <StackPanel Orientation="Vertical" ToolTip="note book">
-                            <Image Height="40" Source="/DNBSNGUI;component/Images/steampunk_diary_icon_for_lotus_organiser_mkiii_by_yereverluvinuncleber-d590ojl.png" Width="50" />
-                                <TextBlock Text="Note Book" Margin="0,0,0,0" VerticalAlignment="Center" Foreground="CadetBlue" />
-                        </StackPanel>
-                    </TabItem.Header>-->
+                    <TabItem Name="notesTabItem"  Style="{StaticResource TItemStyle}" Header="Note Book"  Background="red">
+                        
                         <DockPanel LastChildFill="True">
-                            <UniformGrid DockPanel.Dock="Top" Rows="1">
-                                <Button Name="viewAllBtn" ToolTip="view all" Style="{StaticResource PlainBtnStyle}">View All</Button>
-                                <Button Name="dailyViewBtn" ToolTip="daily view" Style="{StaticResource PlainBtnStyle}">Daily View</Button>
-                                <Button Name="weeklyViewBtn" ToolTip="weekly view" Style="{StaticResource PlainBtnStyle}">Weekly View</Button>
-                                <Button Name="monthlyViewBtn" ToolTip="monthly view" Style="{StaticResource PlainBtnStyle}">Monthly View</Button>
-                                <Button Name="saveToExcelBtn" ToolTip="save to cxcel" Style="{StaticResource PlainBtnStyle}">Save To Excel</Button>
-                                <DatePicker ToolTip="select a date" Margin="10" Name="goToDateDP"></DatePicker>
-                                <Button Name="goToDateBtn" ToolTip="go to date" Style="{StaticResource PlainBtnStyle}">Go To Date</Button>
-                                <Button Name="virtualKeyboardDateBtn" ToolTip="Virtual Keyboard" Style="{StaticResource PlainBtnStyle}" Click="virtualKeyboardDateBtn_Click">Virtual Keyboard</Button>
+                            <DockPanel DockPanel.Dock="Top" >
+                                
 
-                            </UniformGrid>
+                                <DockPanel DockPanel.Dock="Bottom">
+                                    <UniformGrid Rows="1">
+                                        <Label></Label>
+                                        <Label></Label>
+                                        <Label></Label>
+                                        <Label></Label>
+                                        <Button Name="saveNotesBtn" Content="Save Notes"  Style="{StaticResource PlainBtnStyle}" />
+                                        <Button Name="clearFieldsBtn"  Content="Clear Fields"  Style="{StaticResource PlainBtnStyle}" />
+                                    </UniformGrid>
+                                </DockPanel>
 
-                            <DockPanel DockPanel.Dock="Bottom">
-                                <UniformGrid Rows="1">
-                                    <Label></Label>
-                                    <Label></Label>
-                                    <Label></Label>
-                                    <Label></Label>
-                                    <Button Name="saveNotesBtn" Content="Save Notes"  Style="{StaticResource PlainBtnStyle}" />
-                                    <Button Name="clearFieldsBtn"  Content="Clear Fields"  Style="{StaticResource PlainBtnStyle}" />
-                                </UniformGrid>
+
+
+                                <TextBox Name="notesTB" DockPanel.Dock="Top" TextBlock.LineHeight="20" TextBlock.LineStackingStrategy="BlockLineHeight" Padding="20,10,20,20" Height="100">
+                                    <TextBox.Background>
+                                        <DrawingBrush TileMode="Tile" Stretch="None" Viewport="0,0,20,20" ViewportUnits="Absolute" Opacity="1">
+                                            <DrawingBrush.Drawing>
+                                                <GeometryDrawing>
+                                                    <GeometryDrawing.Pen>
+                                                        <Pen Brush="RoyalBlue" Thickness=".1" />
+                                                    </GeometryDrawing.Pen>
+                                                    <GeometryDrawing.Geometry>
+                                                        <LineGeometry StartPoint="0,0" EndPoint="20,0"/>
+                                                    </GeometryDrawing.Geometry>
+                                                </GeometryDrawing>
+                                            </DrawingBrush.Drawing>
+                                        </DrawingBrush>
+                                    </TextBox.Background>
+                                    Start writing from here...
+                                </TextBox>
                             </DockPanel>
+                            <DockPanel DockPanel.Dock="Bottom">
+                                
+
+                                <DockPanel DockPanel.Dock="Bottom">
+                                    <UniformGrid Rows="1">
+                                        <Button Name="rewriBtnBtn" ToolTip="save to cxcel" Style="{StaticResource PlainBtnStyle}">Rewrite Event</Button>
+                                        <Button Name="dltevntBtnBtn" ToolTip="save to cxcel" Style="{StaticResource PlainBtnStyle}">Delete Event</Button>
+                                        <Button Name="saveToExcelBtn" ToolTip="save to cxcel" Style="{StaticResource PlainBtnStyle}">Save To Excel</Button>
+                                        <DatePicker ToolTip="select a date" Margin="10" Name="goToDateDP"></DatePicker>
+                                        <Button Name="goToDateBtn" ToolTip="go to date" Style="{StaticResource PlainBtnStyle}">Go To Date</Button>
+                                    </UniformGrid>
+                                </DockPanel>
 
 
 
-                            <TextBox Name="notesTB" TextBlock.LineHeight="20" TextBlock.LineStackingStrategy="BlockLineHeight" Padding="20,10,20,20">
-                                <TextBox.Background>
-                                    <DrawingBrush TileMode="Tile" Stretch="None" Viewport="0,0,20,20" ViewportUnits="Absolute" Opacity="1">
-                                        <DrawingBrush.Drawing>
-                                            <GeometryDrawing>
-                                                <GeometryDrawing.Pen>
-                                                    <Pen Brush="RoyalBlue" Thickness=".1" />
-                                                </GeometryDrawing.Pen>
-                                                <GeometryDrawing.Geometry>
-                                                    <LineGeometry StartPoint="0,0" EndPoint="20,0"/>
-                                                </GeometryDrawing.Geometry>
-                                            </GeometryDrawing>
-                                        </DrawingBrush.Drawing>
-                                    </DrawingBrush>
-                                </TextBox.Background>
-                                Start writing from here...
-                            </TextBox>
+                                
+                            </DockPanel>
+                            
+                            
+                            <DockPanel>
+                                <TabControl Name="TabControl" Margin="3" BorderBrush="#FFE9E0E0" TabStripPlacement="Right" HorizontalContentAlignment="Left" >
+                                    <TabItem Name="bItem"  Style="{StaticResource TItemStyle}" Header="View All" Width="150">
+
+                                        <DockPanel LastChildFill="True">
+
+                                            <ListView></ListView>
+                                        </DockPanel>
+                                    </TabItem>
+
+                                    <TabItem Name="linktem" Style="{StaticResource TItemStyle}" Header="Daily View"  Width="150">
+                                        <DockPanel LastChildFill="True">
+                                            
+                                            <ListView></ListView>
+                                        </DockPanel>
+                                    </TabItem>
+                                    <TabItem Name="googlItem" Style="{StaticResource TItemStyle}" Header="Weekly View"  Width="150">
+                                        <DockPanel LastChildFill="True">
+                                            
+                                            <ListView></ListView>
+                                        </DockPanel>
+                                    </TabItem>
+                                    <TabItem Name="foutem"  Style="{StaticResource TItemStyle}" Header="Monthly View"  Width="150">
+                                        <DockPanel LastChildFill="True">
+                                            
+                                            <ListView></ListView>
+                                        </DockPanel>
+                                    </TabItem>
+                                </TabControl>
+                            </DockPanel>
+                            
+
+                           
+
+
+
+                           
 
                         </DockPanel>
 
                     </TabItem>
-                    <TabItem Name="mainSocialSiteTabItem"  Style="{StaticResource TItemStyle}" Header="Social Site" ToolTip="social site">
+                    <TabItem Name="mainSocialSiteTabItem"  Style="{StaticResource TItemStyle}" Header="Social Site" >
                         <TabControl Name="socialSiteTabControl" Margin="3" BorderBrush="#FFE9E0E0" TabStripPlacement="Left" HorizontalContentAlignment="Left" >
                             <TabItem Name="fbTabItem"  Style="{StaticResource TItemStyle}" Header="Facebook" ToolTip="facebook">
 
@@ -246,23 +294,9 @@
                                                 </DockPanel>
                                             </UniformGrid>
                                             
-                                            <!--<UniformGrid Columns="1">
-                                                <DockPanel Width="600" >
-                                                    <UniformGrid Columns="3"  DockPanel.Dock="Left">
-                                                        <Label Margin="10" Width="150">Twitter User Name</Label>
-                                                        <Label Margin="10" Width="150">Password</Label>
-                                                        <Label></Label>
-                                                        <TextBox Margin="10" Width="150" Tag="enter user name" Style="{StaticResource commonTBtyle}" />
-                                                        <PasswordBox Name="twitterPB" Width="150" Margin="10"></PasswordBox>
-                                                        <Button Name="twitterLoginBtn" Width="100" ToolTip="login" Style="{StaticResource PlainBtnStyle}">Login</Button>
-                                                        <Label></Label>
-                                                        <CheckBox Margin="10" Width="150">Stay logged in</CheckBox>
-                                                        <Label></Label>
-                                                    </UniformGrid>
-                                                </DockPanel>
-                                            </UniformGrid>-->
+                                           
                                         </Expander>
-                                        <!--<Button Name="refreshTwitterBtn" Content="Refresh Twitter Status" ToolTip="refresh" Style="{StaticResource PlainBtnStyle}"/>-->
+                                        
 
                                     </StackPanel>
                                     <TextBlock   Name="tweetsTextBlock" Foreground="#FF8E6A6A" Background="#FFD06D6D" OpacityMask="#FF2F545F" />
@@ -345,7 +379,7 @@
                             </TabItem>
                         </TabControl>
                     </TabItem>
-                    <TabItem Name="googleCalendarTabItem" Style="{StaticResource TItemStyle}" Header="Calendar" ToolTip="google calendar">
+                    <TabItem Name="googleCalendarTabItem" Style="{StaticResource TItemStyle}" Header="Calendar">
                         <DockPanel LastChildFill="True">
                             <UniformGrid Rows="1" DockPanel.Dock="Bottom" Height="50">
                                 <Button  Style="{StaticResource PlainBtnStyle}" Name="gcalenderBtn" Click="gcalenderBtn_Click">Calendar</Button>
@@ -356,7 +390,7 @@
                             <WebBrowser Name="gCalenderWb"></WebBrowser>
                         </DockPanel>
                     </TabItem>
-                    <TabItem Name="liveChatTabItem" Style="{StaticResource TItemStyle}" Header="Chat" ToolTip="chat">
+                    <TabItem Name="liveChatTabItem" Style="{StaticResource TItemStyle}" Header="Chat">
                         <DockPanel LastChildFill="True">
                             <Expander DockPanel.Dock="Top" ExpandDirection="Down" IsExpanded="False" Header="Login">
                                 <UniformGrid Columns="1">
@@ -385,7 +419,7 @@
                             <ListView></ListView>
                         </DockPanel>
                     </TabItem>
-                    <TabItem Name="googleMapTabItem"  Style="{StaticResource TItemStyle}" Header="Map" ToolTip="google map">
+                    <TabItem Name="googleMapTabItem"  Style="{StaticResource TItemStyle}" Header="Map" >
                         <DockPanel LastChildFill="True">
                             <UniformGrid Rows="1" DockPanel.Dock="Bottom" Height="50">
                                 <Button  Name="kolkataBtn" Style="{StaticResource PlainBtnStyle}" Click="kolkataBtn_Click">Load Map</Button>
@@ -396,7 +430,7 @@
                             <WebBrowser Name="mapWb"></WebBrowser>
                         </DockPanel>
                     </TabItem>
-                    <TabItem Name="contactBookTabItem" Style="{StaticResource TItemStyle}" Header="Contacts" ToolTip="contacts">
+                    <TabItem Name="contactBookTabItem" Style="{StaticResource TItemStyle}" Header="Contacts">
                         <DockPanel LastChildFill="True">
                             <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
                                 <Expander DockPanel.Dock="Top" ExpandDirection="Down" IsExpanded="False" Header="Add Contact" VerticalAlignment="Center">
@@ -454,13 +488,8 @@
                             </ListView>
                         </DockPanel>
                     </TabItem>
-                    <TabItem Name="passTabItem" Style="{StaticResource TItemStyle}" Header="Password" ToolTip="password manager">
-                        <!--<TabItem.Header>
-                        <StackPanel Orientation="Vertical" ToolTip="password manager">
-                            <Image Height="40" Source="/DNBSNGUI;component/Images/password_icon.png" Width="50" />
-                            <TextBlock Text="Password Manage" Margin="0,0,0,0" VerticalAlignment="Center" Foreground="CadetBlue" />
-                        </StackPanel>
-                    </TabItem.Header>-->
+                    <TabItem Name="passTabItem" Style="{StaticResource TItemStyle}" Header="Password">
+                       
                         <DockPanel LastChildFill="True">
                             <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
                                 <Expander Name="loginpassPassExpndr" DockPanel.Dock="Top" ExpandDirection="Down" IsExpanded="True" Header="Login" VerticalAlignment="Center" >
@@ -538,13 +567,8 @@
 
                         </DockPanel>
                     </TabItem>
-                    <TabItem Name="extraTabItem" Style="{StaticResource TItemStyle}" Header="Extra" ToolTip="extra">
-                        <!--<TabItem.Header>
-                        <StackPanel Orientation="Vertical" ToolTip="task manager">
-                            <Image Height="40" Source="/DNBSNGUI;component/Images/Task%20Report%20Hot.png" Width="50" />
-                            <TextBlock Text="Task and Expense" Margin="0,0,0,0" VerticalAlignment="Center" Foreground="CadetBlue" />
-                        </StackPanel>
-                    </TabItem.Header>-->
+                    <TabItem Name="extraTabItem" Style="{StaticResource TItemStyle}" Header="Extra">
+                        
                         <TabControl Name="expnceControl" Margin="3" BorderBrush="#FFE9E0E0" TabStripPlacement="Left" HorizontalContentAlignment="Left" >
                             <TabItem Name="taskTabItem"  Style="{StaticResource TItemStyle}" Header="Task" ToolTip="task">
 

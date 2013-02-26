@@ -27,7 +27,8 @@ namespace DNBSNGUI
         {
             InitializeComponent();
             this.MouseLeftButtonDown += delegate { this.DragMove(); };
-            FocusManager.SetFocusedElement(this, dNBSNUserIDTB); 
+            FocusManager.SetFocusedElement(this, dNBSNUserIDTB);
+            
         }
 
         private void kolkataBtn_Click(object sender, RoutedEventArgs e)
@@ -150,6 +151,7 @@ namespace DNBSNGUI
             //allDetailsExpndr.Header = "All Details";
             //addInfoExpndr.Header = "Add Info";
             logoutPassBtn.IsEnabled = false;
+            hntLginLbl.Content = "Login first to use Daily Note Book with Social Networking Updater";
 
 
             //mainLeftExpndr.IsEnabled = false;
@@ -193,12 +195,5 @@ namespace DNBSNGUI
         }
     }
 
-    //public class MyTextBox : TextBox
-    //{
-    //    public static DependencyProperty LabelTextProperty =
-    //        DependencyProperty.Register(
-    //            "LabelText",
-    //            typeof(string),
-    //            typeof(MyTextBox));
-    //}
+   
 }
