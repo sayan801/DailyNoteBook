@@ -56,14 +56,52 @@
                                     <Label DockPanel.Dock="left" Width="70" Style="{StaticResource LblStyle}">Password :</Label>
                                     <PasswordBox Name="dNBSNpassPB" Margin="2"></PasswordBox>
                                 </DockPanel>
-                                
-                                    <Button DockPanel.Dock="Bottom" Name="dNBSNLoginBtn" Margin="130,9,0,9" Height="25" ToolTip="login" Style="{StaticResource PlainBtnStyle}" Click="dNBSNLoginBtn_Click">Login</Button>
+                                <DockPanel LastChildFill="True" DockPanel.Dock="Bottom">
+                                    <TextBlock Text="New user !! " DockPanel.Dock="left" VerticalAlignment="Center" >
+                                        <Hyperlink Click="createAcHp_Click"> Click here</Hyperlink>
+                                    </TextBlock>
+                                    <Button Name="dNBSNLoginBtn" ToolTip="login" Style="{StaticResource PlainBtnStyle}" Click="dNBSNLoginBtn_Click">Login</Button>
+                                </DockPanel>
+                                    
                                 
                                 
                                 
                             </DockPanel>
                         </UniformGrid>
                     </Expander>
+                    <Expander Name="newAcExpndr" DockPanel.Dock="Top" IsExpanded="False" Visibility="Collapsed" Header="Create New Account" Padding="2,0,0,0">
+                        <UniformGrid Columns="1" >
+
+                            <DockPanel Height="145" Width="186">
+                                <DockPanel LastChildFill="True" DockPanel.Dock="Top">
+                                    <Label DockPanel.Dock="left" Width="70" Style="{StaticResource LblStyle}">User ID :</Label>
+                                    <TextBox x:Name="dNBSNNewUserIDTB" DockPanel.Dock="Right" Margin="2" ToolTip="enter user id" Tag="enter user name" Style="{StaticResource commonTBtyle}"/>
+                                </DockPanel>
+
+                                <DockPanel LastChildFill="True" DockPanel.Dock="Top">
+                                    <Label DockPanel.Dock="left" Width="70" Style="{StaticResource LblStyle}">Password :</Label>
+                                    <PasswordBox Name="dNBSNNewPassPB" Margin="2"></PasswordBox>
+                                </DockPanel>
+                                <DockPanel LastChildFill="True" DockPanel.Dock="Top">
+                                    <Label DockPanel.Dock="left" Width="70" Style="{StaticResource LblStyle}">Re Type :</Label>
+                                    <PasswordBox Name="dNBSNNewRepassPB" Margin="2"></PasswordBox>
+                                </DockPanel>
+                                <DockPanel LastChildFill="True" DockPanel.Dock="Top">
+                                    <Label DockPanel.Dock="left" Width="70" Style="{StaticResource LblStyle}">eMail :</Label>
+                                    <TextBox x:Name="dNBSNMailPB" Margin="2" ToolTip="enter email" Tag="enter email" Style="{StaticResource commonTBtyle}"></TextBox>
+                                </DockPanel>
+                                <DockPanel  DockPanel.Dock="Bottom">
+                                    <Button Name="cancelNewAcBtn" ToolTip="Cancel" Style="{StaticResource PlainBtnStyle}" Click="cancelNewAcBtn_Click">Cancel</Button>
+                                    <Button Name="dNBSSubmitBtn" ToolTip="submit" Style="{StaticResource PlainBtnStyle}">Submit</Button>
+                                </DockPanel>
+
+
+
+
+                            </DockPanel>
+                        </UniformGrid>
+                    </Expander>
+
                     <Expander Name="mainLeftExpndr" IsEnabled="False" IsExpanded="False" Width="200" DockPanel.Dock="Top" Padding="2,0,0,0"  ExpandDirection="Right" Header="H&#x0a; I&#x0a;D&#x0a;E&#x0a;/&#x0a;U&#x0a;N&#x0a;H&#x0a; I&#x0a;D&#x0a;E">
                         <UniformGrid Columns="1">
                             <DockPanel>

@@ -119,8 +119,9 @@ namespace DNBSNGUI
                 dNBSNpassPB.Password = string.Empty;
                 mainTabControl.IsEnabled = true;
                 loginExpndr.IsEnabled = false;
-                loginExpndr.Header = "Logged In";
-                loginExpndr.IsExpanded = false;
+                //loginExpndr.Header = "Logged In";
+                //loginExpndr.IsExpanded = false;
+                loginExpndr.Visibility = Visibility.Collapsed;
                 logoutDnbsnBtn.IsEnabled = true;
                 logoutDnbsnBtn.Content = "LOG OUT";
                 logoutDnbsnBtn.ToolTip = "log out";
@@ -154,6 +155,9 @@ namespace DNBSNGUI
             hntLginLbl.Content = "Login first to use Daily Note Book with Social Networking Updater";
 
 
+            loginExpndr.Visibility = Visibility.Visible;
+            loginExpndr.IsExpanded = true;
+
             //mainLeftExpndr.IsEnabled = false;
             //mainLeftExpndr.IsExpanded = false;
             //dNBSNpassPB.Password = string.Empty;
@@ -162,6 +166,24 @@ namespace DNBSNGUI
             //loginExpndr.Header = "Logged In";
             //loginExpndr.IsExpanded = true;
         }
+
+        private void createAcHp_Click(object sender, RoutedEventArgs e)
+        {
+            newAcExpndr.Visibility = Visibility.Visible;
+            newAcExpndr.IsExpanded = true;
+
+            loginExpndr.Visibility = Visibility.Collapsed;
+        }
+
+        private void cancelNewAcBtn_Click(object sender, RoutedEventArgs e)
+        {
+            newAcExpndr.Visibility = Visibility.Collapsed;
+            
+
+            loginExpndr.Visibility = Visibility.Visible;
+            loginExpndr.IsExpanded = true;
+        }
+
 
         TwitterService service;
         OAuthRequestToken requestToken;
@@ -193,6 +215,8 @@ namespace DNBSNGUI
                 tweetsTextBlock.Text += tweet.User.ScreenName + " says " + tweet.Text + "\n";
             }
         }
+
+        
     }
 
    
