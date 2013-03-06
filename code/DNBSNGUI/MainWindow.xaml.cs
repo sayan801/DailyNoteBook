@@ -89,8 +89,8 @@ namespace DNBSNGUI
             else
             {
                 //MessageBox.Show("Please Enter correct Password");
-                DNBSNGUI.ErrorMessage ErrorMessageObj = new DNBSNGUI.ErrorMessage();
-                ErrorMessageObj.ShowDialog();
+                //DNBSNGUI.ErrorMessage ErrorMessageObj = new DNBSNGUI.ErrorMessage();
+                //ErrorMessageObj.ShowDialog();
                 passwordMPassBtnPB.Password = string.Empty;
             }
         }
@@ -130,8 +130,10 @@ namespace DNBSNGUI
             else
             {
                 //MessageBox.Show("Please Enter correct Password");
-                DNBSNGUI.ErrorMessage ErrorMessageObj = new DNBSNGUI.ErrorMessage();
-                ErrorMessageObj.ShowDialog();
+                //DNBSNGUI.ErrorMessage ErrorMessageObj = new DNBSNGUI.ErrorMessage();
+                //ErrorMessageObj.ShowDialog();
+
+                errorMsgLbl.Content = "Wrong User ID or Password";
                 dNBSNpassPB.Password = string.Empty;
             }
         }
@@ -155,8 +157,7 @@ namespace DNBSNGUI
             hntLginLbl.Content = "Login first to use Daily Note Book with Social Networking Updater";
 
 
-            loginExpndr.Visibility = Visibility.Visible;
-            loginExpndr.IsExpanded = true;
+            
 
             //mainLeftExpndr.IsEnabled = false;
             //mainLeftExpndr.IsExpanded = false;
@@ -173,15 +174,21 @@ namespace DNBSNGUI
             newAcExpndr.IsExpanded = true;
 
             loginExpndr.Visibility = Visibility.Collapsed;
+            dNBSNNewUserIDTB.Clear();
+            dNBSNNewPassPB.Clear();
+            dNBSNNewRepassPB.Clear();
+            dNBSNHintsTB.Clear();
         }
 
-        private void cancelNewAcBtn_Click(object sender, RoutedEventArgs e)
+        private void goLogin_Click(object sender, RoutedEventArgs e)
         {
             newAcExpndr.Visibility = Visibility.Collapsed;
             
 
             loginExpndr.Visibility = Visibility.Visible;
             loginExpndr.IsExpanded = true;
+            dNBSNUserIDTB.Clear();
+            dNBSNpassPB.Clear();
         }
 
 
@@ -215,6 +222,73 @@ namespace DNBSNGUI
                 tweetsTextBlock.Text += tweet.User.ScreenName + " says " + tweet.Text + "\n";
             }
         }
+
+        private void dNBSSubmitBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (!dNBSNNewUserIDTB.Text.Equals(string.Empty) && 
+                !dNBSNNewPassPB.Password.Equals(string.Empty) && 
+                !dNBSNNewRepassPB.Password.Equals(string.Empty) && 
+                !dNBSNHintsTB.Text.Equals(string.Empty))
+            {
+                if(!dNBSNNewPassPB.Password.Equals(dNBSNNewRepassPB.Password))
+                {
+                    
+                    dNBSNNewPassPB.Clear();
+                    dNBSNNewRepassPB.Clear();
+                   
+                    createErrorMsgLbl.Content = "Please Enter same Password";
+                    
+                }
+                else
+                {
+                DNBSNData.UserInfo newUser = new DNBSNData.UserInfo();
+
+                newUser.id = GenerateId();
+
+                newUser.userId = dNBSNNewUserIDTB.Text;
+                newUser.pass = dNBSNNewPassPB.Password;
+                newUser.hints = dNBSNHintsTB.Text;
+
+                DNBSNDb.DbInteraction.DoRegisterNewUser(newUser);
+
+                newAcExpndr.Visibility = Visibility.Collapsed;
+                loginExpndr.Visibility = Visibility.Visible;
+                loginExpndr.IsExpanded = true;
+                dNBSNUserIDTB.Clear();
+                dNBSNpassPB.Clear();
+
+                }
+            }
+            else
+            {
+                createErrorMsgLbl.Content = "Correctly Enter Info ";
+                
+            }
+
+        }
+        private string GenerateId()
+        {
+            return DateTime.Now.ToOADate().ToString();
+        }
+
+
+
+        //if (oldPasswordBox.Password.Equals(FetchSPTSettings.FetchePassword()))
+        //    {
+        //        if (!newPasswordBox.Password.Equals(string.Empty) && newPasswordBox.Password.Equals(reNewPasswordBox.Password))
+        //        {
+        //            FetchSPTSettings.EditSptPassword(newPasswordBox.Password);
+        //            this.Close();
+        //        }
+        //        else
+        //            MessageBox.Show("Please Enter same Password both the password field for new one");
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Please Enter correct Password");
+        //    }
+
+
 
         
     }

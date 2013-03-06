@@ -64,10 +64,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="ErrorMessage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -75,9 +71,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ErrorMessage.xaml.cs">
-      <DependentUpon>ErrorMessage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -140,6 +133,14 @@
     <Resource Include="Images\monotone_pen_write.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DNBData\DNBSNData.csproj">
+      <Project>{9CA46215-E2BC-4D8B-A42D-748A897840A5}</Project>
+      <Name>DNBSNData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DNBSNDb\DNBSNDb.csproj">
+      <Project>{1927B753-C125-45EC-981D-D178F294E23C}</Project>
+      <Name>DNBSNDb</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DNBSNStyles\DNBSNStyles.csproj">
       <Project>{20AEEBC4-15DE-4D4A-ADB6-DA959E61A98A}</Project>
       <Name>DNBSNStyles</Name>

@@ -46,7 +46,7 @@
                     <Expander Name="loginExpndr" DockPanel.Dock="Top" IsExpanded="True" Header="Login in DNBSN" Padding="2,0,0,0">
                         <UniformGrid Columns="1" >
 
-                            <DockPanel Height="95" Width="186">
+                            <DockPanel Height="149" Width="186">
                                 <DockPanel LastChildFill="True" DockPanel.Dock="Top">
                                     <Label DockPanel.Dock="left" Width="70" Style="{StaticResource LblStyle}">User ID :</Label>
                                     <TextBox x:Name="dNBSNUserIDTB" DockPanel.Dock="Right" Margin="2" ToolTip="enter user id" Tag="enter user name" Style="{StaticResource commonTBtyle}"/>
@@ -56,11 +56,17 @@
                                     <Label DockPanel.Dock="left" Width="70" Style="{StaticResource LblStyle}">Password :</Label>
                                     <PasswordBox Name="dNBSNpassPB" Margin="2"></PasswordBox>
                                 </DockPanel>
-                                <DockPanel LastChildFill="True" DockPanel.Dock="Bottom">
-                                    <TextBlock Text="New user !! " DockPanel.Dock="left" VerticalAlignment="Center" >
-                                        <Hyperlink Click="createAcHp_Click"> Click here</Hyperlink>
+                                <DockPanel LastChildFill="True" DockPanel.Dock="Top">
+                                    <TextBlock Text="New User !! " DockPanel.Dock="left" VerticalAlignment="Center" >
+                                        <Hyperlink Click="createAcHp_Click"> Register</Hyperlink>
                                     </TextBlock>
                                     <Button Name="dNBSNLoginBtn" ToolTip="login" Style="{StaticResource PlainBtnStyle}" Click="dNBSNLoginBtn_Click">Login</Button>
+                                </DockPanel>
+                                <DockPanel DockPanel.Dock="Bottom">
+                                    <UniformGrid Rows="2">
+                                    <Label Name="errorMsgLbl"></Label>
+                                    <Label Name="hintsMsgLbl"></Label>
+                                    </UniformGrid>
                                 </DockPanel>
                                     
                                 
@@ -72,7 +78,7 @@
                     <Expander Name="newAcExpndr" DockPanel.Dock="Top" IsExpanded="False" Visibility="Collapsed" Header="Create New Account" Padding="2,0,0,0">
                         <UniformGrid Columns="1" >
 
-                            <DockPanel Height="145" Width="186">
+                            <DockPanel Height="175" Width="186">
                                 <DockPanel LastChildFill="True" DockPanel.Dock="Top">
                                     <Label DockPanel.Dock="left" Width="70" Style="{StaticResource LblStyle}">User ID :</Label>
                                     <TextBox x:Name="dNBSNNewUserIDTB" DockPanel.Dock="Right" Margin="2" ToolTip="enter user id" Tag="enter user name" Style="{StaticResource commonTBtyle}"/>
@@ -86,13 +92,20 @@
                                     <Label DockPanel.Dock="left" Width="70" Style="{StaticResource LblStyle}">Re Type :</Label>
                                     <PasswordBox Name="dNBSNNewRepassPB" Margin="2"></PasswordBox>
                                 </DockPanel>
+                                <DockPanel LastChildFill="True" DockPanel.Dock="Top"></DockPanel>
                                 <DockPanel LastChildFill="True" DockPanel.Dock="Top">
-                                    <Label DockPanel.Dock="left" Width="70" Style="{StaticResource LblStyle}">eMail :</Label>
-                                    <TextBox x:Name="dNBSNMailPB" Margin="2" ToolTip="enter email" Tag="enter email" Style="{StaticResource commonTBtyle}"></TextBox>
+                                    <Label DockPanel.Dock="left" Width="70" Style="{StaticResource LblStyle}">Hints :</Label>
+                                    <TextBox x:Name="dNBSNHintsTB" Margin="2" ToolTip="enter hints" Tag="enter hints" Style="{StaticResource commonTBtyle}"></TextBox>
                                 </DockPanel>
-                                <DockPanel  DockPanel.Dock="Bottom">
-                                    <Button Name="cancelNewAcBtn" ToolTip="Cancel" Style="{StaticResource PlainBtnStyle}" Click="cancelNewAcBtn_Click">Cancel</Button>
-                                    <Button Name="dNBSSubmitBtn" ToolTip="submit" Style="{StaticResource PlainBtnStyle}">Submit</Button>
+                                <DockPanel  DockPanel.Dock="Top">
+                                    <TextBlock Text="Already User !! " DockPanel.Dock="left" VerticalAlignment="Center" >
+                                        <Hyperlink Click="goLogin_Click">Login</Hyperlink>
+                                    </TextBlock>
+                                    <Button Name="dNBSSubmitBtn" ToolTip="submit" Style="{StaticResource PlainBtnStyle}" Click="dNBSSubmitBtn_Click">Submit</Button>
+                                </DockPanel>
+                                <DockPanel DockPanel.Dock="Bottom">
+                                    <Label Name="createErrorMsgLbl"></Label>
+
                                 </DockPanel>
 
 
