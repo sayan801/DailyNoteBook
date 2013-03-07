@@ -69,5 +69,51 @@ namespace DNBSNDb
         }
 
         #endregion
+
+        //#region Note
+
+        //public static int DoEnterNewNote(UserInfo NewUser)
+        //{
+        //    return DoEnterNewNoteindb(NewUser);
+        //}
+
+        //private static int DoRegisterNewuserindb(UserInfo NewUser)
+        //{
+        //    int returnVal = 0;
+        //    MySql.Data.MySqlClient.MySqlConnection msqlConnection = OpenDbConnection();
+
+        //    try
+        //    {
+        //        //define the command reference
+        //        MySql.Data.MySqlClient.MySqlCommand msqlCommand = new MySql.Data.MySqlClient.MySqlCommand();
+
+        //        //define the connection used by the command object
+        //        msqlCommand.Connection = msqlConnection;
+
+        //        msqlCommand.CommandText = "INSERT INTO user(id,userid,passwrd,hints) " + "VALUES(@id,@userid,@passwrd,@hints)";
+
+        //        msqlCommand.Parameters.AddWithValue("@id", NewUser.id);
+        //        msqlCommand.Parameters.AddWithValue("@userid", NewUser.userId);
+        //        msqlCommand.Parameters.AddWithValue("@passwrd", NewUser.pass);
+        //        msqlCommand.Parameters.AddWithValue("@hints", NewUser.hints);
+
+
+        //        msqlCommand.ExecuteNonQuery();
+
+        //        returnVal = 1;
+        //    }
+        //    catch (Exception er)
+        //    {
+        //        returnVal = 0;
+        //    }
+        //    finally
+        //    {
+        //        //always close the connection
+        //        msqlConnection.Close();
+        //    }
+        //    return returnVal;
+        //}
+
+        //#endregion
     }
 }

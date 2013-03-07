@@ -211,8 +211,8 @@
                                         <Label></Label>
                                         <Label></Label>
                                         <Label></Label>
+                                        <Button Name="clearFieldsBtn"  Content="Clear Fields"  Style="{StaticResource PlainBtnStyle}" Click="clearFieldsBtn_Click" />
                                         <Button Name="saveNotesBtn" Content="Save Notes"  Style="{StaticResource PlainBtnStyle}" />
-                                        <Button Name="clearFieldsBtn"  Content="Clear Fields"  Style="{StaticResource PlainBtnStyle}" />
                                     </UniformGrid>
                                 </DockPanel>
 

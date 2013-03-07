@@ -106,6 +106,12 @@ namespace DNBSNGUI
             logoutDnbsnBtn.Content = "";
             loginExpndr.IsExpanded = true;
             loginExpndr.IsEnabled = true;
+            hntLginLbl.Content = "Login first to use Daily Note Book with Social Networking Updater";
+
+            loginExpndr.Visibility = Visibility.Visible;
+            loginExpndr.IsExpanded = true;
+            dNBSNUserIDTB.Clear();
+            dNBSNpassPB.Clear();
             
 
         }
@@ -154,7 +160,7 @@ namespace DNBSNGUI
             //allDetailsExpndr.Header = "All Details";
             //addInfoExpndr.Header = "Add Info";
             logoutPassBtn.IsEnabled = false;
-            hntLginLbl.Content = "Login first to use Daily Note Book with Social Networking Updater";
+            
 
 
             
@@ -178,6 +184,7 @@ namespace DNBSNGUI
             dNBSNNewPassPB.Clear();
             dNBSNNewRepassPB.Clear();
             dNBSNHintsTB.Clear();
+            createErrorMsgLbl.Content = string.Empty;
         }
 
         private void goLogin_Click(object sender, RoutedEventArgs e)
@@ -189,6 +196,8 @@ namespace DNBSNGUI
             loginExpndr.IsExpanded = true;
             dNBSNUserIDTB.Clear();
             dNBSNpassPB.Clear();
+            errorMsgLbl.Content = string.Empty;
+            hintsMsgLbl.Content = string.Empty;
         }
 
 
@@ -269,6 +278,11 @@ namespace DNBSNGUI
         private string GenerateId()
         {
             return DateTime.Now.ToOADate().ToString();
+        }
+
+        private void clearFieldsBtn_Click(object sender, RoutedEventArgs e)
+        {
+            notesTB.Clear();
         }
 
 
