@@ -282,7 +282,31 @@ namespace DNBSNGUI
 
         private void clearFieldsBtn_Click(object sender, RoutedEventArgs e)
         {
+            noteSuccessMsgLvl.Content = "";
             notesTB.Clear();
+        }
+
+        private void saveNotesBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (!notesTB.Text.Equals(string.Empty) && !notesTB.Text.Equals("Start writing from here..."))
+            {
+                DNBSNData.NoteInfo newNote = new DNBSNData.NoteInfo();
+
+                newNote.id = GenerateId();
+
+                newNote.note = notesTB.Text;
+
+                DNBSNDb.DbInteraction.DoEnterNewNote(newNote);
+
+                notesTB.Clear();
+                noteSuccessMsgLvl.Content = "Event Submited";
+            }
+
+
+            else
+            {
+                noteSuccessMsgLvl.Content = "Please Enter Proper Note";
+            }
         }
 
 

@@ -70,50 +70,49 @@ namespace DNBSNDb
 
         #endregion
 
-        //#region Note
+        #region Note
 
-        //public static int DoEnterNewNote(UserInfo NewUser)
-        //{
-        //    return DoEnterNewNoteindb(NewUser);
-        //}
+        public static int DoEnterNewNote(NoteInfo NewNote)
+        {
+            return DoEnterNewNoteindb(NewNote);
+        }
 
-        //private static int DoRegisterNewuserindb(UserInfo NewUser)
-        //{
-        //    int returnVal = 0;
-        //    MySql.Data.MySqlClient.MySqlConnection msqlConnection = OpenDbConnection();
+        private static int DoEnterNewNoteindb(NoteInfo NewNote)
+        {
+            int returnVal = 0;
+            MySql.Data.MySqlClient.MySqlConnection msqlConnection = OpenDbConnection();
 
-        //    try
-        //    {
-        //        //define the command reference
-        //        MySql.Data.MySqlClient.MySqlCommand msqlCommand = new MySql.Data.MySqlClient.MySqlCommand();
+            try
+            {
+                //define the command reference
+                MySql.Data.MySqlClient.MySqlCommand msqlCommand = new MySql.Data.MySqlClient.MySqlCommand();
 
-        //        //define the connection used by the command object
-        //        msqlCommand.Connection = msqlConnection;
+                //define the connection used by the command object
+                msqlCommand.Connection = msqlConnection;
 
-        //        msqlCommand.CommandText = "INSERT INTO user(id,userid,passwrd,hints) " + "VALUES(@id,@userid,@passwrd,@hints)";
+                msqlCommand.CommandText = "INSERT INTO note(id,note) " + "VALUES(@id,@note)";
 
-        //        msqlCommand.Parameters.AddWithValue("@id", NewUser.id);
-        //        msqlCommand.Parameters.AddWithValue("@userid", NewUser.userId);
-        //        msqlCommand.Parameters.AddWithValue("@passwrd", NewUser.pass);
-        //        msqlCommand.Parameters.AddWithValue("@hints", NewUser.hints);
+                msqlCommand.Parameters.AddWithValue("@id", NewNote.id);
+                msqlCommand.Parameters.AddWithValue("@note", NewNote.note);
+                
 
 
-        //        msqlCommand.ExecuteNonQuery();
+                msqlCommand.ExecuteNonQuery();
 
-        //        returnVal = 1;
-        //    }
-        //    catch (Exception er)
-        //    {
-        //        returnVal = 0;
-        //    }
-        //    finally
-        //    {
-        //        //always close the connection
-        //        msqlConnection.Close();
-        //    }
-        //    return returnVal;
-        //}
+                returnVal = 1;
+            }
+            catch (Exception er)
+            {
+                returnVal = 0;
+            }
+            finally
+            {
+                //always close the connection
+                msqlConnection.Close();
+            }
+            return returnVal;
+        }
 
-        //#endregion
+        #endregion
     }
 }

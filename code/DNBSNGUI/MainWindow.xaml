@@ -205,15 +205,18 @@
                             <DockPanel DockPanel.Dock="Top" >
                                 
 
-                                <DockPanel DockPanel.Dock="Bottom">
-                                    <UniformGrid Rows="1">
-                                        <Label></Label>
-                                        <Label></Label>
+                                <DockPanel DockPanel.Dock="Bottom" LastChildFill="True">
+                                    
+                                    <UniformGrid Rows="1" >
+                                        
+                                        
+                                        <Label Name="noteSuccessMsgLvl"  Style="{StaticResource LblStyle}"></Label>
                                         <Label></Label>
                                         <Label></Label>
                                         <Button Name="clearFieldsBtn"  Content="Clear Fields"  Style="{StaticResource PlainBtnStyle}" Click="clearFieldsBtn_Click" />
-                                        <Button Name="saveNotesBtn" Content="Save Notes"  Style="{StaticResource PlainBtnStyle}" />
+                                        <Button Name="saveNotesBtn" Content="Save Notes"  Style="{StaticResource PlainBtnStyle}" Click="saveNotesBtn_Click" />
                                     </UniformGrid>
+                                    
                                 </DockPanel>
 
 
