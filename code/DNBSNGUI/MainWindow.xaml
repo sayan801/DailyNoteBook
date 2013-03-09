@@ -222,6 +222,7 @@
 
 
                                 <TextBox Name="notesTB" DockPanel.Dock="Top" TextBlock.LineHeight="20" TextBlock.LineStackingStrategy="BlockLineHeight" Padding="20,10,20,20" Height="100">
+                                    
                                     <TextBox.Background>
                                         <DrawingBrush TileMode="Tile" Stretch="None" Viewport="0,0,20,20" ViewportUnits="Absolute" Opacity="1">
                                             <DrawingBrush.Drawing>
@@ -236,7 +237,29 @@
                                             </DrawingBrush.Drawing>
                                         </DrawingBrush>
                                     </TextBox.Background>
-                                    Start writing from here...
+                                    <TextBox.Style>
+                                        <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                                            <Style.Resources>
+                                                <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Top" Stretch="None">
+                                                    <VisualBrush.Visual>
+                                                        <Label Content="what's on your mind?" Foreground="LightGray" />
+                                                    </VisualBrush.Visual>
+                                                </VisualBrush>
+                                            </Style.Resources>
+                                            <Style.Triggers>
+                                                <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                                                    <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                                                </Trigger>
+                                                <Trigger Property="Text" Value="{x:Null}">
+                                                    <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                                                </Trigger>
+                                                <Trigger Property="IsKeyboardFocused" Value="True">
+                                                    <Setter Property="Background" Value="White" />
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBox.Style>
+                                    <!--Start writing from here...-->
                                 </TextBox>
                             </DockPanel>
                             <DockPanel DockPanel.Dock="Bottom">

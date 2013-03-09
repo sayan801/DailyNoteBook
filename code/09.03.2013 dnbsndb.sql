@@ -24,6 +24,30 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/ `dnbsndb` /*!40100 DEFAULT CHARACTER SE
 USE `dnbsndb`;
 
 --
+-- Table structure for table `note`
+--
+
+DROP TABLE IF EXISTS `note`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `note` (
+  `id` varchar(100) NOT NULL,
+  `note` varchar(10005) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `note`
+--
+
+LOCK TABLES `note` WRITE;
+/*!40000 ALTER TABLE `note` DISABLE KEYS */;
+INSERT INTO `note` VALUES ('41341.7887237153','Start writing from here...'),('41341.7887887153',''),('41341.7888277199','11111'),('41341.7892207176',''),('41341.7894494329',''),('41341.7932537731',';;;;;'),('41342','trut');
+/*!40000 ALTER TABLE `note` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `user`
 --
 
@@ -45,7 +69,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES ('41339.6946734259','erter','erter','123'),('41339.6947148495','erter','erter','123'),('41339.6951990509','erter','erter','123'),('41339.6954115046','erter','erter','123'),('41339.6964523148','fw','123','123'),('41339.6967889236','fw','123','1234'),('41339.701378588','asdf','asdsa','1234'),('41339.7029616782','121','23654','123');
+INSERT INTO `user` VALUES ('41339.6946734259','1','erter','1'),('41342.4463346528','anirban','anirban','anirban');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -58,4 +82,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-03-06 17:00:36
+-- Dump completed on 2013-03-09 13:23:03

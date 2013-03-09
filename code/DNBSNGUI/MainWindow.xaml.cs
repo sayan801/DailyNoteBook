@@ -118,7 +118,7 @@ namespace DNBSNGUI
 
         private void dNBSNLoginBtn_Click(object sender, RoutedEventArgs e)
         {
-            if ((dNBSNUserIDTB.Text.Equals("1")) && (dNBSNpassPB.Password.Equals("1")))
+            if (dNBSNUserIDTB.Text.Equals(DNBSNDb.DbInteraction.FetcheId()) && dNBSNpassPB.Password.Equals(DNBSNDb.DbInteraction.FetchePassword()))
             {
                 mainLeftExpndr.IsEnabled = true;
                 mainLeftExpndr.IsExpanded = true;

@@ -114,5 +114,89 @@ namespace DNBSNDb
         }
 
         #endregion
+
+        #region ID password
+
+        public static string FetcheId()
+        {
+
+            string idStr = string.Empty;
+
+            int returnVal = 0;
+            MySql.Data.MySqlClient.MySqlConnection msqlConnection = OpenDbConnection();
+
+            try
+            {
+
+
+                //define the command reference
+                MySql.Data.MySqlClient.MySqlCommand msqlCommand = new MySql.Data.MySqlClient.MySqlCommand();
+
+                //define the connection used by the command object
+                msqlCommand.Connection = msqlConnection;
+
+
+                msqlCommand.CommandText = "Select userid from user;";
+                MySql.Data.MySqlClient.MySqlDataReader msqlReader = msqlCommand.ExecuteReader();
+
+                msqlReader.Read();
+
+                idStr = msqlReader.GetString("userid");
+
+            }
+            catch (Exception er)
+            {
+                //Assert//.Show(er.Message);
+            }
+            finally
+            {
+                //always close the connection
+                msqlConnection.Close();
+            }
+
+            return idStr;
+        }
+
+        public static string FetchePassword()
+        {
+
+            string passwordStr = string.Empty;
+
+            int returnVal = 0;
+            MySql.Data.MySqlClient.MySqlConnection msqlConnection = OpenDbConnection();
+
+            try
+            {
+
+
+                //define the command reference
+                MySql.Data.MySqlClient.MySqlCommand msqlCommand = new MySql.Data.MySqlClient.MySqlCommand();
+
+                //define the connection used by the command object
+                msqlCommand.Connection = msqlConnection;
+
+
+                msqlCommand.CommandText = "Select passwrd from user;";
+                MySql.Data.MySqlClient.MySqlDataReader msqlReader = msqlCommand.ExecuteReader();
+
+                msqlReader.Read();
+
+                passwordStr = msqlReader.GetString("passwrd");
+
+            }
+            catch (Exception er)
+            {
+                //Assert//.Show(er.Message);
+            }
+            finally
+            {
+                //always close the connection
+                msqlConnection.Close();
+            }
+
+            return passwordStr;
+        }
+        #endregion
     }
 }
+
