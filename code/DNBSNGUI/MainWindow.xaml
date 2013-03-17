@@ -4,7 +4,7 @@
         xmlns:sys="clr-namespace:System;assembly=mscorlib"   
         Title="DNBSN"
         MinHeight="650" MinWidth="1250" AllowsTransparency="True" ResizeMode="CanResizeWithGrip" Background="Transparent" 
-        WindowStyle="None" WindowStartupLocation="CenterScreen" Icon="/DNBSNGUI;component/Images/monotone_pen_write.png">
+        WindowStyle="None" WindowStartupLocation="CenterScreen" Icon="/DNBSNGUI;component/Images/monotone_pen_write.png"  xmlns:ViewEvent="clr-namespace:DNBSNGUI">
 
 
     <Window.Resources>
@@ -210,9 +210,13 @@
                                     <UniformGrid Rows="1" >
                                         
                                         
+                                        
+                                        <Button Name="rewriBtnBtn" ToolTip="save to cxcel" Style="{StaticResource PlainBtnStyle}">Rewrite Event</Button>
+                                        <Button Name="dltevntBtnBtn" ToolTip="save to cxcel" Style="{StaticResource PlainBtnStyle}">Delete Event</Button>
+                                        <Button Name="saveToExcelBtn" ToolTip="save to cxcel" Style="{StaticResource PlainBtnStyle}">Save To Excel</Button>
+                                        <DatePicker ToolTip="select a date" Margin="10" Name="goToDateDP"></DatePicker>
+                                        <Button Name="goToDateBtn" ToolTip="go to date" Style="{StaticResource PlainBtnStyle}">Go To Date</Button>
                                         <Label Name="noteSuccessMsgLvl"  Style="{StaticResource LblStyle}"></Label>
-                                        <Label></Label>
-                                        <Label></Label>
                                         <Button Name="clearFieldsBtn"  Content="Clear Fields"  Style="{StaticResource PlainBtnStyle}" Click="clearFieldsBtn_Click" />
                                         <Button Name="saveNotesBtn" Content="Save Notes"  Style="{StaticResource PlainBtnStyle}" Click="saveNotesBtn_Click" />
                                     </UniformGrid>
@@ -262,27 +266,70 @@
                                     <!--Start writing from here...-->
                                 </TextBox>
                             </DockPanel>
-                            <DockPanel DockPanel.Dock="Bottom">
-                                
-
-                                <DockPanel DockPanel.Dock="Bottom">
-                                    <UniformGrid Rows="1">
-                                        <Button Name="rewriBtnBtn" ToolTip="save to cxcel" Style="{StaticResource PlainBtnStyle}">Rewrite Event</Button>
-                                        <Button Name="dltevntBtnBtn" ToolTip="save to cxcel" Style="{StaticResource PlainBtnStyle}">Delete Event</Button>
-                                        <Button Name="saveToExcelBtn" ToolTip="save to cxcel" Style="{StaticResource PlainBtnStyle}">Save To Excel</Button>
-                                        <DatePicker ToolTip="select a date" Margin="10" Name="goToDateDP"></DatePicker>
-                                        <Button Name="goToDateBtn" ToolTip="go to date" Style="{StaticResource PlainBtnStyle}">Go To Date</Button>
-                                    </UniformGrid>
-                                </DockPanel>
-
-
-
-                                
-                            </DockPanel>
+                            
                             
                             
                             <DockPanel>
                                 <TabControl Name="TabControl" Margin="3" BorderBrush="#FFE9E0E0" TabStripPlacement="Right" HorizontalContentAlignment="Left" >
+                                    <TabItem Name="foutem"  Style="{StaticResource TItemStyle}" Header="Monthly View"  Width="150">
+                                        <DockPanel LastChildFill="True">
+                                            <UniformGrid Rows="1" Columns="7" DockPanel.Dock="Top">
+                                                <Label>Sunday</Label>
+                                                <Label>Monday</Label>
+                                                <Label>Tuesday</Label>
+                                                <Label>Wednesday</Label>
+                                                <Label>Thursday</Label>
+                                                <Label>Friday</Label>
+                                                <Label>Saturday</Label>
+                                            </UniformGrid>
+
+                                            <UniformGrid Rows="6" Columns="7" DockPanel.Dock="Bottom">
+                                                <ViewEvent:ShowEvent x:Name="videoSurveillanceControl3"  Margin="2"/>
+                                                <ViewEvent:ShowEvent  Margin="2"/>
+                                                <ViewEvent:ShowEvent  Margin="2"/>
+                                                <ViewEvent:ShowEvent   Margin="2"/>
+                                                <ViewEvent:ShowEvent  Margin="2"/>
+                                                <ViewEvent:ShowEvent  Margin="2"/>
+                                                <ViewEvent:ShowEvent  Margin="2"/>
+                                                <ViewEvent:ShowEvent  Margin="2"/>
+                                                <ViewEvent:ShowEvent   Margin="2"/>
+                                                <ViewEvent:ShowEvent   Margin="2"/>
+                                                <ViewEvent:ShowEvent   Margin="2"/>
+                                                <ViewEvent:ShowEvent  Margin="2"/>
+                                                <ViewEvent:ShowEvent  Margin="2"/>
+                                                <ViewEvent:ShowEvent   Margin="2"/>
+                                                <ViewEvent:ShowEvent  Margin="2"/>
+                                                <ViewEvent:ShowEvent  Margin="2"/>
+                                                <ViewEvent:ShowEvent  Margin="2"/>
+                                                <ViewEvent:ShowEvent  Margin="2"/>
+                                                <ViewEvent:ShowEvent   Margin="2"/>
+                                                <ViewEvent:ShowEvent   Margin="2"/>
+                                                <ViewEvent:ShowEvent   Margin="2"/>
+                                                <ViewEvent:ShowEvent  Margin="2"/>
+                                                <ViewEvent:ShowEvent  Margin="2"/>
+                                                <ViewEvent:ShowEvent   Margin="2"/>
+                                                <ViewEvent:ShowEvent  Margin="2"/>
+                                                <ViewEvent:ShowEvent  Margin="2"/>
+                                                <ViewEvent:ShowEvent  Margin="2"/>
+                                                <ViewEvent:ShowEvent  Margin="2"/>
+                                                <ViewEvent:ShowEvent   Margin="2"/>
+                                                <ViewEvent:ShowEvent   Margin="2"/>
+                                                <ViewEvent:ShowEvent   Margin="2"/>
+                                                <ViewEvent:ShowEvent   Margin="2"/>
+                                                <ViewEvent:ShowEvent  Margin="2"/>
+                                                <ViewEvent:ShowEvent  Margin="2"/>
+                                                <ViewEvent:ShowEvent   Margin="2"/>
+                                                <ViewEvent:ShowEvent  Margin="2"/>
+                                                <ViewEvent:ShowEvent  Margin="2"/>
+                                                <ViewEvent:ShowEvent  Margin="2"/>
+                                                <ViewEvent:ShowEvent  Margin="2"/>
+                                                <ViewEvent:ShowEvent   Margin="2"/>
+                                                <ViewEvent:ShowEvent   Margin="2"/>
+                                                <ViewEvent:ShowEvent   Margin="2"/>
+                                            </UniformGrid>
+                                        </DockPanel>
+                                    </TabItem>
+
                                     <TabItem Name="bItem"  Style="{StaticResource TItemStyle}" Header="View All" Width="150">
 
                                         <DockPanel LastChildFill="True">
@@ -303,12 +350,7 @@
                                             <ListView></ListView>
                                         </DockPanel>
                                     </TabItem>
-                                    <TabItem Name="foutem"  Style="{StaticResource TItemStyle}" Header="Monthly View"  Width="150">
-                                        <DockPanel LastChildFill="True">
-                                            
-                                            <ListView></ListView>
-                                        </DockPanel>
-                                    </TabItem>
+                                    
                                 </TabControl>
                             </DockPanel>
                             
