@@ -309,6 +309,11 @@ namespace DNBSNGUI
             }
         }
 
+        private void previousDateBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
 
 
         //if (oldPasswordBox.Password.Equals(FetchSPTSettings.FetchePassword()))

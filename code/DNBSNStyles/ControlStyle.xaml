@@ -364,6 +364,13 @@
         <Setter Property="FontWeight" Value="Bold" />
         
     </Style>
+    <Style x:Key="TxtblkStyle" TargetType="TextBlock">
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="FontWeight" Value="Bold" />
+
+    </Style>
 
     <!--<Style TargetType="{x:Type TextBox}" x:Key="commonTBtyle">
         <Setter Property="OverridesDefaultStyle" Value="True"/>
