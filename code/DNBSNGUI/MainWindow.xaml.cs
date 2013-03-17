@@ -28,7 +28,7 @@ namespace DNBSNGUI
             InitializeComponent();
             this.MouseLeftButtonDown += delegate { this.DragMove(); };
             FocusManager.SetFocusedElement(this, dNBSNUserIDTB);
-            
+
         }
 
         private void kolkataBtn_Click(object sender, RoutedEventArgs e)
@@ -112,7 +112,7 @@ namespace DNBSNGUI
             loginExpndr.IsExpanded = true;
             dNBSNUserIDTB.Clear();
             dNBSNpassPB.Clear();
-            
+
 
         }
 
@@ -160,10 +160,10 @@ namespace DNBSNGUI
             //allDetailsExpndr.Header = "All Details";
             //addInfoExpndr.Header = "Add Info";
             logoutPassBtn.IsEnabled = false;
-            
 
 
-            
+
+
 
             //mainLeftExpndr.IsEnabled = false;
             //mainLeftExpndr.IsExpanded = false;
@@ -190,7 +190,7 @@ namespace DNBSNGUI
         private void goLogin_Click(object sender, RoutedEventArgs e)
         {
             newAcExpndr.Visibility = Visibility.Collapsed;
-            
+
 
             loginExpndr.Visibility = Visibility.Visible;
             loginExpndr.IsExpanded = true;
@@ -234,44 +234,44 @@ namespace DNBSNGUI
 
         private void dNBSSubmitBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (!dNBSNNewUserIDTB.Text.Equals(string.Empty) && 
-                !dNBSNNewPassPB.Password.Equals(string.Empty) && 
-                !dNBSNNewRepassPB.Password.Equals(string.Empty) && 
+            if (!dNBSNNewUserIDTB.Text.Equals(string.Empty) &&
+                !dNBSNNewPassPB.Password.Equals(string.Empty) &&
+                !dNBSNNewRepassPB.Password.Equals(string.Empty) &&
                 !dNBSNHintsTB.Text.Equals(string.Empty))
             {
-                if(!dNBSNNewPassPB.Password.Equals(dNBSNNewRepassPB.Password))
+                if (!dNBSNNewPassPB.Password.Equals(dNBSNNewRepassPB.Password))
                 {
-                    
+
                     dNBSNNewPassPB.Clear();
                     dNBSNNewRepassPB.Clear();
-                   
+
                     createErrorMsgLbl.Content = "Please Enter same Password";
-                    
+
                 }
                 else
                 {
-                DNBSNData.UserInfo newUser = new DNBSNData.UserInfo();
+                    DNBSNData.UserInfo newUser = new DNBSNData.UserInfo();
 
-                newUser.id = GenerateId();
+                    newUser.id = GenerateId();
 
-                newUser.userId = dNBSNNewUserIDTB.Text;
-                newUser.pass = dNBSNNewPassPB.Password;
-                newUser.hints = dNBSNHintsTB.Text;
+                    newUser.userId = dNBSNNewUserIDTB.Text;
+                    newUser.pass = dNBSNNewPassPB.Password;
+                    newUser.hints = dNBSNHintsTB.Text;
 
-                DNBSNDb.DbInteraction.DoRegisterNewUser(newUser);
+                    DNBSNDb.DbInteraction.DoRegisterNewUser(newUser);
 
-                newAcExpndr.Visibility = Visibility.Collapsed;
-                loginExpndr.Visibility = Visibility.Visible;
-                loginExpndr.IsExpanded = true;
-                dNBSNUserIDTB.Clear();
-                dNBSNpassPB.Clear();
+                    newAcExpndr.Visibility = Visibility.Collapsed;
+                    loginExpndr.Visibility = Visibility.Visible;
+                    loginExpndr.IsExpanded = true;
+                    dNBSNUserIDTB.Clear();
+                    dNBSNpassPB.Clear();
 
                 }
             }
             else
             {
                 createErrorMsgLbl.Content = "Correctly Enter Info ";
-                
+
             }
 
         }
@@ -314,6 +314,12 @@ namespace DNBSNGUI
 
         }
 
+        private void foutem_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            for (int i = 1; i <= 30; i++)
+                dateUG.Children.Add(new ShowEvent(i));
+        }
+
 
 
         //if (oldPasswordBox.Password.Equals(FetchSPTSettings.FetchePassword()))
@@ -333,8 +339,8 @@ namespace DNBSNGUI
 
 
 
-        
+
     }
 
-   
+
 }

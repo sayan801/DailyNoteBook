@@ -285,7 +285,7 @@
                             
                             <DockPanel>
                                 <TabControl Name="TabControl" Margin="3" BorderBrush="#FFE9E0E0" TabStripPlacement="Right" HorizontalContentAlignment="Left" >
-                                    <TabItem Name="foutem"  Style="{StaticResource TItemStyle}" Header="Monthly View"  Width="150">
+                                    <TabItem Name="foutem"  Style="{StaticResource TItemStyle}" Header="Monthly View"  Width="150" MouseLeftButtonDown="foutem_MouseLeftButtonDown">
                                         <DockPanel LastChildFill="True">
                                             
                                             <UniformGrid Rows="1" Columns="7" DockPanel.Dock="Top">
@@ -298,49 +298,8 @@
                                                 <Label>Saturday</Label>
                                             </UniformGrid>
 
-                                            <UniformGrid Rows="6" Columns="7" DockPanel.Dock="Bottom">
-                                                <ViewEvent:ShowEvent x:Name="videoSurveillanceControl3"  Margin="2"/>
-                                                <ViewEvent:ShowEvent  Margin="2"/>
-                                                <ViewEvent:ShowEvent  Margin="2"/>
-                                                <ViewEvent:ShowEvent   Margin="2"/>
-                                                <ViewEvent:ShowEvent  Margin="2"/>
-                                                <ViewEvent:ShowEvent  Margin="2"/>
-                                                <ViewEvent:ShowEvent  Margin="2"/>
-                                                <ViewEvent:ShowEvent  Margin="2"/>
-                                                <ViewEvent:ShowEvent   Margin="2"/>
-                                                <ViewEvent:ShowEvent   Margin="2"/>
-                                                <ViewEvent:ShowEvent   Margin="2"/>
-                                                <ViewEvent:ShowEvent  Margin="2"/>
-                                                <ViewEvent:ShowEvent  Margin="2"/>
-                                                <ViewEvent:ShowEvent   Margin="2"/>
-                                                <ViewEvent:ShowEvent  Margin="2"/>
-                                                <ViewEvent:ShowEvent  Margin="2"/>
-                                                <ViewEvent:ShowEvent  Margin="2"/>
-                                                <ViewEvent:ShowEvent  Margin="2"/>
-                                                <ViewEvent:ShowEvent   Margin="2"/>
-                                                <ViewEvent:ShowEvent   Margin="2"/>
-                                                <ViewEvent:ShowEvent   Margin="2"/>
-                                                <ViewEvent:ShowEvent  Margin="2"/>
-                                                <ViewEvent:ShowEvent  Margin="2"/>
-                                                <ViewEvent:ShowEvent   Margin="2"/>
-                                                <ViewEvent:ShowEvent  Margin="2"/>
-                                                <ViewEvent:ShowEvent  Margin="2"/>
-                                                <ViewEvent:ShowEvent  Margin="2"/>
-                                                <ViewEvent:ShowEvent  Margin="2"/>
-                                                <ViewEvent:ShowEvent   Margin="2"/>
-                                                <ViewEvent:ShowEvent   Margin="2"/>
-                                                <ViewEvent:ShowEvent   Margin="2"/>
-                                                <ViewEvent:ShowEvent   Margin="2"/>
-                                                <ViewEvent:ShowEvent  Margin="2"/>
-                                                <ViewEvent:ShowEvent  Margin="2"/>
-                                                <ViewEvent:ShowEvent   Margin="2"/>
-                                                <ViewEvent:ShowEvent  Margin="2"/>
-                                                <ViewEvent:ShowEvent  Margin="2"/>
-                                                <ViewEvent:ShowEvent  Margin="2"/>
-                                                <ViewEvent:ShowEvent  Margin="2"/>
-                                                <ViewEvent:ShowEvent   Margin="2"/>
-                                                <ViewEvent:ShowEvent   Margin="2"/>
-                                                <ViewEvent:ShowEvent   Margin="2"/>
+                                            <UniformGrid Name="dateUG" Rows="6" Columns="7" DockPanel.Dock="Bottom">
+                                              
                                             </UniformGrid>
                                         </DockPanel>
                                     </TabItem>

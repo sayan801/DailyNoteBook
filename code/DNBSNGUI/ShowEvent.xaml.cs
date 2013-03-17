@@ -19,9 +19,11 @@ namespace DNBSNGUI
     /// </summary>
     public partial class ShowEvent : UserControl
     {
-        public ShowEvent()
+        public ShowEvent(int no)
         {
             InitializeComponent();
+
+            sequenceLabel.Content = no;
         }
     }
 }

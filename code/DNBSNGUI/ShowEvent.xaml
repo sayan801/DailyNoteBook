@@ -8,7 +8,7 @@
 
     <DockPanel LastChildFill="True">
         <UniformGrid DockPanel.Dock="Top">
-            <Label>1</Label>
+            <Label Name="sequenceLabel"></Label>
         </UniformGrid>
         <UniformGrid DockPanel.Dock="Top">
             <ListView Background="Gray"></ListView>
