@@ -269,7 +269,7 @@
                                     <DockPanel LastChildFill="True">
 
                                         <UniformGrid Rows="1" DockPanel.Dock="Bottom">
-                                            <Button Content="&lt;" Style="{StaticResource PlainBtnStyle}"></Button>
+                                            <Button Content="&lt;" Style="{StaticResource PlainBtnStyle}" Name="previousDateBtn" Click="previousDateBtn_Click"></Button>
                                             <Button Content="&gt;" Style="{StaticResource PlainBtnStyle}"></Button>
                                         </UniformGrid>
 
