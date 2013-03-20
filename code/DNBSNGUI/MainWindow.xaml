@@ -210,10 +210,10 @@
                                 <DockPanel DockPanel.Dock="Bottom" LastChildFill="True">
                                     
                                     <UniformGrid Rows="1" >
-                                        
-                                        
-                                        
-                                        <Label></Label>
+
+
+
+                                        <DatePicker ToolTip="today" Margin="10" Name="noteDateDP"></DatePicker>
                                         <Label Name="noteSuccessMsgLvl"  Style="{StaticResource LblStyle}"></Label>
                                         <Button Name="clearFieldsBtn"  Content="Clear Fields"  Style="{StaticResource PlainBtnStyle}" Click="clearFieldsBtn_Click" />
                                         <Button Name="saveNotesBtn" Content="Save Notes"  Style="{StaticResource PlainBtnStyle}" Click="saveNotesBtn_Click" />
@@ -279,14 +279,14 @@
                                     <Button Name="rewriBtnBtn" ToolTip="save to cxcel" Style="{StaticResource PlainBtnStyle}">Rewrite Event</Button>
                                     <Button Name="dltevntBtnBtn" ToolTip="save to cxcel" Style="{StaticResource PlainBtnStyle}">Delete Event</Button>
                                     <Button Name="saveToExcelBtn" ToolTip="save to cxcel" Style="{StaticResource PlainBtnStyle}">Save To Excel</Button>
-                                    <DatePicker ToolTip="select a date" Margin="10" Name="goToDateDP"></DatePicker>
+                                    <DatePicker ToolTip="select a date" Margin="10" Name="goToDateDP" ></DatePicker>
                                     <Button Name="goToDateBtn" ToolTip="go to date" Style="{StaticResource PlainBtnStyle}">Go To Date</Button>
                                 </UniformGrid>
                             </DockPanel>
                             
                             <DockPanel>
                                 <TabControl Name="TabControl" Margin="3" BorderBrush="#FFE9E0E0" TabStripPlacement="Right" HorizontalContentAlignment="Left" >
-                                    <TabItem Name="foutem"  Style="{StaticResource TItemStyle}" Header="Monthly View"  Width="150" MouseLeftButtonDown="foutem_MouseLeftButtonDown">
+                                    <TabItem Name="foutem"  Style="{StaticResource TItemStyle}" Header="Monthly View"  Width="150">
                                         <DockPanel LastChildFill="True">
                                             
                                             <UniformGrid Rows="1" Columns="7" DockPanel.Dock="Top">
@@ -309,7 +309,14 @@
 
                                         <DockPanel LastChildFill="True">
 
-                                            <ListView></ListView>
+                                            <ListView Name="allnoteView" HorizontalAlignment="Stretch" ItemsSource="{Binding allnoteCollection}">
+                                                <ListView.View>
+                                                    <GridView>
+                                                        <GridViewColumn Width="100" Header="Date" DisplayMemberBinding="{Binding noteDate}"/>
+                                                        <GridViewColumn Width="650" Header="Event" DisplayMemberBinding="{Binding note}" />
+                                                    </GridView>
+                                                </ListView.View>
+                                            </ListView>
                                         </DockPanel>
                                     </TabItem>
 
@@ -524,10 +531,10 @@
                             <WebBrowser Name="mapWb"></WebBrowser>
                         </DockPanel>
                     </TabItem>
-                    <TabItem Name="contactBookTabItem" Style="{StaticResource TItemStyle}" Header="Contacts">
+                    <TabItem Name="contactBookTabItem" Style="{StaticResource TItemStyle}" Header="Contacts"  >
                         <DockPanel LastChildFill="True">
                             <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
-                                <Expander Name="contacXpndr"  DockPanel.Dock="Top" ExpandDirection="Down" IsExpanded="False" Header="Add Contact" VerticalAlignment="Center">
+                                <Expander Name="contacXpndr"  DockPanel.Dock="Top" ExpandDirection="Down" IsExpanded="False" Header="Add Contact" VerticalAlignment="Center" >
                                     <UniformGrid Columns="1">
                                         <DockPanel Width="650" >
                                             <UniformGrid Columns="4"  DockPanel.Dock="Left" Width="647">
@@ -561,22 +568,22 @@
                                     <Label></Label>
                                     <Label></Label>
                                     <Label></Label>
-                                    <Label></Label>
+                                    <Button Name="contactrfrshBtn" Content="Refresh" ToolTip="Refresh details" Style="{StaticResource PlainBtnStyle}" Click="contactrfrshBtn_Click" />
                                     <Button Content="Edit Contacts" ToolTip="edit selected contact details" Style="{StaticResource PlainBtnStyle}" />
                                     <Button Content="Delete Contact" ToolTip="delete selected contact details" Style="{StaticResource PlainBtnStyle}" />
                                 </UniformGrid>
                             </DockPanel>
-                            <ListView Name="contactView" HorizontalAlignment="Stretch">
+                            <ListView Name="contactView" HorizontalAlignment="Stretch" ItemsSource="{Binding contactCollection}">
                                 <ListView.View>
                                     <GridView>
-                                        <GridViewColumn Width="180" Header="Name" />
-                                        <GridViewColumn Width="150" Header="Mobile Number"  />
-                                        <GridViewColumn Width="130" Header="EMail"   />
-                                        <GridViewColumn Width="150" Header="Home Number"   />
-                                        <GridViewColumn Width="300" Header="Address"   />
-                                        <GridViewColumn Width="150" Header="Office Number"   />
-                                        <GridViewColumn Width="150" Header="Fax Number"   />
-                                        <GridViewColumn Width="100" Header="Remarks"   />
+                                        <GridViewColumn Width="180" Header="Name" DisplayMemberBinding="{Binding name}" />
+                                        <GridViewColumn Width="150" Header="Mobile Number" DisplayMemberBinding="{Binding mobileno}" />
+                                        <GridViewColumn Width="130" Header="EMail" DisplayMemberBinding="{Binding email}"  />
+                                        <GridViewColumn Width="150" Header="Home Number" DisplayMemberBinding="{Binding homeno}"  />
+                                        <GridViewColumn Width="300" Header="Address"  DisplayMemberBinding="{Binding address}" />
+                                        <GridViewColumn Width="150" Header="Office Number"  DisplayMemberBinding="{Binding oficeno}" />
+                                        <GridViewColumn Width="150" Header="Fax Number" DisplayMemberBinding="{Binding faxno}"  />
+                                        <GridViewColumn Width="100" Header="Remarks"  DisplayMemberBinding="{Binding remark}" />
                                     </GridView>
                                 </ListView.View>
                             </ListView>
@@ -608,7 +615,7 @@
                             </StackPanel>
                             <DockPanel Name="mainPassDP" IsEnabled="False" LastChildFill="True">
 
-                                <Expander Header="Login To Add Info" Name="addInfoExpndr" DockPanel.Dock="Top">
+                                <Expander Header="Login To Add Info" Name="addpassInfoExpndr" DockPanel.Dock="Top">
                                     <UniformGrid Columns="4">
                                         <Label Margin="10">Name</Label>
                                         <TextBox Name="passNameTB" Margin="10" Tag="enter name" Style="{StaticResource commonTBtyle}" />
@@ -627,7 +634,7 @@
                                         <TextBox Name="secrtAnsTB"  Margin="10" Tag="enter answer" Style="{StaticResource commonTBtyle}" />
                                         <Label Margin="10">Others Info</Label>
                                         <TextBox Name="othersInfoTB" Margin="10" Tag="enter others info" Style="{StaticResource commonTBtyle}" />
-                                        <Button ToolTip="clear all fields" Width="150" Style="{StaticResource PlainBtnStyle}">Clear Fields</Button>
+                                        <Button Name="clearPassInfoFieldBtn" ToolTip="clear all fields" Width="150" Style="{StaticResource PlainBtnStyle}" Click="clearPassInfoFieldBtn_Click">Clear Fields</Button>
                                         <Button Name="paswrdSaveBtn"  ToolTip="save info" Width="150" Style="{StaticResource PlainBtnStyle}" Click="paswrdSave_Click">Save</Button>
                                     </UniformGrid>
                                 </Expander>
@@ -635,23 +642,23 @@
                                 <UniformGrid DockPanel.Dock="Bottom" Columns="6" Name="logoutDP">
                                     <Label></Label>
                                     <Label></Label>
-                                    <Label></Label>
+                                    <Button Content="Refresh" Name="refrshpsdwBtn" ToolTip="refresh details" Style="{StaticResource PlainBtnStyle}" Click="refrshpsdwBtn_Click" />
                                     <Button Content="Edit Details" ToolTip="edit selected details" Style="{StaticResource PlainBtnStyle}" />
                                     <Button Content="Delete Details" ToolTip="delete selected details" Style="{StaticResource PlainBtnStyle}" />
                                     <Button Content="Please Log In First" Name="logoutPassBtn"  IsEnabled="False" ToolTip="logout" Style="{StaticResource PlainBtnStyle}" Click="logoutPassBtn_Click" />
                                 </UniformGrid>
                                 <UniformGrid DockPanel.Dock="Top">
                                     <Expander Header="Login To Show All Details" Name="allDetailsExpndr">
-                                        <ListView Name="passView" HorizontalAlignment="Stretch">
+                                        <ListView Name="passView" HorizontalAlignment="Stretch" ItemsSource="{Binding passwordCollection}">
                                             <ListView.View>
                                                 <GridView>
-                                                    <GridViewColumn Width="100" Header="Name" />
-                                                    <GridViewColumn Width="150" Header="Mail"  />
-                                                    <GridViewColumn Width="100" Header="ID"   />
-                                                    <GridViewColumn Width="150" Header="Password"   />
-                                                    <GridViewColumn Width="300" Header="Secret Question"   />
-                                                    <GridViewColumn Width="100" Header="Answer"   />
-                                                    <GridViewColumn Width="100" Header="Others Info"   />
+                                                    <GridViewColumn Width="100" Header="Name" DisplayMemberBinding="{Binding name}" />
+                                                    <GridViewColumn Width="150" Header="Mail" DisplayMemberBinding="{Binding email}" />
+                                                    <GridViewColumn Width="100" Header="ID"  DisplayMemberBinding="{Binding userId}" />
+                                                    <GridViewColumn Width="150" Header="Password"  DisplayMemberBinding="{Binding password}" />
+                                                    <GridViewColumn Width="300" Header="Secret Question" DisplayMemberBinding="{Binding scrtqstn}"  />
+                                                    <GridViewColumn Width="100" Header="Answer"  DisplayMemberBinding="{Binding scrtans}"/>
+                                                    <GridViewColumn Width="100" Header="Others Info" DisplayMemberBinding="{Binding otherInfo}"  />
                                                 </GridView>
                                             </ListView.View>
                                         </ListView>
@@ -668,7 +675,7 @@
 
                                 <DockPanel LastChildFill="True">
                                     <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
-                                        <Expander DockPanel.Dock="Top" ExpandDirection="Down" IsExpanded="False" Header="Add Task" VerticalAlignment="Center">
+                                        <Expander Name="tskxpndr" DockPanel.Dock="Top" ExpandDirection="Down" IsExpanded="False" Header="Add Task" VerticalAlignment="Center">
                                             <UniformGrid Columns="1">
 
                                                 <DockPanel Width="650" Height="197">
@@ -722,7 +729,7 @@
                                             <Label></Label>
                                             <Label></Label>
                                             <Label></Label>
-                                            <Button Content="Refresh" Name="refrshTskBtn" ToolTip="refresh task" Style="{StaticResource PlainBtnStyle}" Click="refrshTskBtn_Click" />
+                                            <Button Content="Refresh" Name="refrshTskBtn" ToolTip="refresh task" Style="{StaticResource PlainBtnStyle}" Click="contactrfrshBtn_Click" />
                                             <Button Content="Edit Task" ToolTip="edit selected task" Style="{StaticResource PlainBtnStyle}" />
                                             <Button Content="Delete Task" ToolTip="delete selected task" Style="{StaticResource PlainBtnStyle}" />
                                         </UniformGrid>

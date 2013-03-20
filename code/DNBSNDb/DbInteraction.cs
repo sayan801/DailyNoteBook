@@ -90,9 +90,10 @@ namespace DNBSNDb
                 //define the connection used by the command object
                 msqlCommand.Connection = msqlConnection;
 
-                msqlCommand.CommandText = "INSERT INTO note(id,note) " + "VALUES(@id,@note)";
+                msqlCommand.CommandText = "INSERT INTO note(id,date,note) " + "VALUES(@id,@date,@note)";
 
                 msqlCommand.Parameters.AddWithValue("@id", NewNote.id);
+                msqlCommand.Parameters.AddWithValue("@date", NewNote.noteDate);
                 msqlCommand.Parameters.AddWithValue("@note", NewNote.note);
                 
 
@@ -113,6 +114,48 @@ namespace DNBSNDb
             return returnVal;
         }
 
+        public static List<NoteInfo> GetAllNoteList()
+        {
+            return QueryAllNoteList();
+        }
+        private static List<NoteInfo> QueryAllNoteList()
+        {
+            List<NoteInfo> NoteList = new List<NoteInfo>();
+
+            MySql.Data.MySqlClient.MySqlConnection msqlConnection = OpenDbConnection();
+
+            try
+            {   //define the command reference
+                MySql.Data.MySqlClient.MySqlCommand msqlCommand = new MySql.Data.MySqlClient.MySqlCommand();
+                msqlCommand.Connection = msqlConnection;
+
+                msqlCommand.CommandText = "Select * From note ;";
+                MySql.Data.MySqlClient.MySqlDataReader msqlReader = msqlCommand.ExecuteReader();
+
+                while (msqlReader.Read())
+                {
+                    NoteInfo Note = new NoteInfo();
+
+                    Note.id = msqlReader.GetString("id");
+                    Note.noteDate = msqlReader.GetDateTime("date");
+                    Note.note = msqlReader.GetString("note");
+
+                    NoteList.Add(Note);
+                }
+
+            }
+            catch (Exception er)
+            {
+            }
+            finally
+            {
+                //always close the connection
+                msqlConnection.Close();
+            }
+
+            return NoteList;
+        }
+        
         #endregion
 
         #region ID password
@@ -243,6 +286,55 @@ namespace DNBSNDb
             return returnVal;
         }
 
+
+        public static List<ContactInfo> GetAllContactList()
+        {
+            return QueryAllContactList();
+        }
+        private static List<ContactInfo> QueryAllContactList()
+        {
+            List<ContactInfo> ContactList = new List<ContactInfo>();
+
+            MySql.Data.MySqlClient.MySqlConnection msqlConnection = OpenDbConnection();
+
+            try
+            {   //define the command reference
+                MySql.Data.MySqlClient.MySqlCommand msqlCommand = new MySql.Data.MySqlClient.MySqlCommand();
+                msqlCommand.Connection = msqlConnection;
+
+                msqlCommand.CommandText = "Select * From contact ;";
+                MySql.Data.MySqlClient.MySqlDataReader msqlReader = msqlCommand.ExecuteReader();
+
+                while (msqlReader.Read())
+                {
+                    ContactInfo Contact = new ContactInfo();
+
+                    Contact.id = msqlReader.GetString("contactId");
+                    Contact.name = msqlReader.GetString("name");
+                    Contact.mobileno = msqlReader.GetString("mobile");
+                    Contact.homeno = msqlReader.GetString("homePhone");
+                    Contact.oficeno = msqlReader.GetString("officePhone");
+                    Contact.email = msqlReader.GetString("email");
+                    Contact.address = msqlReader.GetString("address");
+                    Contact.faxno = msqlReader.GetString("faxNumber");
+                    Contact.remark = msqlReader.GetString("remark");
+
+                    
+                    ContactList.Add(Contact);
+                }
+
+            }
+            catch (Exception er)
+            {
+            }
+            finally
+            {
+                //always close the connection
+                msqlConnection.Close();
+            }
+
+            return ContactList;
+        }
 
         #endregion
 
@@ -379,6 +471,56 @@ namespace DNBSNDb
             return returnVal;
         }
 
+
+        public static List<PasswordInfo> GetAllPasswordsList()
+        {
+            return QueryAllPasswordList();
+        }
+        private static List<PasswordInfo> QueryAllPasswordList()
+        {
+            List<PasswordInfo> PasswordList = new List<PasswordInfo>();
+
+            MySql.Data.MySqlClient.MySqlConnection msqlConnection = OpenDbConnection();
+
+            try
+            {   //define the command reference
+                MySql.Data.MySqlClient.MySqlCommand msqlCommand = new MySql.Data.MySqlClient.MySqlCommand();
+                msqlCommand.Connection = msqlConnection;
+
+                msqlCommand.CommandText = "Select * From password ;";
+                MySql.Data.MySqlClient.MySqlDataReader msqlReader = msqlCommand.ExecuteReader();
+
+                while (msqlReader.Read())
+                {
+                    PasswordInfo Password = new PasswordInfo();
+
+                    Password.id = msqlReader.GetString("passwordId");
+                    Password.name = msqlReader.GetString("name");
+                    Password.email = msqlReader.GetString("email");
+                    Password.userId = msqlReader.GetString("userId");
+                    Password.password = msqlReader.GetString("password");
+                    Password.scrtqstn = msqlReader.GetString("secretQuestion");
+                    Password.scrtans = msqlReader.GetString("secretAnswer");
+                    Password.otherInfo = msqlReader.GetString("otherInfo");
+
+
+                    
+
+                    PasswordList.Add(Password);
+                }
+
+            }
+            catch (Exception er)
+            {
+            }
+            finally
+            {
+                //always close the connection
+                msqlConnection.Close();
+            }
+
+            return PasswordList;
+        }
 
         #endregion
     }

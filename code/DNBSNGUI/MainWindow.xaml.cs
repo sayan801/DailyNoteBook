@@ -26,17 +26,9 @@ namespace DNBSNGUI
     /// </summary>
     public partial class MainWindow : Window
     {
+       
 
-        ObservableCollection<TaskInfo> _taskCollection = new ObservableCollection<TaskInfo>();
-
-
-        public ObservableCollection<TaskInfo> taskCollection
-        {
-            get
-            {
-                return _taskCollection;
-            }
-        }
+        
         
         public MainWindow()
         {
@@ -49,6 +41,13 @@ namespace DNBSNGUI
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             fetchTaskData();
+            fetchContactData();
+            fetchPasswordData();
+            fetchNoteData();
+
+
+            for (int i = 1; i <= 30; i++)
+                dateUG.Children.Add(new ShowEvent(i));
         }
 
         private void kolkataBtn_Click(object sender, RoutedEventArgs e)
@@ -103,7 +102,7 @@ namespace DNBSNGUI
                 allDetailsExpndr.IsExpanded = true;
                 logoutPassBtn.Content = "Logout";
                 allDetailsExpndr.Header = "All Details";
-                addInfoExpndr.Header = "Add Info";
+                addpassInfoExpndr.Header = "Add Info";
                 logoutPassBtn.IsEnabled = true;
             }
             else
@@ -175,7 +174,7 @@ namespace DNBSNGUI
             //loginpassPassExpndr.ToolTip = "Logged In";
             allDetailsExpndr.IsExpanded = false;
             logoutPassBtn.Content = "Please Log In First";
-            addInfoExpndr.Header = "Login To Add Info";
+            addpassInfoExpndr.Header = "Login To Add Info";
             allDetailsExpndr.Header = "Login To Show All Details";
             //allDetailsExpndr.Header = "All Details";
             //addInfoExpndr.Header = "Add Info";
@@ -295,16 +294,19 @@ namespace DNBSNGUI
             }
 
         }
+
+        private void previousDateBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private string GenerateId()
         {
             return DateTime.Now.ToOADate().ToString();
         }
 
-        private void clearFieldsBtn_Click(object sender, RoutedEventArgs e)
-        {
-            noteSuccessMsgLvl.Content = "";
-            notesTB.Clear();
-        }
+
+        #region Note
 
         private void saveNotesBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -314,12 +316,14 @@ namespace DNBSNGUI
 
                 newNote.id = GenerateId();
 
+                newNote.noteDate = noteDateDP.SelectedDate.Value;
                 newNote.note = notesTB.Text;
 
                 DNBSNDb.DbInteraction.DoEnterNewNote(newNote);
 
                 notesTB.Clear();
                 noteSuccessMsgLvl.Content = "Event Submited";
+                fetchNoteData();
             }
 
 
@@ -327,18 +331,153 @@ namespace DNBSNGUI
             {
                 noteSuccessMsgLvl.Content = "Please Enter Proper Note";
             }
+
+
         }
 
-        private void previousDateBtn_Click(object sender, RoutedEventArgs e)
+        private void clearFieldsBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            noteSuccessMsgLvl.Content = "";
+            notesTB.Clear();
         }
 
-        private void foutem_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        ObservableCollection<NoteInfo> _allnoteCollection = new ObservableCollection<NoteInfo>();
+
+
+        public ObservableCollection<NoteInfo> allnoteCollection
         {
-            for (int i = 1; i <= 30; i++)
-                dateUG.Children.Add(new ShowEvent(i));
+            get
+            {
+                return _allnoteCollection;
+            }
         }
+
+        private void fetchNoteData()
+        {
+            List<NoteInfo> notes = DbInteraction.GetAllNoteList();
+
+            _allnoteCollection.Clear();
+
+            foreach (NoteInfo note in notes)
+            {
+                _allnoteCollection.Add(note);
+            }
+        }
+
+        
+
+        #endregion
+
+
+
+        #region Password
+
+        private void paswrdSave_Click(object sender, RoutedEventArgs e)
+        {
+            DNBSNData.PasswordInfo newPassword = new DNBSNData.PasswordInfo();
+
+            newPassword.id = GenerateId();
+            newPassword.name = passNameTB.Text;
+            newPassword.email = emailforpassTB.Text;
+            newPassword.userId = userIdTB.Text;
+            newPassword.password = pawsrdTB.Text;
+            newPassword.scrtqstn = scrtQstnTB.Text;
+            newPassword.scrtans = secrtAnsTB.Text;
+            newPassword.otherInfo = othersInfoTB.Text;
+
+
+            DNBSNDb.DbInteraction.DoRegisterNewPassword(newPassword);
+            passNameTB.Text = emailforpassTB.Text = userIdTB.Text = pawsrdTB.Text = scrtQstnTB.Text = secrtAnsTB.Text = othersInfoTB.Text = "";
+
+            addpassInfoExpndr.IsExpanded = false;
+            fetchPasswordData();
+        }
+
+        private void clearPassInfoFieldBtn_Click(object sender, RoutedEventArgs e)
+        {
+            passNameTB.Text = emailforpassTB.Text = userIdTB.Text = pawsrdTB.Text = scrtQstnTB.Text = secrtAnsTB.Text = othersInfoTB.Text = "";
+        }
+
+        ObservableCollection<PasswordInfo> _passwordCollection = new ObservableCollection<PasswordInfo>();
+
+
+        public ObservableCollection<PasswordInfo> passwordCollection
+        {
+            get
+            {
+                return _passwordCollection;
+            }
+        }
+
+        private void fetchPasswordData()
+        {
+            List<PasswordInfo> passwords = DbInteraction.GetAllPasswordsList();
+
+            _passwordCollection.Clear();
+
+            foreach (PasswordInfo password in passwords)
+            {
+                _passwordCollection.Add(password);
+            }
+        }
+
+        private void refrshpsdwBtn_Click(object sender, RoutedEventArgs e)
+        {
+            fetchPasswordData();
+        }
+
+
+        #endregion
+
+        #region Task
+
+        private void addTaskBtn_Click(object sender, RoutedEventArgs e)
+        {
+            DNBSNData.TaskInfo newTask = new DNBSNData.TaskInfo();
+
+            newTask.id = GenerateId();
+            newTask.value = taskValueCB.Text;
+            newTask.taskDetails = taskDetailsTB.Text;
+
+            DNBSNDb.DbInteraction.DoRegisterNewTask(newTask);
+
+            taskValueCB.Text = taskDetailsTB.Text = "";
+            fetchTaskData();
+            tskxpndr.IsExpanded = false;
+
+        }
+
+        ObservableCollection<TaskInfo> _taskCollection = new ObservableCollection<TaskInfo>();
+
+
+        public ObservableCollection<TaskInfo> taskCollection
+        {
+            get
+            {
+                return _taskCollection;
+            }
+        }
+
+        private void fetchTaskData()
+        {
+            List<TaskInfo> tasks = DbInteraction.GetAllTaskList();
+
+            _taskCollection.Clear();
+
+            foreach (TaskInfo task in tasks)
+            {
+                _taskCollection.Add(task);
+            }
+        }
+
+        private void refrshTskBtn_Click(object sender, RoutedEventArgs e)
+        {
+            fetchContactData();
+        }
+
+        #endregion
+
+        #region Contact
 
         private void saveContactBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -356,73 +495,44 @@ namespace DNBSNGUI
 
 
             DNBSNDb.DbInteraction.DoRegisterNewContact(newContact);
-
+            contactnameTB.Text = mobnoTB.Text = homnoTB.Text = ofcNoTb.Text = faxNoTb.Text = addressTB.Text = remrkTB.Text = emailTb.Text = "";
+            fetchContactData();
+            contacXpndr.IsExpanded = true;
 
         }
 
-        private void addTaskBtn_Click(object sender, RoutedEventArgs e)
+        ObservableCollection<ContactInfo> _contactCollection = new ObservableCollection<ContactInfo>();
+
+
+        public ObservableCollection<ContactInfo> contactCollection
         {
-            DNBSNData.TaskInfo newTask = new DNBSNData.TaskInfo();
-
-            newTask.id = GenerateId();
-            newTask.value = taskValueCB.Text;
-            newTask.taskDetails = taskDetailsTB.Text;
-            
-
-            DNBSNDb.DbInteraction.DoRegisterNewTask(newTask);
-        }
-
-        private void paswrdSave_Click(object sender, RoutedEventArgs e)
-        {
-            DNBSNData.PasswordInfo newPassword = new DNBSNData.PasswordInfo();
-
-            newPassword.id = GenerateId();
-            newPassword.name = passNameTB.Text;
-            newPassword.email = emailforpassTB.Text;
-            newPassword.userId = userIdTB.Text;
-            newPassword.password = pawsrdTB.Text;
-            newPassword.scrtqstn = scrtQstnTB.Text;
-            newPassword.scrtans = secrtAnsTB.Text;
-            newPassword.otherInfo = othersInfoTB.Text;
-
-
-            DNBSNDb.DbInteraction.DoRegisterNewPassword(newPassword);
-        }
-
-        private void fetchTaskData()
-        {
-            List<TaskInfo> tasks = DbInteraction.GetAllTaskList();
-
-            _taskCollection.Clear();
-
-            foreach (TaskInfo task in tasks)
+            get
             {
-                _taskCollection.Add(task);
+                return _contactCollection;
             }
         }
 
-        private void refrshTskBtn_Click(object sender, RoutedEventArgs e)
+        private void fetchContactData()
         {
-            fetchTaskData();
+            List<ContactInfo> contacts = DbInteraction.GetAllContactList();
+
+            _contactCollection.Clear();
+
+            foreach (ContactInfo Contacts in contacts)
+            {
+                _contactCollection.Add(Contacts);
+            }
         }
 
+        private void contactrfrshBtn_Click(object sender, RoutedEventArgs e)
+        {
+            fetchContactData();
+        }
 
-        //if (oldPasswordBox.Password.Equals(FetchSPTSettings.FetchePassword()))
-        //    {
-        //        if (!newPasswordBox.Password.Equals(string.Empty) && newPasswordBox.Password.Equals(reNewPasswordBox.Password))
-        //        {
-        //            FetchSPTSettings.EditSptPassword(newPasswordBox.Password);
-        //            this.Close();
-        //        }
-        //        else
-        //            MessageBox.Show("Please Enter same Password both the password field for new one");
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("Please Enter correct Password");
-        //    }
+         #endregion
 
-
+        
+        
 
 
     }
