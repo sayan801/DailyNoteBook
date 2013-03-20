@@ -197,6 +197,190 @@ namespace DNBSNDb
             return passwordStr;
         }
         #endregion
+
+        #region Contact
+
+
+        public static int DoRegisterNewContact(ContactInfo contactDetails)
+        {
+            int returnVal = 0;
+            MySql.Data.MySqlClient.MySqlConnection msqlConnection = OpenDbConnection();
+
+            try
+            {
+                //define the command reference
+                MySql.Data.MySqlClient.MySqlCommand msqlCommand = new MySql.Data.MySqlClient.MySqlCommand();
+
+                //define the connection used by the command object
+                msqlCommand.Connection = msqlConnection;
+
+                msqlCommand.CommandText = "INSERT INTO contact(contactId,name,mobile,homePhone,officePhone,email,address,faxNumber,remark) "
+                                                   + "VALUES(@contactId,@name,@mobile,@homePhone,@officePhone,@email,@address,@faxNumber,@remark)";
+
+                msqlCommand.Parameters.AddWithValue("@contactId", contactDetails.id);
+                msqlCommand.Parameters.AddWithValue("@name", contactDetails.name);
+                msqlCommand.Parameters.AddWithValue("@mobile", contactDetails.mobileno);
+                msqlCommand.Parameters.AddWithValue("@homePhone", contactDetails.homeno);
+                msqlCommand.Parameters.AddWithValue("@officePhone", contactDetails.oficeno);
+                msqlCommand.Parameters.AddWithValue("@email", contactDetails.email);
+                msqlCommand.Parameters.AddWithValue("@address", contactDetails.address);
+                msqlCommand.Parameters.AddWithValue("@faxNumber", contactDetails.faxno);
+                msqlCommand.Parameters.AddWithValue("@remark", contactDetails.remark);
+
+                msqlCommand.ExecuteNonQuery();
+
+                returnVal = 1;
+            }
+            catch (Exception er)
+            {
+                returnVal = 0;
+            }
+            finally
+            {
+                //always close the connection
+                msqlConnection.Close();
+            }
+            return returnVal;
+        }
+
+
+        #endregion
+
+        #region Task
+
+
+        public static int DoRegisterNewTask(TaskInfo TaskDetails)
+        {
+            int returnVal = 0;
+            MySql.Data.MySqlClient.MySqlConnection msqlConnection = OpenDbConnection();
+
+            try
+            {
+                //define the command reference
+                MySql.Data.MySqlClient.MySqlCommand msqlCommand = new MySql.Data.MySqlClient.MySqlCommand();
+
+                //define the connection used by the command object
+                msqlCommand.Connection = msqlConnection;
+
+                msqlCommand.CommandText = "INSERT INTO task(taskId,priority,details) "
+                                                   + "VALUES(@taskId,@priority,@details)";
+
+                msqlCommand.Parameters.AddWithValue("@taskId", TaskDetails.id);
+                msqlCommand.Parameters.AddWithValue("@priority", TaskDetails.value);
+                msqlCommand.Parameters.AddWithValue("@details", TaskDetails.taskDetails);
+
+                msqlCommand.ExecuteNonQuery();
+
+                returnVal = 1;
+            }
+            catch (Exception er)
+            {
+                returnVal = 0;
+            }
+            finally
+            {
+                //always close the connection
+                msqlConnection.Close();
+            }
+            return returnVal;
+        }
+
+
+
+        public static List<TaskInfo> GetAllTaskList()
+        {
+            return QueryAllTaskList();
+        }
+        private static List<TaskInfo> QueryAllTaskList()
+        {
+            List<TaskInfo> TaskList = new List<TaskInfo>();
+
+            MySql.Data.MySqlClient.MySqlConnection msqlConnection = OpenDbConnection();
+
+            try
+            {   //define the command reference
+                MySql.Data.MySqlClient.MySqlCommand msqlCommand = new MySql.Data.MySqlClient.MySqlCommand();
+                msqlCommand.Connection = msqlConnection;
+
+                msqlCommand.CommandText = "Select * From task GROUP BY NAME;";
+                MySql.Data.MySqlClient.MySqlDataReader msqlReader = msqlCommand.ExecuteReader();
+
+                while (msqlReader.Read())
+                {
+                    TaskInfo Task = new TaskInfo();
+
+                    Task.id = msqlReader.GetString("taskId");
+                    Task.value = msqlReader.GetString("priority");
+                    Task.taskDetails = msqlReader.GetString("details");
+                    
+
+                    TaskList.Add(Task);
+                }
+
+            }
+            catch (Exception er)
+            {
+            }
+            finally
+            {
+                //always close the connection
+                msqlConnection.Close();
+            }
+
+            return TaskList;
+        }
+
+        
+
+
+        #endregion
+
+        #region Password Manager
+
+
+        public static int DoRegisterNewPassword(PasswordInfo passwordDetails)
+        {
+            int returnVal = 0;
+            MySql.Data.MySqlClient.MySqlConnection msqlConnection = OpenDbConnection();
+
+            try
+            {
+                //define the command reference
+                MySql.Data.MySqlClient.MySqlCommand msqlCommand = new MySql.Data.MySqlClient.MySqlCommand();
+
+                //define the connection used by the command object
+                msqlCommand.Connection = msqlConnection;
+
+                msqlCommand.CommandText = "INSERT INTO password(passwordId,name,email,userId,password,secretQuestion,secretAnswer,otherInfo) "
+                                                   + "VALUES(@passwordId,@name,@email,@userId,@password,@secretQuestion,@secretAnswer,@otherInfo)";
+
+                msqlCommand.Parameters.AddWithValue("@passwordId", passwordDetails.id);
+                msqlCommand.Parameters.AddWithValue("@name", passwordDetails.name);
+                msqlCommand.Parameters.AddWithValue("@email", passwordDetails.email);
+                msqlCommand.Parameters.AddWithValue("@userId", passwordDetails.userId);
+                msqlCommand.Parameters.AddWithValue("@password", passwordDetails.password);
+                msqlCommand.Parameters.AddWithValue("@secretQuestion", passwordDetails.scrtqstn);
+                msqlCommand.Parameters.AddWithValue("@secretAnswer", passwordDetails.scrtans);
+                msqlCommand.Parameters.AddWithValue("@otherInfo", passwordDetails.otherInfo);
+
+                msqlCommand.ExecuteNonQuery();
+
+                returnVal = 1;
+            }
+            catch (Exception er)
+            {
+                returnVal = 0;
+            }
+            finally
+            {
+                //always close the connection
+                msqlConnection.Close();
+            }
+            return returnVal;
+        }
+
+
+        #endregion
     }
 }
 

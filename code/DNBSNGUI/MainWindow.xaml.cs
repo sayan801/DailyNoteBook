@@ -11,6 +11,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DNBSNData;
+using DNBSNDb;
+using System.Collections.ObjectModel;
 
 using TweetSharp;
 using System.Diagnostics;
@@ -23,12 +26,29 @@ namespace DNBSNGUI
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        ObservableCollection<TaskInfo> _taskCollection = new ObservableCollection<TaskInfo>();
+
+
+        public ObservableCollection<TaskInfo> taskCollection
+        {
+            get
+            {
+                return _taskCollection;
+            }
+        }
+        
         public MainWindow()
         {
             InitializeComponent();
             this.MouseLeftButtonDown += delegate { this.DragMove(); };
             FocusManager.SetFocusedElement(this, dNBSNUserIDTB);
 
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            fetchTaskData();
         }
 
         private void kolkataBtn_Click(object sender, RoutedEventArgs e)
@@ -320,6 +340,71 @@ namespace DNBSNGUI
                 dateUG.Children.Add(new ShowEvent(i));
         }
 
+        private void saveContactBtn_Click(object sender, RoutedEventArgs e)
+        {
+            DNBSNData.ContactInfo newContact = new DNBSNData.ContactInfo();
+
+            newContact.id = GenerateId();
+            newContact.name = contactnameTB.Text;
+            newContact.mobileno = mobnoTB.Text;
+            newContact.homeno = homnoTB.Text;
+            newContact.oficeno = ofcNoTb.Text;
+            newContact.faxno = faxNoTb.Text;
+            newContact.address = addressTB.Text;
+            newContact.remark = remrkTB.Text;
+            newContact.email = emailTb.Text;
+
+
+            DNBSNDb.DbInteraction.DoRegisterNewContact(newContact);
+
+
+        }
+
+        private void addTaskBtn_Click(object sender, RoutedEventArgs e)
+        {
+            DNBSNData.TaskInfo newTask = new DNBSNData.TaskInfo();
+
+            newTask.id = GenerateId();
+            newTask.value = taskValueCB.Text;
+            newTask.taskDetails = taskDetailsTB.Text;
+            
+
+            DNBSNDb.DbInteraction.DoRegisterNewTask(newTask);
+        }
+
+        private void paswrdSave_Click(object sender, RoutedEventArgs e)
+        {
+            DNBSNData.PasswordInfo newPassword = new DNBSNData.PasswordInfo();
+
+            newPassword.id = GenerateId();
+            newPassword.name = passNameTB.Text;
+            newPassword.email = emailforpassTB.Text;
+            newPassword.userId = userIdTB.Text;
+            newPassword.password = pawsrdTB.Text;
+            newPassword.scrtqstn = scrtQstnTB.Text;
+            newPassword.scrtans = secrtAnsTB.Text;
+            newPassword.otherInfo = othersInfoTB.Text;
+
+
+            DNBSNDb.DbInteraction.DoRegisterNewPassword(newPassword);
+        }
+
+        private void fetchTaskData()
+        {
+            List<TaskInfo> tasks = DbInteraction.GetAllTaskList();
+
+            _taskCollection.Clear();
+
+            foreach (TaskInfo task in tasks)
+            {
+                _taskCollection.Add(task);
+            }
+        }
+
+        private void refrshTskBtn_Click(object sender, RoutedEventArgs e)
+        {
+            fetchTaskData();
+        }
 
 
         //if (oldPasswordBox.Password.Equals(FetchSPTSettings.FetchePassword()))

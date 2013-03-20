@@ -3,9 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:sys="clr-namespace:System;assembly=mscorlib"   
         xmlns:ViewEvent="clr-namespace:DNBSNGUI"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}"
         Title="DNBSN"
         MinHeight="650" MinWidth="1250" AllowsTransparency="True" ResizeMode="CanResizeWithGrip" Background="Transparent" 
-        WindowStyle="None" WindowStartupLocation="CenterScreen" Icon="/DNBSNGUI;component/Images/monotone_pen_write.png"  >
+        WindowStyle="None" WindowStartupLocation="CenterScreen" Icon="/DNBSNGUI;component/Images/monotone_pen_write.png" Loaded="Window_Loaded" >
 
 
     <Window.Resources>
@@ -526,30 +527,30 @@
                     <TabItem Name="contactBookTabItem" Style="{StaticResource TItemStyle}" Header="Contacts">
                         <DockPanel LastChildFill="True">
                             <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
-                                <Expander DockPanel.Dock="Top" ExpandDirection="Down" IsExpanded="False" Header="Add Contact" VerticalAlignment="Center">
+                                <Expander Name="contacXpndr"  DockPanel.Dock="Top" ExpandDirection="Down" IsExpanded="False" Header="Add Contact" VerticalAlignment="Center">
                                     <UniformGrid Columns="1">
                                         <DockPanel Width="650" >
                                             <UniformGrid Columns="4"  DockPanel.Dock="Left" Width="647">
                                                 <Label Margin="10" Width="150">Name</Label>
-                                                <TextBox Margin="10" Width="140" Tag="enter name" Style="{StaticResource commonTBtyle}" />
+                                                <TextBox Name="contactnameTB" Margin="10" Width="140" Tag="enter name" Style="{StaticResource commonTBtyle}" />
                                                 <Label Margin="10" Width="150">Mobile Number</Label>
-                                                <TextBox Margin="10" Width="140" Tag="enter mobile number" Style="{StaticResource commonTBtyle}" />
+                                                <TextBox Name="mobnoTB" Margin="10" Width="140" Tag="enter mobile number" Style="{StaticResource commonTBtyle}" />
                                                 <Label Margin="10" Width="150">EMail</Label>
-                                                <TextBox Margin="10" Width="140" Tag="enter email address" Style="{StaticResource commonTBtyle}" />
+                                                <TextBox Name="emailTb" Margin="10" Width="140" Tag="enter email address" Style="{StaticResource commonTBtyle}" />
                                                 <Label Margin="10" Width="150">Home Number</Label>
-                                                <TextBox Margin="10" Width="140" Tag="enter home number" Style="{StaticResource commonTBtyle}" />
+                                                <TextBox Name="homnoTB" Margin="10" Width="140" Tag="enter home number" Style="{StaticResource commonTBtyle}" />
                                                 <Label Margin="10" Width="150">Address</Label>
-                                                <TextBox Margin="10" Width="140" Tag="enter address" Style="{StaticResource commonTBtyle}" />
+                                                <TextBox Name="addressTB" Margin="10" Width="140" Tag="enter address" Style="{StaticResource commonTBtyle}" />
                                                 <Label Margin="10" Width="150">Office Number</Label>
-                                                <TextBox Margin="10" Width="140" Tag="enter office number" Style="{StaticResource commonTBtyle}" />
+                                                <TextBox Name="ofcNoTb" Margin="10" Width="140" Tag="enter office number" Style="{StaticResource commonTBtyle}" />
                                                 <Label Margin="10" Width="150">Remarks</Label>
-                                                <TextBox Margin="10" Width="140" Tag="enter remarks" Style="{StaticResource commonTBtyle}" />
+                                                <TextBox Name="remrkTB" Margin="10" Width="140" Tag="enter remarks" Style="{StaticResource commonTBtyle}" />
                                                 <Label Margin="10" Width="150">Fax Number</Label>
-                                                <TextBox Margin="10" Width="140" Tag="enter fax number" Style="{StaticResource commonTBtyle}" />
+                                                <TextBox Name="faxNoTb" Margin="10" Width="140" Tag="enter fax number" Style="{StaticResource commonTBtyle}" />
                                                 <Label></Label>
                                                 <Label></Label>
                                                 <Button Content="Clear Fields" ToolTip="clear fields" Style="{StaticResource PlainBtnStyle}" />
-                                                <Button Content="Save" ToolTip="save info" Style="{StaticResource PlainBtnStyle}" />
+                                                <Button Content="Save" ToolTip="save info" Style="{StaticResource PlainBtnStyle}" Name="saveContactBtn"  Click="saveContactBtn_Click" />
                                             </UniformGrid>
                                         </DockPanel>
                                     </UniformGrid>
@@ -610,24 +611,24 @@
                                 <Expander Header="Login To Add Info" Name="addInfoExpndr" DockPanel.Dock="Top">
                                     <UniformGrid Columns="4">
                                         <Label Margin="10">Name</Label>
-                                        <TextBox Margin="10" Tag="enter name" Style="{StaticResource commonTBtyle}" />
+                                        <TextBox Name="passNameTB" Margin="10" Tag="enter name" Style="{StaticResource commonTBtyle}" />
 
                                         <Label Margin="10">EMail</Label>
-                                        <TextBox Margin="10" Tag="enter email address" Style="{StaticResource commonTBtyle}" />
+                                        <TextBox Name="emailforpassTB" Margin="10" Tag="enter email address" Style="{StaticResource commonTBtyle}" />
 
                                         <Label Margin="10">User ID</Label>
-                                        <TextBox Margin="10" Tag="enter user id" Style="{StaticResource commonTBtyle}" />
+                                        <TextBox Name="userIdTB" Margin="10" Tag="enter user id" Style="{StaticResource commonTBtyle}" />
 
                                         <Label Margin="10">Password</Label>
-                                        <TextBox Margin="10" Tag="enter password" Style="{StaticResource commonTBtyle}" />
+                                        <TextBox Name="pawsrdTB" Margin="10" Tag="enter password" Style="{StaticResource commonTBtyle}" />
                                         <Label Margin="10">Secret Question</Label>
-                                        <TextBox Margin="10" Tag="enter secret question" Style="{StaticResource commonTBtyle}" />
+                                        <TextBox Name="scrtQstnTB"  Margin="10" Tag="enter secret question" Style="{StaticResource commonTBtyle}" />
                                         <Label Margin="10">Answer</Label>
-                                        <TextBox Margin="10" Tag="enter answer" Style="{StaticResource commonTBtyle}" />
+                                        <TextBox Name="secrtAnsTB"  Margin="10" Tag="enter answer" Style="{StaticResource commonTBtyle}" />
                                         <Label Margin="10">Others Info</Label>
-                                        <TextBox Margin="10" Tag="enter others info" Style="{StaticResource commonTBtyle}" />
+                                        <TextBox Name="othersInfoTB" Margin="10" Tag="enter others info" Style="{StaticResource commonTBtyle}" />
                                         <Button ToolTip="clear all fields" Width="150" Style="{StaticResource PlainBtnStyle}">Clear Fields</Button>
-                                        <Button ToolTip="save info" Width="150" Style="{StaticResource PlainBtnStyle}">Save</Button>
+                                        <Button Name="paswrdSaveBtn"  ToolTip="save info" Width="150" Style="{StaticResource PlainBtnStyle}" Click="paswrdSave_Click">Save</Button>
                                     </UniformGrid>
                                 </Expander>
 
@@ -635,8 +636,8 @@
                                     <Label></Label>
                                     <Label></Label>
                                     <Label></Label>
-                                    <Label></Label>
-                                    <Label></Label>
+                                    <Button Content="Edit Details" ToolTip="edit selected details" Style="{StaticResource PlainBtnStyle}" />
+                                    <Button Content="Delete Details" ToolTip="delete selected details" Style="{StaticResource PlainBtnStyle}" />
                                     <Button Content="Please Log In First" Name="logoutPassBtn"  IsEnabled="False" ToolTip="logout" Style="{StaticResource PlainBtnStyle}" Click="logoutPassBtn_Click" />
                                 </UniformGrid>
                                 <UniformGrid DockPanel.Dock="Top">
@@ -674,14 +675,14 @@
 
                                                     <UniformGrid Columns="4"  DockPanel.Dock="Left" Width="647" Height="198">
                                                         <Label Margin="10" Width="150" VerticalAlignment="Center">Task Value</Label>
-                                                        <ComboBox Margin="10" Width="142" Height="30" ToolTip="task value" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" SelectedIndex="0">
+                                                        <ComboBox Name="taskValueCB" Margin="10" Width="142" Height="30" ToolTip="task value" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" SelectedIndex="0">
                                                             <ComboBoxItem>High</ComboBoxItem>
                                                             <ComboBoxItem>Medium</ComboBoxItem>
                                                             <ComboBoxItem>Low</ComboBoxItem>
                                                         </ComboBox>
 
                                                         <Label Margin="10" Width="150" VerticalAlignment="Center">About Task</Label>
-                                                        <TextBox Height="100" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" SpellCheck.IsEnabled="True">
+                                                        <TextBox Name="taskDetailsTB" Height="100" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" SpellCheck.IsEnabled="True">
                                                             <TextBox.Style>
                                                                 <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
                                                                     <Style.Resources>
@@ -708,7 +709,7 @@
                                                         <Label></Label>
                                                         <Label></Label>
                                                         <Button Content="Clear" ToolTip="clear field" Style="{StaticResource PlainBtnStyle}" Height="25" Width="130" />
-                                                        <Button Content="Save" ToolTip="save task" Style="{StaticResource PlainBtnStyle}" Height="25" Width="130" />
+                                                        <Button Name="addTaskBtn" Content="Save" ToolTip="save task" Style="{StaticResource PlainBtnStyle}" Height="25" Width="130" Click="addTaskBtn_Click" />
                                                     </UniformGrid>
                                                 </DockPanel>
                                             </UniformGrid>
@@ -721,17 +722,17 @@
                                             <Label></Label>
                                             <Label></Label>
                                             <Label></Label>
-                                            <Label></Label>
+                                            <Button Content="Refresh" Name="refrshTskBtn" ToolTip="refresh task" Style="{StaticResource PlainBtnStyle}" Click="refrshTskBtn_Click" />
                                             <Button Content="Edit Task" ToolTip="edit selected task" Style="{StaticResource PlainBtnStyle}" />
                                             <Button Content="Delete Task" ToolTip="delete selected task" Style="{StaticResource PlainBtnStyle}" />
                                         </UniformGrid>
                                     </DockPanel>
-                                    <ListView Name="taskView" HorizontalAlignment="Stretch">
+                                    <ListView Name="taskView" HorizontalAlignment="Stretch" ItemsSource="{Binding taskCollection}">
                                         <ListView.View>
                                             <GridView>
-                                                <GridViewColumn Width="100" Header="Value" />
-                                                <GridViewColumn Width="650" Header="Task"  />
-                                                <GridViewColumn Width="100" Header="Status"   />
+                                                <GridViewColumn Width="100" Header="Value" DisplayMemberBinding="{Binding value}"/>
+                                                <GridViewColumn Width="650" Header="Task" DisplayMemberBinding="{Binding taskDetails}" />
+                                                <!--<GridViewColumn Width="100" Header="Status"   />-->
                                             </GridView>
                                         </ListView.View>
                                     </ListView>
