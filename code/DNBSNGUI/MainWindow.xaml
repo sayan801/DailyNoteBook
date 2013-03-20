@@ -213,7 +213,7 @@
 
 
 
-                                        <DatePicker ToolTip="today" Margin="10" Name="noteDateDP"></DatePicker>
+                                        <DatePicker ToolTip="today" Margin="10" Name="noteDateDP" SelectedDate="{x:Static sys:DateTime.Now}" Style="{StaticResource DatepkrStyle}"></DatePicker>
                                         <Label Name="noteSuccessMsgLvl"  Style="{StaticResource LblStyle}"></Label>
                                         <Button Name="clearFieldsBtn"  Content="Clear Fields"  Style="{StaticResource PlainBtnStyle}" Click="clearFieldsBtn_Click" />
                                         <Button Name="saveNotesBtn" Content="Save Notes"  Style="{StaticResource PlainBtnStyle}" Click="saveNotesBtn_Click" />
@@ -279,14 +279,14 @@
                                     <Button Name="rewriBtnBtn" ToolTip="save to cxcel" Style="{StaticResource PlainBtnStyle}">Rewrite Event</Button>
                                     <Button Name="dltevntBtnBtn" ToolTip="save to cxcel" Style="{StaticResource PlainBtnStyle}">Delete Event</Button>
                                     <Button Name="saveToExcelBtn" ToolTip="save to cxcel" Style="{StaticResource PlainBtnStyle}">Save To Excel</Button>
-                                    <DatePicker ToolTip="select a date" Margin="10" Name="goToDateDP" ></DatePicker>
-                                    <Button Name="goToDateBtn" ToolTip="go to date" Style="{StaticResource PlainBtnStyle}">Go To Date</Button>
+                                    <DatePicker ToolTip="select a date" Margin="10" Name="goToDateDP" SelectedDate="{x:Static sys:DateTime.Now}" Style="{StaticResource DatepkrStyle}" ></DatePicker>
+                                    <Button Name="goToDateBtn" ToolTip="go to date" Style="{StaticResource PlainBtnStyle}" Click="goToDateBtn_Click">Go To Date</Button>
                                 </UniformGrid>
                             </DockPanel>
                             
                             <DockPanel>
-                                <TabControl Name="TabControl" Margin="3" BorderBrush="#FFE9E0E0" TabStripPlacement="Right" HorizontalContentAlignment="Left" >
-                                    <TabItem Name="foutem"  Style="{StaticResource TItemStyle}" Header="Monthly View"  Width="150">
+                                <TabControl Name="noteControlsTab" Margin="3" BorderBrush="#FFE9E0E0" TabStripPlacement="Right" HorizontalContentAlignment="Left" >
+                                    <TabItem Name="monthlyViewTC"  Style="{StaticResource TItemStyle}" Header="Monthly View"  Width="150" MouseRightButtonDown="monthlyViewTC_click">
                                         <DockPanel LastChildFill="True">
                                             
                                             <UniformGrid Rows="1" Columns="7" DockPanel.Dock="Top">
@@ -309,7 +309,7 @@
 
                                         <DockPanel LastChildFill="True">
 
-                                            <ListView Name="allnoteView" HorizontalAlignment="Stretch" ItemsSource="{Binding allnoteCollection}">
+                                            <ListView Name="allnoteView" HorizontalAlignment="Stretch" ItemsSource="{Binding allnoteCollection}" >
                                                 <ListView.View>
                                                     <GridView>
                                                         <GridViewColumn Width="100" Header="Date" DisplayMemberBinding="{Binding noteDate}"/>

@@ -26,10 +26,10 @@ namespace DNBSNGUI
     /// </summary>
     public partial class MainWindow : Window
     {
-       
 
-        
-        
+
+
+
         public MainWindow()
         {
             InitializeComponent();
@@ -316,7 +316,7 @@ namespace DNBSNGUI
 
                 newNote.id = GenerateId();
 
-                newNote.noteDate = noteDateDP.SelectedDate.Value;
+                newNote.gotoDate = noteDateDP.SelectedDate.Value;
                 newNote.note = notesTB.Text;
 
                 DNBSNDb.DbInteraction.DoEnterNewNote(newNote);
@@ -364,7 +364,7 @@ namespace DNBSNGUI
             }
         }
 
-        
+
 
         #endregion
 
@@ -529,11 +529,38 @@ namespace DNBSNGUI
             fetchContactData();
         }
 
-         #endregion
+        #endregion
 
-        
-        
+        #region Go to Date
+        private void goToDateBtn_Click(object sender, RoutedEventArgs e)
+        {
+            noteControlsTab.SelectedIndex = 1;
+            NoteInfo noteinfo = new NoteInfo();
+            noteinfo.gotoDate = goToDateDP.SelectedDate.Value;
 
+
+            List<NoteInfo> notes = DbInteraction.searchNoteList(noteinfo);
+
+            _allnoteCollection.Clear();
+
+            foreach (NoteInfo note in notes)
+            {
+                _allnoteCollection.Add(note);
+            }
+        }
+        #endregion
+
+        private void monthlyViewTC_click(object sender, RoutedEventArgs e)
+        {
+            List<NoteInfo> months = DbInteraction.searchMnthlyNoteList( goToDateDP.SelectedDate.Value);
+
+            _allnoteCollection.Clear();
+
+            foreach (NoteInfo note in months)
+            {
+                _allnoteCollection.Add(note);
+            }
+        }
 
     }
 

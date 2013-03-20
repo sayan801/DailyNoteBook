@@ -10,5 +10,7 @@ namespace DNBSNData
         public string id { get; set; }
         public DateTime noteDate { get; set; }
         public string note { get; set; }
+        public DateTime gotoDate { get; set; }
+        
     }
 }

@@ -93,7 +93,7 @@ namespace DNBSNDb
                 msqlCommand.CommandText = "INSERT INTO note(id,date,note) " + "VALUES(@id,@date,@note)";
 
                 msqlCommand.Parameters.AddWithValue("@id", NewNote.id);
-                msqlCommand.Parameters.AddWithValue("@date", NewNote.noteDate);
+                msqlCommand.Parameters.AddWithValue("@date", NewNote.gotoDate);
                 msqlCommand.Parameters.AddWithValue("@note", NewNote.note);
                 
 
@@ -523,6 +523,103 @@ namespace DNBSNDb
         }
 
         #endregion
+
+        #region Go To Date / Search
+
+        public static List<NoteInfo> searchNoteList(NoteInfo noteinfo)
+        {
+            return searchAllNoteList(noteinfo);
+        }
+
+        private static List<NoteInfo> searchAllNoteList(NoteInfo noteinfo)
+        {
+            List<NoteInfo> NoteList = new List<NoteInfo>();
+
+            MySql.Data.MySqlClient.MySqlConnection msqlConnection = OpenDbConnection();
+
+            try
+            {   //define the command reference
+                MySql.Data.MySqlClient.MySqlCommand msqlCommand = new MySql.Data.MySqlClient.MySqlCommand();
+                msqlCommand.Connection = msqlConnection;
+
+                msqlCommand.CommandText = "Select * From note where date = @date ; ";
+
+                msqlCommand.Parameters.AddWithValue("@date", noteinfo.gotoDate);
+                MySql.Data.MySqlClient.MySqlDataReader msqlReader = msqlCommand.ExecuteReader();
+
+                while (msqlReader.Read())
+                {
+                    NoteInfo Note = new NoteInfo();
+
+                    Note.noteDate = msqlReader.GetDateTime("date");
+                    
+
+                    NoteList.Add(Note);
+                }
+
+            }
+            catch (Exception er)
+            {
+            }
+            finally
+            {
+                //always close the connection
+                msqlConnection.Close();
+            }
+
+            return NoteList;
+        }
+
+        #endregion
+
+        #region Monthly View
+
+        public static List<NoteInfo> searchMnthlyNoteList(DateTime date)
+        {
+            DateTime day1st = new DateTime(date.Year, date.Month, 1);
+            DateTime dayLast = new DateTime(date.Year, date.Month + 1, 1);
+            dayLast = dayLast.Subtract(new TimeSpan(1, 0, 0, 0));
+            List<NoteInfo> NoteList = new List<NoteInfo>();
+
+            MySql.Data.MySqlClient.MySqlConnection msqlConnection = OpenDbConnection();
+
+            try
+            {   //define the command reference
+                MySql.Data.MySqlClient.MySqlCommand msqlCommand = new MySql.Data.MySqlClient.MySqlCommand();
+                msqlCommand.Connection = msqlConnection;
+
+                msqlCommand.CommandText = "SELECT * FROM note where date(note.date) >= DATE_SUB( @dayLast, INTERVAL @diff DAY) group by date;";
+                msqlCommand.Parameters.AddWithValue("@dayLast", dayLast);
+                msqlCommand.Parameters.AddWithValue("@diff", dayLast.Subtract(day1st));
+                MySql.Data.MySqlClient.MySqlDataReader msqlReader = msqlCommand.ExecuteReader();
+
+                while (msqlReader.Read())
+                {
+                    NoteInfo Note = new NoteInfo();
+
+                    Note.noteDate = msqlReader.GetDateTime("date");
+                    Note.note = msqlReader.GetString("note");
+
+                    NoteList.Add(Note);
+                }
+
+            }
+            catch (Exception er)
+            {
+            }
+            finally
+            {
+                //always close the connection
+                msqlConnection.Close();
+            }
+
+            return NoteList;
+        }
+
+        #endregion
+
+
+    
     }
 }
 

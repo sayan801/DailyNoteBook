@@ -372,6 +372,14 @@
 
     </Style>
 
+    <Style x:Key="DatepkrStyle" TargetType="DatePicker">
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="FontWeight" Value="Bold" />
+
+    </Style>
+
     <!--<Style TargetType="{x:Type TextBox}" x:Key="commonTBtyle">
         <Setter Property="OverridesDefaultStyle" Value="True"/>
         <Setter Property="FontSize" Value="14"/>
