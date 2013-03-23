@@ -66,8 +66,8 @@
                                 </DockPanel>
                                 <DockPanel DockPanel.Dock="Bottom">
                                     <UniformGrid Rows="2">
-                                    <Label Name="errorMsgLbl"></Label>
-                                    <Label Name="hintsMsgLbl"></Label>
+                                    <Label Name="errorMsgLbl" Foreground="Red"></Label>
+                                        <Label Name="hintsMsgLbl" Foreground="Red"></Label>
                                     </UniformGrid>
                                 </DockPanel>
                                     
@@ -106,7 +106,7 @@
                                     <Button Name="dNBSSubmitBtn" ToolTip="submit" Style="{StaticResource PlainBtnStyle}" Click="dNBSSubmitBtn_Click">Submit</Button>
                                 </DockPanel>
                                 <DockPanel DockPanel.Dock="Bottom">
-                                    <Label Name="createErrorMsgLbl"></Label>
+                                    <Label Name="createErrorMsgLbl" Foreground="Red"></Label>
 
                                 </DockPanel>
 
@@ -483,10 +483,11 @@
                     <TabItem Name="googleCalendarTabItem" Style="{StaticResource TItemStyle}" Header="Calendar">
                         <DockPanel LastChildFill="True">
                             <UniformGrid Rows="1" DockPanel.Dock="Bottom" Height="50">
-                                <Button  Style="{StaticResource PlainBtnStyle}" Name="gcalenderBtn" Click="gcalenderBtn_Click">Calendar</Button>
-                                <Button  Style="{StaticResource PlainBtnStyle}"></Button>
-                                <Button  Style="{StaticResource PlainBtnStyle}"></Button>
-                                <Button  Style="{StaticResource PlainBtnStyle}"></Button>
+                                <Button  Style="{StaticResource PlainBtnStyle}" Name="gcalenderBtn" Click="gcalenderBtn_Click">Load Calendar</Button>
+                                <Label></Label>
+                                <Label></Label>
+                                <Label></Label>
+                                <Label></Label>
                             </UniformGrid>
                             <WebBrowser Name="gCalenderWb"></WebBrowser>
                         </DockPanel>
@@ -524,9 +525,10 @@
                         <DockPanel LastChildFill="True">
                             <UniformGrid Rows="1" DockPanel.Dock="Bottom" Height="50">
                                 <Button  Name="kolkataBtn" Style="{StaticResource PlainBtnStyle}" Click="kolkataBtn_Click">Load Map</Button>
-                                <Button  Name="delhiBtn" Style="{StaticResource PlainBtnStyle}"></Button>
-                                <Button  Name="mumbaiBtn" Style="{StaticResource PlainBtnStyle}"></Button>
-                                <Button  Name="chennaiBtn" Style="{StaticResource PlainBtnStyle}"></Button>
+                                <Label></Label>
+                                <Label></Label>
+                                <Label></Label>
+                                <Label></Label>
                             </UniformGrid>
                             <WebBrowser Name="mapWb"></WebBrowser>
                         </DockPanel>
