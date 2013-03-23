@@ -64,7 +64,7 @@ CREATE TABLE `note` (
   `id` varchar(100) NOT NULL,
   `note` varchar(10005) NOT NULL,
   `date` datetime DEFAULT NULL,
-  `sharedWith` varchar(45) DEFAULT NULL,
+  `sharedWith` varchar(45) DEFAULT '"N/A''',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -75,7 +75,7 @@ CREATE TABLE `note` (
 
 LOCK TABLES `note` WRITE;
 /*!40000 ALTER TABLE `note` DISABLE KEYS */;
-INSERT INTO `note` VALUES ('41341.7887237153','Start writing from here...',NULL,NULL),('41341.7887887153','',NULL,NULL),('41341.7888277199','11111',NULL,NULL),('41341.7892207176','',NULL,NULL),('41341.7894494329','',NULL,NULL),('41341.7932537731',';;;;;',NULL,NULL),('41342','trut',NULL,NULL);
+INSERT INTO `note` VALUES ('41356.7216594907','Enjoying good time with Technicise ...','2013-03-23 00:00:00',NULL);
 /*!40000 ALTER TABLE `note` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -155,7 +155,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES ('41339.6946734259','1','erter','1'),('41342.4463346528','anirban','anirban','anirban');
+INSERT INTO `user` VALUES ('41339.6946734259','1','erter','1'),('41342.4463346528','anirban','anirban','anirban'),('41356.7146045718','fgjhf','2232','123');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -168,4 +168,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-03-20 14:38:24
+-- Dump completed on 2013-03-23 17:32:35

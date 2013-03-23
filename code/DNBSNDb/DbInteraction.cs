@@ -136,7 +136,7 @@ namespace DNBSNDb
                 {
                     NoteInfo Note = new NoteInfo();
 
-                    Note.id = msqlReader.GetString("id");
+                    //Note.id = msqlReader.GetString("id");
                     Note.noteDate = msqlReader.GetDateTime("date");
                     Note.note = msqlReader.GetString("note");
 

@@ -214,7 +214,7 @@
 
 
                                         <DatePicker ToolTip="today" Margin="10" Name="noteDateDP" SelectedDate="{x:Static sys:DateTime.Now}" Style="{StaticResource DatepkrStyle}"></DatePicker>
-                                        <Label Name="noteSuccessMsgLvl"  Style="{StaticResource LblStyle}"></Label>
+                                        <Label Name="noteSuccessMsgLvl" Foreground="Red" Style="{StaticResource LblStyle}"></Label>
                                         <Button Name="clearFieldsBtn"  Content="Clear Fields"  Style="{StaticResource PlainBtnStyle}" Click="clearFieldsBtn_Click" />
                                         <Button Name="saveNotesBtn" Content="Save Notes"  Style="{StaticResource PlainBtnStyle}" Click="saveNotesBtn_Click" />
                                     </UniformGrid>
