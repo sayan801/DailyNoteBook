@@ -524,8 +524,9 @@
                     <TabItem Name="googleMapTabItem"  Style="{StaticResource TItemStyle}" Header="Map" >
                         <DockPanel LastChildFill="True">
                             <UniformGrid Rows="1" DockPanel.Dock="Bottom" Height="50">
+                                
+                                <TextBox Name="loadMaplocationTB" Margin="10" Width="140" Tag="enter location" Style="{StaticResource commonTBtyle}" />
                                 <Button  Name="kolkataBtn" Style="{StaticResource PlainBtnStyle}" Click="kolkataBtn_Click">Load Map</Button>
-                                <Label></Label>
                                 <Label></Label>
                                 <Label></Label>
                                 <Label></Label>

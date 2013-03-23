@@ -52,7 +52,7 @@ namespace DNBSNGUI
 
         private void kolkataBtn_Click(object sender, RoutedEventArgs e)
         {
-            mapWb.NavigateToString("<html><body><iframe src=\"https://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=kolkata+&amp;aq=&amp;sll=22.356426,88.211975&amp;sspn=0.779817,1.560059&amp;t=h&amp;ie=UTF8&amp;hq=&amp;hnear=Kolkata,+West+Bengal&amp;ll=22.356426,88.211975&amp;spn=24.657494,49.921875&amp;z=5&amp;output=embed\" width=\"1100\" height=\"480\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading...</iframe></body></html>");
+            mapWb.NavigateToString("<html><body><iframe src=\"https://maps.google.co.in/?ll=20.98352,82.752628&spn=43.617141,86.572266&t=h&z=4\" width=\"1100\" height=\"480\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading...</iframe></body></html>");
         }
 
         private void gcalenderBtn_Click(object sender, RoutedEventArgs e)
@@ -339,6 +339,7 @@ namespace DNBSNGUI
         {
             noteSuccessMsgLvl.Content = "";
             notesTB.Clear();
+            noteSuccessMsgLvl.Content = "All Clear";
         }
 
         ObservableCollection<NoteInfo> _allnoteCollection = new ObservableCollection<NoteInfo>();
