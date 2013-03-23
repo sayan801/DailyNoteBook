@@ -8,6 +8,6 @@
             <TextBox Name="verificationCodeTxtBox"></TextBox>
             <Button Name="verifyTwitterApp" Click="verifyTwitterApp_Click">Verify Twitter App</Button>
         </UniformGrid>
-        <TextBlock   Name="tweetsTextBlock"  DockPanel.Dock="Bottom" />
+        <TextBlock   Name="tweetsTextBlock"  DockPanel.Dock="Bottom" Background="#FFA9C7D4" Foreground="#FF434753" FontSize="13" FontWeight="Bold"></TextBlock>
     </DockPanel>
 </Window>
