@@ -1,0 +1,518 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+
+  <HelpKINode Title="address property" Url="html/1089381389.htm" />
+  <HelpKINode Title="address property" Url="html/323566853.htm" />
+  <HelpKINode Title="App class" Url="html/1571504717.htm" />
+  <HelpKINode Title="App class" Url="html/521639525.htm" />
+  <HelpKINode Title="App class">
+    <HelpKINode Title="about App class" Url="html/521639525.htm" />
+    <HelpKINode Title="all members" Url="html/1571504717.htm" />
+    <HelpKINode Title="constructor" Url="html/1405751170.htm" />
+  </HelpKINode>
+  <HelpKINode Title="App.App constructor" Url="html/1405751170.htm" />
+  <HelpKINode Title="Appid property" Url="html/1245277230.htm" />
+  <HelpKINode Title="Appid property" Url="html/1375567350.htm" />
+  <HelpKINode Title="Appid property" Url="html/1529034634.htm" />
+  <HelpKINode Title="Appid property" Url="html/1591300315.htm" />
+  <HelpKINode Title="Appid property" Url="html/207485487.htm" />
+  <HelpKINode Title="Appid property" Url="html/582654254.htm" />
+  <HelpKINode Title="calender field" Url="html/1481393629.htm" />
+  <HelpKINode Title="contact property" Url="html/1828517940.htm" />
+  <HelpKINode Title="ContactInfo class" Url="html/55317888.htm" />
+  <HelpKINode Title="ContactInfo class" Url="html/954317477.htm" />
+  <HelpKINode Title="ContactInfo class">
+    <HelpKINode Title="about ContactInfo class" Url="html/55317888.htm" />
+    <HelpKINode Title="all members" Url="html/954317477.htm" />
+    <HelpKINode Title="properties" Url="html/778458539.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ContactInfo.address property" Url="html/1089381389.htm" />
+  <HelpKINode Title="ContactInfo.email property" Url="html/1211496398.htm" />
+  <HelpKINode Title="ContactInfo.faxno property" Url="html/1654095487.htm" />
+  <HelpKINode Title="ContactInfo.homeno property" Url="html/1174480789.htm" />
+  <HelpKINode Title="ContactInfo.id property" Url="html/1840698628.htm" />
+  <HelpKINode Title="ContactInfo.mobileno property" Url="html/1010497881.htm" />
+  <HelpKINode Title="ContactInfo.name property" Url="html/1066146344.htm" />
+  <HelpKINode Title="ContactInfo.oficeno property" Url="html/1203249492.htm" />
+  <HelpKINode Title="ContactInfo.remark property" Url="html/391063631.htm" />
+  <HelpKINode Title="Culture property" Url="html/1497423685.htm" />
+  <HelpKINode Title="Daily enumeration member" Url="html/1506293312.htm" />
+  <HelpKINode Title="Daily field" Url="html/705959017.htm" />
+  <HelpKINode Title="DaliyNoteBookController class" Url="html/1461015612.htm" />
+  <HelpKINode Title="DaliyNoteBookController class" Url="html/271389888.htm" />
+  <HelpKINode Title="DaliyNoteBookController class">
+    <HelpKINode Title="about DaliyNoteBookController class" Url="html/271389888.htm" />
+    <HelpKINode Title="all members" Url="html/1461015612.htm" />
+    <HelpKINode Title="fields" Url="html/2115486407.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DaliyNoteBookController.FacebookController field" Url="html/852430979.htm" />
+  <HelpKINode Title="DaliyNoteBookController.GoogleCalenderController field" Url="html/2135819215.htm" />
+  <HelpKINode Title="DaliyNoteBookController.GoogleMapController field" Url="html/360856726.htm" />
+  <HelpKINode Title="DaliyNoteBookController.LinkedInController field" Url="html/358747459.htm" />
+  <HelpKINode Title="DaliyNoteBookController.MemberManager field" Url="html/715220920.htm" />
+  <HelpKINode Title="DaliyNoteBookController.notes field" Url="html/2001005459.htm" />
+  <HelpKINode Title="DaliyNoteBookController.TwitterController field" Url="html/817889399.htm" />
+  <HelpKINode Title="date field" Url="html/199389586.htm" />
+  <HelpKINode Title="date property" Url="html/334840218.htm" />
+  <HelpKINode Title="DbInteraction class" Url="html/1627713688.htm" />
+  <HelpKINode Title="DbInteraction class" Url="html/2047657.htm" />
+  <HelpKINode Title="DbInteraction class">
+    <HelpKINode Title="about DbInteraction class" Url="html/1627713688.htm" />
+    <HelpKINode Title="all members" Url="html/2047657.htm" />
+    <HelpKINode Title="fields" Url="html/667082227.htm" />
+    <HelpKINode Title="methods" Url="html/1287749225.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DbInteraction.dbmsCurrent field" Url="html/2109748905.htm" />
+  <HelpKINode Title="DbInteraction.DoEnterNewNote method" Url="html/1845869043.htm" />
+  <HelpKINode Title="DbInteraction.DoEnterNewNoteindb method" Url="html/1105301745.htm" />
+  <HelpKINode Title="DbInteraction.DoRegisterNewContact method" Url="html/1293621531.htm" />
+  <HelpKINode Title="DbInteraction.DoRegisterNewPassword method" Url="html/1434958201.htm" />
+  <HelpKINode Title="DbInteraction.DoRegisterNewTask method" Url="html/680864485.htm" />
+  <HelpKINode Title="DbInteraction.DoRegisterNewUser method" Url="html/524255275.htm" />
+  <HelpKINode Title="DbInteraction.DoRegisterNewuserindb method" Url="html/1678125376.htm" />
+  <HelpKINode Title="DbInteraction.FetcheId method" Url="html/555544443.htm" />
+  <HelpKINode Title="DbInteraction.FetchePassword method" Url="html/2107189566.htm" />
+  <HelpKINode Title="DbInteraction.GetAllContactList method" Url="html/887424109.htm" />
+  <HelpKINode Title="DbInteraction.GetAllNoteList method" Url="html/1403680225.htm" />
+  <HelpKINode Title="DbInteraction.GetAllPasswordsList method" Url="html/153145108.htm" />
+  <HelpKINode Title="DbInteraction.GetAllTaskList method" Url="html/2119059406.htm" />
+  <HelpKINode Title="DbInteraction.OpenDbConnection method" Url="html/378942369.htm" />
+  <HelpKINode Title="DbInteraction.passwordCurrent field" Url="html/49873173.htm" />
+  <HelpKINode Title="DbInteraction.QueryAllContactList method" Url="html/316657709.htm" />
+  <HelpKINode Title="DbInteraction.QueryAllNoteList method" Url="html/765771131.htm" />
+  <HelpKINode Title="DbInteraction.QueryAllPasswordList method" Url="html/1837333486.htm" />
+  <HelpKINode Title="DbInteraction.QueryAllTaskList method" Url="html/133899470.htm" />
+  <HelpKINode Title="DbInteraction.searchAllNoteList method" Url="html/330071880.htm" />
+  <HelpKINode Title="DbInteraction.searchMnthlyNoteList method" Url="html/452940114.htm" />
+  <HelpKINode Title="DbInteraction.searchNoteList method" Url="html/1425956501.htm" />
+  <HelpKINode Title="dbmsCurrent field" Url="html/2109748905.htm" />
+  <HelpKINode Title="Default property" Url="html/70014922.htm" />
+  <HelpKINode Title="defaultInstance field" Url="html/590947203.htm" />
+  <HelpKINode Title="Description field" Url="html/305369558.htm" />
+  <HelpKINode Title="description property" Url="html/842230528.htm" />
+  <HelpKINode Title="DNBSNData namespace" Url="html/2139808609.htm" />
+  <HelpKINode Title="DNBSNData.ContactInfo class" Url="html/55317888.htm" />
+  <HelpKINode Title="DNBSNData.ContactInfo class" Url="html/954317477.htm" />
+  <HelpKINode Title="DNBSNData.DaliyNoteBookController class" Url="html/1461015612.htm" />
+  <HelpKINode Title="DNBSNData.DaliyNoteBookController class" Url="html/271389888.htm" />
+  <HelpKINode Title="DNBSNData.FacebookController class" Url="html/1347916077.htm" />
+  <HelpKINode Title="DNBSNData.FacebookController class" Url="html/875029888.htm" />
+  <HelpKINode Title="DNBSNData.FacebookDetails class" Url="html/1035324011.htm" />
+  <HelpKINode Title="DNBSNData.FacebookDetails class" Url="html/369259573.htm" />
+  <HelpKINode Title="DNBSNData.GoogleCalenderController class" Url="html/1347319832.htm" />
+  <HelpKINode Title="DNBSNData.GoogleCalenderController class" Url="html/262102180.htm" />
+  <HelpKINode Title="DNBSNData.GoogleCalenderDetails class" Url="html/1986158010.htm" />
+  <HelpKINode Title="DNBSNData.GoogleCalenderDetails class" Url="html/855120154.htm" />
+  <HelpKINode Title="DNBSNData.GoogleMapController class" Url="html/1022082316.htm" />
+  <HelpKINode Title="DNBSNData.GoogleMapController class" Url="html/1389855470.htm" />
+  <HelpKINode Title="DNBSNData.GoogleMapDetails class" Url="html/1003299210.htm" />
+  <HelpKINode Title="DNBSNData.GoogleMapDetails class" Url="html/152571946.htm" />
+  <HelpKINode Title="DNBSNData.LinkedInController class" Url="html/1512088421.htm" />
+  <HelpKINode Title="DNBSNData.LinkedInController class" Url="html/1641782948.htm" />
+  <HelpKINode Title="DNBSNData.LinkedInDetails class" Url="html/1835237842.htm" />
+  <HelpKINode Title="DNBSNData.LinkedInDetails class" Url="html/1870828710.htm" />
+  <HelpKINode Title="DNBSNData.MemberInfo class" Url="html/1073369742.htm" />
+  <HelpKINode Title="DNBSNData.MemberInfo class" Url="html/458321906.htm" />
+  <HelpKINode Title="DNBSNData.MemberManager class" Url="html/1178058974.htm" />
+  <HelpKINode Title="DNBSNData.MemberManager class" Url="html/922407380.htm" />
+  <HelpKINode Title="DNBSNData.NoteDetails class" Url="html/2018044583.htm" />
+  <HelpKINode Title="DNBSNData.NoteDetails class" Url="html/472175301.htm" />
+  <HelpKINode Title="DNBSNData.NoteInfo class" Url="html/1444385134.htm" />
+  <HelpKINode Title="DNBSNData.NoteInfo class" Url="html/430515759.htm" />
+  <HelpKINode Title="DNBSNData.PasswordInfo class" Url="html/181885037.htm" />
+  <HelpKINode Title="DNBSNData.PasswordInfo class" Url="html/1838351980.htm" />
+  <HelpKINode Title="DNBSNData.PreferenceInfo class" Url="html/1036585492.htm" />
+  <HelpKINode Title="DNBSNData.PreferenceInfo class" Url="html/1087610816.htm" />
+  <HelpKINode Title="DNBSNData.ReportInfo class" Url="html/1026823723.htm" />
+  <HelpKINode Title="DNBSNData.ReportInfo class" Url="html/78604631.htm" />
+  <HelpKINode Title="DNBSNData.ReportType enumeration" Url="html/1506293312.htm" />
+  <HelpKINode Title="DNBSNData.TaskInfo class" Url="html/1617944330.htm" />
+  <HelpKINode Title="DNBSNData.TaskInfo class" Url="html/587396673.htm" />
+  <HelpKINode Title="DNBSNData.TwitterController class" Url="html/720001390.htm" />
+  <HelpKINode Title="DNBSNData.TwitterController class" Url="html/963669969.htm" />
+  <HelpKINode Title="DNBSNData.TwitterDetails class" Url="html/442454606.htm" />
+  <HelpKINode Title="DNBSNData.TwitterDetails class" Url="html/996959544.htm" />
+  <HelpKINode Title="DNBSNData.UserInfo class" Url="html/1834352958.htm" />
+  <HelpKINode Title="DNBSNData.UserInfo class" Url="html/35128919.htm" />
+  <HelpKINode Title="DNBSNDb namespace" Url="html/782602235.htm" />
+  <HelpKINode Title="DNBSNDb.DbInteraction class" Url="html/1627713688.htm" />
+  <HelpKINode Title="DNBSNDb.DbInteraction class" Url="html/2047657.htm" />
+  <HelpKINode Title="DNBSNGUI namespace" Url="html/795111374.htm" />
+  <HelpKINode Title="DNBSNGUI.App class" Url="html/1571504717.htm" />
+  <HelpKINode Title="DNBSNGUI.App class" Url="html/521639525.htm" />
+  <HelpKINode Title="DNBSNGUI.MainWindow class" Url="html/494305234.htm" />
+  <HelpKINode Title="DNBSNGUI.MainWindow class" Url="html/637454948.htm" />
+  <HelpKINode Title="DNBSNGUI.Properties namespace" Url="html/1527982232.htm" />
+  <HelpKINode Title="DNBSNGUI.Properties.Resources class" Url="html/1102861162.htm" />
+  <HelpKINode Title="DNBSNGUI.Properties.Resources class" Url="html/401612672.htm" />
+  <HelpKINode Title="DNBSNGUI.Properties.Settings class" Url="html/1271527439.htm" />
+  <HelpKINode Title="DNBSNGUI.Properties.Settings class" Url="html/1768986549.htm" />
+  <HelpKINode Title="DNBSNGUI.ShowEvent class" Url="html/1944600077.htm" />
+  <HelpKINode Title="DNBSNGUI.ShowEvent class" Url="html/481492962.htm" />
+  <HelpKINode Title="DoEnterNewNote method" Url="html/1845869043.htm" />
+  <HelpKINode Title="DoEnterNewNoteindb method" Url="html/1105301745.htm" />
+  <HelpKINode Title="DoRegisterNewContact method" Url="html/1293621531.htm" />
+  <HelpKINode Title="DoRegisterNewPassword method" Url="html/1434958201.htm" />
+  <HelpKINode Title="DoRegisterNewTask method" Url="html/680864485.htm" />
+  <HelpKINode Title="DoRegisterNewUser method" Url="html/524255275.htm" />
+  <HelpKINode Title="DoRegisterNewuserindb method" Url="html/1678125376.htm" />
+  <HelpKINode Title="email property" Url="html/1211496398.htm" />
+  <HelpKINode Title="email property" Url="html/1837943587.htm" />
+  <HelpKINode Title="FacebookController class" Url="html/1347916077.htm" />
+  <HelpKINode Title="FacebookController class" Url="html/875029888.htm" />
+  <HelpKINode Title="FacebookController class">
+    <HelpKINode Title="about FacebookController class" Url="html/1347916077.htm" />
+    <HelpKINode Title="all members" Url="html/875029888.htm" />
+    <HelpKINode Title="fields" Url="html/1400151937.htm" />
+  </HelpKINode>
+  <HelpKINode Title="FacebookController field" Url="html/852430979.htm" />
+  <HelpKINode Title="FacebookController.fbs field" Url="html/2085597983.htm" />
+  <HelpKINode Title="FacebookDetails class" Url="html/1035324011.htm" />
+  <HelpKINode Title="FacebookDetails class" Url="html/369259573.htm" />
+  <HelpKINode Title="FacebookDetails class">
+    <HelpKINode Title="about FacebookDetails class" Url="html/369259573.htm" />
+    <HelpKINode Title="all members" Url="html/1035324011.htm" />
+    <HelpKINode Title="fields" Url="html/788348741.htm" />
+    <HelpKINode Title="properties" Url="html/1395232110.htm" />
+  </HelpKINode>
+  <HelpKINode Title="FacebookDetails.Appid property" Url="html/582654254.htm" />
+  <HelpKINode Title="FacebookDetails.lastLoginTime field" Url="html/690432941.htm" />
+  <HelpKINode Title="FacebookDetails.password property" Url="html/871467390.htm" />
+  <HelpKINode Title="FacebookDetails.updates field" Url="html/825374151.htm" />
+  <HelpKINode Title="FacebookDetails.username property" Url="html/1860793791.htm" />
+  <HelpKINode Title="faxno property" Url="html/1654095487.htm" />
+  <HelpKINode Title="fbs field" Url="html/2085597983.htm" />
+  <HelpKINode Title="FetcheId method" Url="html/555544443.htm" />
+  <HelpKINode Title="FetchePassword method" Url="html/2107189566.htm" />
+  <HelpKINode Title="GetAllContactList method" Url="html/887424109.htm" />
+  <HelpKINode Title="GetAllNoteList method" Url="html/1403680225.htm" />
+  <HelpKINode Title="GetAllPasswordsList method" Url="html/153145108.htm" />
+  <HelpKINode Title="GetAllTaskList method" Url="html/2119059406.htm" />
+  <HelpKINode Title="GoogleCalenderController class" Url="html/1347319832.htm" />
+  <HelpKINode Title="GoogleCalenderController class" Url="html/262102180.htm" />
+  <HelpKINode Title="GoogleCalenderController class">
+    <HelpKINode Title="about GoogleCalenderController class" Url="html/1347319832.htm" />
+    <HelpKINode Title="all members" Url="html/262102180.htm" />
+    <HelpKINode Title="fields" Url="html/522651859.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GoogleCalenderController field" Url="html/2135819215.htm" />
+  <HelpKINode Title="GoogleCalenderController.calender field" Url="html/1481393629.htm" />
+  <HelpKINode Title="GoogleCalenderDetails class" Url="html/1986158010.htm" />
+  <HelpKINode Title="GoogleCalenderDetails class" Url="html/855120154.htm" />
+  <HelpKINode Title="GoogleCalenderDetails class">
+    <HelpKINode Title="about GoogleCalenderDetails class" Url="html/855120154.htm" />
+    <HelpKINode Title="all members" Url="html/1986158010.htm" />
+    <HelpKINode Title="fields" Url="html/1401786206.htm" />
+    <HelpKINode Title="properties" Url="html/742787296.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GoogleCalenderDetails.Appid property" Url="html/1529034634.htm" />
+  <HelpKINode Title="GoogleCalenderDetails.lastLoginTime field" Url="html/1205936447.htm" />
+  <HelpKINode Title="GoogleCalenderDetails.password property" Url="html/1975331209.htm" />
+  <HelpKINode Title="GoogleCalenderDetails.updates field" Url="html/1789252005.htm" />
+  <HelpKINode Title="GoogleCalenderDetails.username property" Url="html/804029438.htm" />
+  <HelpKINode Title="GoogleMapController class" Url="html/1022082316.htm" />
+  <HelpKINode Title="GoogleMapController class" Url="html/1389855470.htm" />
+  <HelpKINode Title="GoogleMapController class">
+    <HelpKINode Title="about GoogleMapController class" Url="html/1022082316.htm" />
+    <HelpKINode Title="all members" Url="html/1389855470.htm" />
+    <HelpKINode Title="fields" Url="html/1986249746.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GoogleMapController field" Url="html/360856726.htm" />
+  <HelpKINode Title="GoogleMapController.map field" Url="html/1462262859.htm" />
+  <HelpKINode Title="GoogleMapDetails class" Url="html/1003299210.htm" />
+  <HelpKINode Title="GoogleMapDetails class" Url="html/152571946.htm" />
+  <HelpKINode Title="GoogleMapDetails class">
+    <HelpKINode Title="about GoogleMapDetails class" Url="html/152571946.htm" />
+    <HelpKINode Title="all members" Url="html/1003299210.htm" />
+    <HelpKINode Title="fields" Url="html/844951009.htm" />
+    <HelpKINode Title="properties" Url="html/371944737.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GoogleMapDetails.Appid property" Url="html/207485487.htm" />
+  <HelpKINode Title="GoogleMapDetails.lastLoginTime field" Url="html/819890389.htm" />
+  <HelpKINode Title="GoogleMapDetails.password property" Url="html/473808562.htm" />
+  <HelpKINode Title="GoogleMapDetails.updates field" Url="html/16938616.htm" />
+  <HelpKINode Title="GoogleMapDetails.username property" Url="html/2141360360.htm" />
+  <HelpKINode Title="gotoDate property" Url="html/937695287.htm" />
+  <HelpKINode Title="hints property" Url="html/566527419.htm" />
+  <HelpKINode Title="homeno property" Url="html/1174480789.htm" />
+  <HelpKINode Title="id property" Url="html/1162519402.htm" />
+  <HelpKINode Title="id property" Url="html/1626242569.htm" />
+  <HelpKINode Title="id property" Url="html/1840698628.htm" />
+  <HelpKINode Title="id property" Url="html/34358601.htm" />
+  <HelpKINode Title="id property" Url="html/418141308.htm" />
+  <HelpKINode Title="id property" Url="html/50982028.htm" />
+  <HelpKINode Title="id property" Url="html/789906704.htm" />
+  <HelpKINode Title="isFbSynced field" Url="html/992979135.htm" />
+  <HelpKINode Title="isGoogleCalenderSynced field" Url="html/889955461.htm" />
+  <HelpKINode Title="isLinkedInSynced field" Url="html/1287559938.htm" />
+  <HelpKINode Title="isTwitterSynced field" Url="html/345713673.htm" />
+  <HelpKINode Title="lastLoginTime field" Url="html/1205936447.htm" />
+  <HelpKINode Title="lastLoginTime field" Url="html/16404731.htm" />
+  <HelpKINode Title="lastLoginTime field" Url="html/2106122201.htm" />
+  <HelpKINode Title="lastLoginTime field" Url="html/690432941.htm" />
+  <HelpKINode Title="lastLoginTime field" Url="html/782304922.htm" />
+  <HelpKINode Title="lastLoginTime field" Url="html/819890389.htm" />
+  <HelpKINode Title="linkedin field" Url="html/400044670.htm" />
+  <HelpKINode Title="LinkedInController class" Url="html/1512088421.htm" />
+  <HelpKINode Title="LinkedInController class" Url="html/1641782948.htm" />
+  <HelpKINode Title="LinkedInController class">
+    <HelpKINode Title="about LinkedInController class" Url="html/1512088421.htm" />
+    <HelpKINode Title="all members" Url="html/1641782948.htm" />
+    <HelpKINode Title="fields" Url="html/1639258190.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LinkedInController field" Url="html/358747459.htm" />
+  <HelpKINode Title="LinkedInController.linkedin field" Url="html/400044670.htm" />
+  <HelpKINode Title="LinkedInDetails class" Url="html/1835237842.htm" />
+  <HelpKINode Title="LinkedInDetails class" Url="html/1870828710.htm" />
+  <HelpKINode Title="LinkedInDetails class">
+    <HelpKINode Title="about LinkedInDetails class" Url="html/1870828710.htm" />
+    <HelpKINode Title="all members" Url="html/1835237842.htm" />
+    <HelpKINode Title="fields" Url="html/1159077981.htm" />
+    <HelpKINode Title="properties" Url="html/117898835.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LinkedInDetails.Appid property" Url="html/1375567350.htm" />
+  <HelpKINode Title="LinkedInDetails.lastLoginTime field" Url="html/2106122201.htm" />
+  <HelpKINode Title="LinkedInDetails.password property" Url="html/1454870303.htm" />
+  <HelpKINode Title="LinkedInDetails.updates field" Url="html/1144536288.htm" />
+  <HelpKINode Title="LinkedInDetails.username property" Url="html/880615842.htm" />
+  <HelpKINode Title="MainWindow class" Url="html/494305234.htm" />
+  <HelpKINode Title="MainWindow class" Url="html/637454948.htm" />
+  <HelpKINode Title="MainWindow class">
+    <HelpKINode Title="about MainWindow class" Url="html/494305234.htm" />
+    <HelpKINode Title="all members" Url="html/637454948.htm" />
+    <HelpKINode Title="constructor" Url="html/1725749436.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MainWindow.MainWindow constructor" Url="html/1725749436.htm" />
+  <HelpKINode Title="map field" Url="html/1462262859.htm" />
+  <HelpKINode Title="MemberInfo class" Url="html/1073369742.htm" />
+  <HelpKINode Title="MemberInfo class" Url="html/458321906.htm" />
+  <HelpKINode Title="MemberInfo class">
+    <HelpKINode Title="about MemberInfo class" Url="html/1073369742.htm" />
+    <HelpKINode Title="all members" Url="html/458321906.htm" />
+    <HelpKINode Title="fields" Url="html/1351660068.htm" />
+    <HelpKINode Title="properties" Url="html/14086100.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MemberInfo.address property" Url="html/323566853.htm" />
+  <HelpKINode Title="MemberInfo.contact property" Url="html/1828517940.htm" />
+  <HelpKINode Title="MemberInfo.id property" Url="html/789906704.htm" />
+  <HelpKINode Title="MemberInfo.name property" Url="html/750192368.htm" />
+  <HelpKINode Title="MemberInfo.prefs field" Url="html/1788860977.htm" />
+  <HelpKINode Title="MemberManager class" Url="html/1178058974.htm" />
+  <HelpKINode Title="MemberManager class" Url="html/922407380.htm" />
+  <HelpKINode Title="MemberManager class">
+    <HelpKINode Title="about MemberManager class" Url="html/1178058974.htm" />
+    <HelpKINode Title="all members" Url="html/922407380.htm" />
+    <HelpKINode Title="fields" Url="html/808452089.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MemberManager field" Url="html/715220920.htm" />
+  <HelpKINode Title="MemberManager.members field" Url="html/1624976312.htm" />
+  <HelpKINode Title="members field" Url="html/1624976312.htm" />
+  <HelpKINode Title="mobileno property" Url="html/1010497881.htm" />
+  <HelpKINode Title="Monthly enumeration member" Url="html/1506293312.htm" />
+  <HelpKINode Title="Monthly field" Url="html/1486694065.htm" />
+  <HelpKINode Title="name field" Url="html/1138921070.htm" />
+  <HelpKINode Title="name property" Url="html/1066146344.htm" />
+  <HelpKINode Title="name property" Url="html/110079013.htm" />
+  <HelpKINode Title="name property" Url="html/750192368.htm" />
+  <HelpKINode Title="note property" Url="html/974164850.htm" />
+  <HelpKINode Title="noteDate property" Url="html/438114745.htm" />
+  <HelpKINode Title="NoteDetails class" Url="html/2018044583.htm" />
+  <HelpKINode Title="NoteDetails class" Url="html/472175301.htm" />
+  <HelpKINode Title="NoteDetails class">
+    <HelpKINode Title="about NoteDetails class" Url="html/2018044583.htm" />
+    <HelpKINode Title="all members" Url="html/472175301.htm" />
+    <HelpKINode Title="fields" Url="html/266165049.htm" />
+    <HelpKINode Title="properties" Url="html/2034853704.htm" />
+  </HelpKINode>
+  <HelpKINode Title="NoteDetails.Appid property" Url="html/1591300315.htm" />
+  <HelpKINode Title="NoteDetails.isFbSynced field" Url="html/992979135.htm" />
+  <HelpKINode Title="NoteDetails.isGoogleCalenderSynced field" Url="html/889955461.htm" />
+  <HelpKINode Title="NoteDetails.isLinkedInSynced field" Url="html/1287559938.htm" />
+  <HelpKINode Title="NoteDetails.isTwitterSynced field" Url="html/345713673.htm" />
+  <HelpKINode Title="NoteDetails.lastLoginTime field" Url="html/782304922.htm" />
+  <HelpKINode Title="NoteDetails.password property" Url="html/929664966.htm" />
+  <HelpKINode Title="NoteDetails.updates field" Url="html/1601310934.htm" />
+  <HelpKINode Title="NoteDetails.username property" Url="html/513029457.htm" />
+  <HelpKINode Title="NoteInfo class" Url="html/1444385134.htm" />
+  <HelpKINode Title="NoteInfo class" Url="html/430515759.htm" />
+  <HelpKINode Title="NoteInfo class">
+    <HelpKINode Title="about NoteInfo class" Url="html/1444385134.htm" />
+    <HelpKINode Title="all members" Url="html/430515759.htm" />
+    <HelpKINode Title="properties" Url="html/1722874505.htm" />
+  </HelpKINode>
+  <HelpKINode Title="NoteInfo.gotoDate property" Url="html/937695287.htm" />
+  <HelpKINode Title="NoteInfo.id property" Url="html/418141308.htm" />
+  <HelpKINode Title="NoteInfo.note property" Url="html/974164850.htm" />
+  <HelpKINode Title="NoteInfo.noteDate property" Url="html/438114745.htm" />
+  <HelpKINode Title="notes field" Url="html/2001005459.htm" />
+  <HelpKINode Title="oficeno property" Url="html/1203249492.htm" />
+  <HelpKINode Title="OpenDbConnection method" Url="html/378942369.htm" />
+  <HelpKINode Title="otherInfo property" Url="html/7309108.htm" />
+  <HelpKINode Title="pass property" Url="html/1809066648.htm" />
+  <HelpKINode Title="password property" Url="html/1454870303.htm" />
+  <HelpKINode Title="password property" Url="html/1972487992.htm" />
+  <HelpKINode Title="password property" Url="html/1975331209.htm" />
+  <HelpKINode Title="password property" Url="html/473808562.htm" />
+  <HelpKINode Title="password property" Url="html/871467390.htm" />
+  <HelpKINode Title="password property" Url="html/929664966.htm" />
+  <HelpKINode Title="password property" Url="html/93247971.htm" />
+  <HelpKINode Title="passwordCurrent field" Url="html/49873173.htm" />
+  <HelpKINode Title="PasswordInfo class" Url="html/181885037.htm" />
+  <HelpKINode Title="PasswordInfo class" Url="html/1838351980.htm" />
+  <HelpKINode Title="PasswordInfo class">
+    <HelpKINode Title="about PasswordInfo class" Url="html/1838351980.htm" />
+    <HelpKINode Title="all members" Url="html/181885037.htm" />
+    <HelpKINode Title="properties" Url="html/1046464203.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PasswordInfo.email property" Url="html/1837943587.htm" />
+  <HelpKINode Title="PasswordInfo.id property" Url="html/1162519402.htm" />
+  <HelpKINode Title="PasswordInfo.name property" Url="html/110079013.htm" />
+  <HelpKINode Title="PasswordInfo.otherInfo property" Url="html/7309108.htm" />
+  <HelpKINode Title="PasswordInfo.password property" Url="html/93247971.htm" />
+  <HelpKINode Title="PasswordInfo.scrtans property" Url="html/1276062659.htm" />
+  <HelpKINode Title="PasswordInfo.scrtqstn property" Url="html/550877144.htm" />
+  <HelpKINode Title="PasswordInfo.userId property" Url="html/917671539.htm" />
+  <HelpKINode Title="PreferenceInfo class" Url="html/1036585492.htm" />
+  <HelpKINode Title="PreferenceInfo class" Url="html/1087610816.htm" />
+  <HelpKINode Title="PreferenceInfo class">
+    <HelpKINode Title="about PreferenceInfo class" Url="html/1036585492.htm" />
+    <HelpKINode Title="all members" Url="html/1087610816.htm" />
+    <HelpKINode Title="fields" Url="html/1902451873.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PreferenceInfo.date field" Url="html/199389586.htm" />
+  <HelpKINode Title="PreferenceInfo.Description field" Url="html/305369558.htm" />
+  <HelpKINode Title="PreferenceInfo.name field" Url="html/1138921070.htm" />
+  <HelpKINode Title="prefs field" Url="html/1788860977.htm" />
+  <HelpKINode Title="Quarterly enumeration member" Url="html/1506293312.htm" />
+  <HelpKINode Title="Quarterly field" Url="html/57674738.htm" />
+  <HelpKINode Title="QueryAllContactList method" Url="html/316657709.htm" />
+  <HelpKINode Title="QueryAllNoteList method" Url="html/765771131.htm" />
+  <HelpKINode Title="QueryAllPasswordList method" Url="html/1837333486.htm" />
+  <HelpKINode Title="QueryAllTaskList method" Url="html/133899470.htm" />
+  <HelpKINode Title="remark property" Url="html/391063631.htm" />
+  <HelpKINode Title="ReportInfo class" Url="html/1026823723.htm" />
+  <HelpKINode Title="ReportInfo class" Url="html/78604631.htm" />
+  <HelpKINode Title="ReportInfo class">
+    <HelpKINode Title="about ReportInfo class" Url="html/1026823723.htm" />
+    <HelpKINode Title="all members" Url="html/78604631.htm" />
+    <HelpKINode Title="properties" Url="html/1897067495.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ReportInfo.date property" Url="html/334840218.htm" />
+  <HelpKINode Title="ReportInfo.description property" Url="html/842230528.htm" />
+  <HelpKINode Title="ReportInfo.id property" Url="html/34358601.htm" />
+  <HelpKINode Title="ReportInfo.type property" Url="html/1817624174.htm" />
+  <HelpKINode Title="ReportType enumeration" Url="html/1506293312.htm" />
+  <HelpKINode Title="ReportType.Daily field" Url="html/705959017.htm" />
+  <HelpKINode Title="ReportType.Monthly field" Url="html/1486694065.htm" />
+  <HelpKINode Title="ReportType.Quarterly field" Url="html/57674738.htm" />
+  <HelpKINode Title="ReportType.Single field" Url="html/314742867.htm" />
+  <HelpKINode Title="ReportType.Weekly field" Url="html/1236178089.htm" />
+  <HelpKINode Title="ReportType.Yearly field" Url="html/1465119082.htm" />
+  <HelpKINode Title="resourceCulture field" Url="html/1754496656.htm" />
+  <HelpKINode Title="resourceMan field" Url="html/868969537.htm" />
+  <HelpKINode Title="ResourceManager property" Url="html/1924941832.htm" />
+  <HelpKINode Title="Resources class" Url="html/1102861162.htm" />
+  <HelpKINode Title="Resources class" Url="html/401612672.htm" />
+  <HelpKINode Title="Resources class">
+    <HelpKINode Title="about Resources class" Url="html/1102861162.htm" />
+    <HelpKINode Title="all members" Url="html/401612672.htm" />
+    <HelpKINode Title="constructor" Url="html/1045089246.htm" />
+    <HelpKINode Title="fields" Url="html/1487436005.htm" />
+    <HelpKINode Title="properties" Url="html/348718357.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Resources.Culture property" Url="html/1497423685.htm" />
+  <HelpKINode Title="Resources.resourceCulture field" Url="html/1754496656.htm" />
+  <HelpKINode Title="Resources.resourceMan field" Url="html/868969537.htm" />
+  <HelpKINode Title="Resources.ResourceManager property" Url="html/1924941832.htm" />
+  <HelpKINode Title="Resources.Resources constructor" Url="html/1045089246.htm" />
+  <HelpKINode Title="scrtans property" Url="html/1276062659.htm" />
+  <HelpKINode Title="scrtqstn property" Url="html/550877144.htm" />
+  <HelpKINode Title="searchAllNoteList method" Url="html/330071880.htm" />
+  <HelpKINode Title="searchMnthlyNoteList method" Url="html/452940114.htm" />
+  <HelpKINode Title="searchNoteList method" Url="html/1425956501.htm" />
+  <HelpKINode Title="Settings class" Url="html/1271527439.htm" />
+  <HelpKINode Title="Settings class" Url="html/1768986549.htm" />
+  <HelpKINode Title="Settings class">
+    <HelpKINode Title="about Settings class" Url="html/1271527439.htm" />
+    <HelpKINode Title="all members" Url="html/1768986549.htm" />
+    <HelpKINode Title="fields" Url="html/1498091790.htm" />
+    <HelpKINode Title="properties" Url="html/1369451628.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Settings.Default property" Url="html/70014922.htm" />
+  <HelpKINode Title="Settings.defaultInstance field" Url="html/590947203.htm" />
+  <HelpKINode Title="ShowEvent class" Url="html/1944600077.htm" />
+  <HelpKINode Title="ShowEvent class" Url="html/481492962.htm" />
+  <HelpKINode Title="ShowEvent class">
+    <HelpKINode Title="about ShowEvent class" Url="html/481492962.htm" />
+    <HelpKINode Title="all members" Url="html/1944600077.htm" />
+    <HelpKINode Title="constructor" Url="html/368507140.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ShowEvent.ShowEvent constructor" Url="html/368507140.htm" />
+  <HelpKINode Title="Single enumeration member" Url="html/1506293312.htm" />
+  <HelpKINode Title="Single field" Url="html/314742867.htm" />
+  <HelpKINode Title="taskDetails property" Url="html/1777960103.htm" />
+  <HelpKINode Title="TaskInfo class" Url="html/1617944330.htm" />
+  <HelpKINode Title="TaskInfo class" Url="html/587396673.htm" />
+  <HelpKINode Title="TaskInfo class">
+    <HelpKINode Title="about TaskInfo class" Url="html/587396673.htm" />
+    <HelpKINode Title="all members" Url="html/1617944330.htm" />
+    <HelpKINode Title="properties" Url="html/929890543.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TaskInfo.id property" Url="html/1626242569.htm" />
+  <HelpKINode Title="TaskInfo.taskDetails property" Url="html/1777960103.htm" />
+  <HelpKINode Title="TaskInfo.value property" Url="html/921889588.htm" />
+  <HelpKINode Title="twits field" Url="html/84787305.htm" />
+  <HelpKINode Title="TwitterController class" Url="html/720001390.htm" />
+  <HelpKINode Title="TwitterController class" Url="html/963669969.htm" />
+  <HelpKINode Title="TwitterController class">
+    <HelpKINode Title="about TwitterController class" Url="html/720001390.htm" />
+    <HelpKINode Title="all members" Url="html/963669969.htm" />
+    <HelpKINode Title="fields" Url="html/1306637090.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TwitterController field" Url="html/817889399.htm" />
+  <HelpKINode Title="TwitterController.twits field" Url="html/84787305.htm" />
+  <HelpKINode Title="TwitterDetails class" Url="html/442454606.htm" />
+  <HelpKINode Title="TwitterDetails class" Url="html/996959544.htm" />
+  <HelpKINode Title="TwitterDetails class">
+    <HelpKINode Title="about TwitterDetails class" Url="html/442454606.htm" />
+    <HelpKINode Title="all members" Url="html/996959544.htm" />
+    <HelpKINode Title="fields" Url="html/1896641369.htm" />
+    <HelpKINode Title="properties" Url="html/1384920390.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TwitterDetails.Appid property" Url="html/1245277230.htm" />
+  <HelpKINode Title="TwitterDetails.lastLoginTime field" Url="html/16404731.htm" />
+  <HelpKINode Title="TwitterDetails.password property" Url="html/1972487992.htm" />
+  <HelpKINode Title="TwitterDetails.updates field" Url="html/128862610.htm" />
+  <HelpKINode Title="TwitterDetails.username property" Url="html/766915804.htm" />
+  <HelpKINode Title="type property" Url="html/1817624174.htm" />
+  <HelpKINode Title="updates field" Url="html/1144536288.htm" />
+  <HelpKINode Title="updates field" Url="html/128862610.htm" />
+  <HelpKINode Title="updates field" Url="html/1601310934.htm" />
+  <HelpKINode Title="updates field" Url="html/16938616.htm" />
+  <HelpKINode Title="updates field" Url="html/1789252005.htm" />
+  <HelpKINode Title="updates field" Url="html/825374151.htm" />
+  <HelpKINode Title="userId property" Url="html/1421849890.htm" />
+  <HelpKINode Title="userId property" Url="html/917671539.htm" />
+  <HelpKINode Title="UserInfo class" Url="html/1834352958.htm" />
+  <HelpKINode Title="UserInfo class" Url="html/35128919.htm" />
+  <HelpKINode Title="UserInfo class">
+    <HelpKINode Title="about UserInfo class" Url="html/1834352958.htm" />
+    <HelpKINode Title="all members" Url="html/35128919.htm" />
+    <HelpKINode Title="properties" Url="html/287569990.htm" />
+  </HelpKINode>
+  <HelpKINode Title="UserInfo.hints property" Url="html/566527419.htm" />
+  <HelpKINode Title="UserInfo.id property" Url="html/50982028.htm" />
+  <HelpKINode Title="UserInfo.pass property" Url="html/1809066648.htm" />
+  <HelpKINode Title="UserInfo.userId property" Url="html/1421849890.htm" />
+  <HelpKINode Title="username property" Url="html/1860793791.htm" />
+  <HelpKINode Title="username property" Url="html/2141360360.htm" />
+  <HelpKINode Title="username property" Url="html/513029457.htm" />
+  <HelpKINode Title="username property" Url="html/766915804.htm" />
+  <HelpKINode Title="username property" Url="html/804029438.htm" />
+  <HelpKINode Title="username property" Url="html/880615842.htm" />
+  <HelpKINode Title="value property" Url="html/921889588.htm" />
+  <HelpKINode Title="Weekly enumeration member" Url="html/1506293312.htm" />
+  <HelpKINode Title="Weekly field" Url="html/1236178089.htm" />
+  <HelpKINode Title="Yearly enumeration member" Url="html/1506293312.htm" />
+  <HelpKINode Title="Yearly field" Url="html/1465119082.htm" />
+</HelpKI>

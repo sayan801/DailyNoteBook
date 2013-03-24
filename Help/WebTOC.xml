@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="99c7267b-3a88-4c2e-a3c8-c5d08684c00e" Title="DNBSNData Namespace" Url="html/2139808609.htm">
+    <HelpTOCNode Id="ea5966f6-6a0b-41ee-810e-dc86a3e5e90f" Title="ContactInfo Class" Url="html/55317888.htm">
+      <HelpTOCNode Title="ContactInfo Members" Url="html/954317477.htm" />
+      <HelpTOCNode Id="1726c85f-9db6-41e6-84ee-ad4274cd8b78" Title="ContactInfo Properties" Url="html/778458539.htm">
+        <HelpTOCNode Title="id Property " Url="html/1840698628.htm" />
+        <HelpTOCNode Title="name Property " Url="html/1066146344.htm" />
+        <HelpTOCNode Title="mobileno Property " Url="html/1010497881.htm" />
+        <HelpTOCNode Title="homeno Property " Url="html/1174480789.htm" />
+        <HelpTOCNode Title="oficeno Property " Url="html/1203249492.htm" />
+        <HelpTOCNode Title="faxno Property " Url="html/1654095487.htm" />
+        <HelpTOCNode Title="address Property " Url="html/1089381389.htm" />
+        <HelpTOCNode Title="remark Property " Url="html/391063631.htm" />
+        <HelpTOCNode Title="email Property " Url="html/1211496398.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="d74e167a-36cc-415a-a4fd-5cd69d063beb" Title="LinkedInDetails Class" Url="html/1870828710.htm">
+      <HelpTOCNode Title="LinkedInDetails Members" Url="html/1835237842.htm" />
+      <HelpTOCNode Id="2f2e2ef1-a8f0-4125-b9da-94a5efaca903" Title="LinkedInDetails Fields" Url="html/1159077981.htm">
+        <HelpTOCNode Title="updates Field" Url="html/1144536288.htm" />
+        <HelpTOCNode Title="lastLoginTime Field" Url="html/2106122201.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="cd531dae-a06c-4d9a-9fc3-2a42808fb31b" Title="LinkedInDetails Properties" Url="html/117898835.htm">
+        <HelpTOCNode Title="Appid Property " Url="html/1375567350.htm" />
+        <HelpTOCNode Title="username Property " Url="html/880615842.htm" />
+        <HelpTOCNode Title="password Property " Url="html/1454870303.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="eb187851-6943-4ff2-8c4b-6e34964a869f" Title="GoogleCalenderDetails Class" Url="html/855120154.htm">
+      <HelpTOCNode Title="GoogleCalenderDetails Members" Url="html/1986158010.htm" />
+      <HelpTOCNode Id="e95e4969-571e-4ce5-8b8c-2afd888dde17" Title="GoogleCalenderDetails Fields" Url="html/1401786206.htm">
+        <HelpTOCNode Title="updates Field" Url="html/1789252005.htm" />
+        <HelpTOCNode Title="lastLoginTime Field" Url="html/1205936447.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="d3f6b879-28f8-419b-b288-0a687e8cf96d" Title="GoogleCalenderDetails Properties" Url="html/742787296.htm">
+        <HelpTOCNode Title="Appid Property " Url="html/1529034634.htm" />
+        <HelpTOCNode Title="username Property " Url="html/804029438.htm" />
+        <HelpTOCNode Title="password Property " Url="html/1975331209.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="34a12581-353f-4b60-a09c-93d3537bb7ee" Title="TwitterDetails Class" Url="html/442454606.htm">
+      <HelpTOCNode Title="TwitterDetails Members" Url="html/996959544.htm" />
+      <HelpTOCNode Id="a88ed632-b853-4032-8c64-b5c32299ba09" Title="TwitterDetails Fields" Url="html/1896641369.htm">
+        <HelpTOCNode Title="updates Field" Url="html/128862610.htm" />
+        <HelpTOCNode Title="lastLoginTime Field" Url="html/16404731.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="51a11bf7-d2fd-4e20-80fe-215f6ee6e0e9" Title="TwitterDetails Properties" Url="html/1384920390.htm">
+        <HelpTOCNode Title="Appid Property " Url="html/1245277230.htm" />
+        <HelpTOCNode Title="username Property " Url="html/766915804.htm" />
+        <HelpTOCNode Title="password Property " Url="html/1972487992.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="f29ba70a-0636-449a-a25e-9677217c0a0c" Title="FacebookDetails Class" Url="html/369259573.htm">
+      <HelpTOCNode Title="FacebookDetails Members" Url="html/1035324011.htm" />
+      <HelpTOCNode Id="1a286447-c424-4151-b48f-0a72e3369d4f" Title="FacebookDetails Fields" Url="html/788348741.htm">
+        <HelpTOCNode Title="updates Field" Url="html/825374151.htm" />
+        <HelpTOCNode Title="lastLoginTime Field" Url="html/690432941.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="effc13d5-6e9d-4838-b756-fd5ee72514af" Title="FacebookDetails Properties" Url="html/1395232110.htm">
+        <HelpTOCNode Title="Appid Property " Url="html/582654254.htm" />
+        <HelpTOCNode Title="username Property " Url="html/1860793791.htm" />
+        <HelpTOCNode Title="password Property " Url="html/871467390.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="0b9aa25b-fa32-48f7-8c15-b76b91606047" Title="GoogleMapDetails Class" Url="html/152571946.htm">
+      <HelpTOCNode Title="GoogleMapDetails Members" Url="html/1003299210.htm" />
+      <HelpTOCNode Id="539170ca-297f-4622-a46d-962fd319ffc1" Title="GoogleMapDetails Fields" Url="html/844951009.htm">
+        <HelpTOCNode Title="updates Field" Url="html/16938616.htm" />
+        <HelpTOCNode Title="lastLoginTime Field" Url="html/819890389.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="71d5f95b-b2c2-4bcf-8e24-05c72ef9c900" Title="GoogleMapDetails Properties" Url="html/371944737.htm">
+        <HelpTOCNode Title="Appid Property " Url="html/207485487.htm" />
+        <HelpTOCNode Title="username Property " Url="html/2141360360.htm" />
+        <HelpTOCNode Title="password Property " Url="html/473808562.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="91c489c6-a8e8-43a2-9e26-4b0d7185cec4" Title="NoteDetails Class" Url="html/2018044583.htm">
+      <HelpTOCNode Title="NoteDetails Members" Url="html/472175301.htm" />
+      <HelpTOCNode Id="5ebfb158-7445-405c-ab90-a55f07a4a1dd" Title="NoteDetails Fields" Url="html/266165049.htm">
+        <HelpTOCNode Title="updates Field" Url="html/1601310934.htm" />
+        <HelpTOCNode Title="lastLoginTime Field" Url="html/782304922.htm" />
+        <HelpTOCNode Title="isFbSynced Field" Url="html/992979135.htm" />
+        <HelpTOCNode Title="isTwitterSynced Field" Url="html/345713673.htm" />
+        <HelpTOCNode Title="isLinkedInSynced Field" Url="html/1287559938.htm" />
+        <HelpTOCNode Title="isGoogleCalenderSynced Field" Url="html/889955461.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="82cd6645-8caa-4bfc-a647-397a117322fd" Title="NoteDetails Properties" Url="html/2034853704.htm">
+        <HelpTOCNode Title="Appid Property " Url="html/1591300315.htm" />
+        <HelpTOCNode Title="username Property " Url="html/513029457.htm" />
+        <HelpTOCNode Title="password Property " Url="html/929664966.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="757bb7ac-ef7c-4622-b55e-fb22b508ad8f" Title="FacebookController Class" Url="html/1347916077.htm">
+      <HelpTOCNode Title="FacebookController Members" Url="html/875029888.htm" />
+      <HelpTOCNode Id="cc2eb7b3-30b7-4de7-8adc-d00d2905bd63" Title="FacebookController Fields" Url="html/1400151937.htm">
+        <HelpTOCNode Title="fbs Field" Url="html/2085597983.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="aa8e69a4-61d7-4fe3-a1a0-50e606378415" Title="TwitterController Class" Url="html/720001390.htm">
+      <HelpTOCNode Title="TwitterController Members" Url="html/963669969.htm" />
+      <HelpTOCNode Id="d03d1f58-6274-4af0-b746-7bc92ea78fc1" Title="TwitterController Fields" Url="html/1306637090.htm">
+        <HelpTOCNode Title="twits Field" Url="html/84787305.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="34d0fdf7-e6e3-43b0-b2f6-52deeeb1c9f0" Title="LinkedInController Class" Url="html/1512088421.htm">
+      <HelpTOCNode Title="LinkedInController Members" Url="html/1641782948.htm" />
+      <HelpTOCNode Id="4c7cc81b-5122-4fe2-b688-1ca0c951eb08" Title="LinkedInController Fields" Url="html/1639258190.htm">
+        <HelpTOCNode Title="linkedin Field" Url="html/400044670.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="bf1008cd-4723-4914-b03f-00895b388c4c" Title="GoogleMapController Class" Url="html/1022082316.htm">
+      <HelpTOCNode Title="GoogleMapController Members" Url="html/1389855470.htm" />
+      <HelpTOCNode Id="6bbffe28-0dbb-4eec-9096-fd2b7ada9f22" Title="GoogleMapController Fields" Url="html/1986249746.htm">
+        <HelpTOCNode Title="map Field" Url="html/1462262859.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="1fd93a9a-35f5-4493-8efb-876ccd94ad67" Title="GoogleCalenderController Class" Url="html/1347319832.htm">
+      <HelpTOCNode Title="GoogleCalenderController Members" Url="html/262102180.htm" />
+      <HelpTOCNode Id="d79c0c84-f4bf-4778-95a3-32f3a1788bc5" Title="GoogleCalenderController Fields" Url="html/522651859.htm">
+        <HelpTOCNode Title="calender Field" Url="html/1481393629.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="d32faec5-b7b7-4bac-84b9-cdaeeb5503f3" Title="ReportInfo Class" Url="html/1026823723.htm">
+      <HelpTOCNode Title="ReportInfo Members" Url="html/78604631.htm" />
+      <HelpTOCNode Id="6ee4b42b-ea2d-4cf0-91db-6dc163b2569e" Title="ReportInfo Properties" Url="html/1897067495.htm">
+        <HelpTOCNode Title="id Property " Url="html/34358601.htm" />
+        <HelpTOCNode Title="date Property " Url="html/334840218.htm" />
+        <HelpTOCNode Title="type Property " Url="html/1817624174.htm" />
+        <HelpTOCNode Title="description Property " Url="html/842230528.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="2d458f48-4c06-4c4f-b4c1-33b4a2a6cb3e" Title="DaliyNoteBookController Class" Url="html/271389888.htm">
+      <HelpTOCNode Title="DaliyNoteBookController Members" Url="html/1461015612.htm" />
+      <HelpTOCNode Id="fd4e8fc8-d4a3-4bf9-b1de-6fb833cc52b0" Title="DaliyNoteBookController Fields" Url="html/2115486407.htm">
+        <HelpTOCNode Title="notes Field" Url="html/2001005459.htm" />
+        <HelpTOCNode Title="GoogleCalenderController Field" Url="html/2135819215.htm" />
+        <HelpTOCNode Title="GoogleMapController Field" Url="html/360856726.htm" />
+        <HelpTOCNode Title="LinkedInController Field" Url="html/358747459.htm" />
+        <HelpTOCNode Title="FacebookController Field" Url="html/852430979.htm" />
+        <HelpTOCNode Title="TwitterController Field" Url="html/817889399.htm" />
+        <HelpTOCNode Title="MemberManager Field" Url="html/715220920.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="04a91fb2-7220-4420-a33c-a413e2dcf72c" Title="MemberInfo Class" Url="html/1073369742.htm">
+      <HelpTOCNode Title="MemberInfo Members" Url="html/458321906.htm" />
+      <HelpTOCNode Id="1f994813-f939-4734-82f8-1ad8411959ec" Title="MemberInfo Fields" Url="html/1351660068.htm">
+        <HelpTOCNode Title="prefs Field" Url="html/1788860977.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="3798c9dc-29b3-466e-a4b9-50ae76cf4c5e" Title="MemberInfo Properties" Url="html/14086100.htm">
+        <HelpTOCNode Title="id Property " Url="html/789906704.htm" />
+        <HelpTOCNode Title="name Property " Url="html/750192368.htm" />
+        <HelpTOCNode Title="address Property " Url="html/323566853.htm" />
+        <HelpTOCNode Title="contact Property " Url="html/1828517940.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="11b2c551-ee52-4f2f-a634-2b69b6b8bb51" Title="MemberManager Class" Url="html/1178058974.htm">
+      <HelpTOCNode Title="MemberManager Members" Url="html/922407380.htm" />
+      <HelpTOCNode Id="3d9c8334-9b95-4896-abd3-e615451d64ee" Title="MemberManager Fields" Url="html/808452089.htm">
+        <HelpTOCNode Title="members Field" Url="html/1624976312.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="cbf2e8c8-6e21-432e-80e4-301fa9a72c6f" Title="PreferenceInfo Class" Url="html/1036585492.htm">
+      <HelpTOCNode Title="PreferenceInfo Members" Url="html/1087610816.htm" />
+      <HelpTOCNode Id="62fe4e81-92c8-4f6f-8b21-3dbe1ce695f3" Title="PreferenceInfo Fields" Url="html/1902451873.htm">
+        <HelpTOCNode Title="name Field" Url="html/1138921070.htm" />
+        <HelpTOCNode Title="Description Field" Url="html/305369558.htm" />
+        <HelpTOCNode Title="date Field" Url="html/199389586.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="6255629a-0c13-40e5-b0e2-325b2c9a3add" Title="NoteInfo Class" Url="html/1444385134.htm">
+      <HelpTOCNode Title="NoteInfo Members" Url="html/430515759.htm" />
+      <HelpTOCNode Id="661e501e-346a-4892-8b5a-3e90b7262aa9" Title="NoteInfo Properties" Url="html/1722874505.htm">
+        <HelpTOCNode Title="id Property " Url="html/418141308.htm" />
+        <HelpTOCNode Title="noteDate Property " Url="html/438114745.htm" />
+        <HelpTOCNode Title="note Property " Url="html/974164850.htm" />
+        <HelpTOCNode Title="gotoDate Property " Url="html/937695287.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="7aa67de4-c3ba-40e6-a421-827fe1571822" Title="PasswordInfo Class" Url="html/1838351980.htm">
+      <HelpTOCNode Title="PasswordInfo Members" Url="html/181885037.htm" />
+      <HelpTOCNode Id="30ef32a4-b22f-4e14-88e9-30c58e7b8cdc" Title="PasswordInfo Properties" Url="html/1046464203.htm">
+        <HelpTOCNode Title="id Property " Url="html/1162519402.htm" />
+        <HelpTOCNode Title="name Property " Url="html/110079013.htm" />
+        <HelpTOCNode Title="email Property " Url="html/1837943587.htm" />
+        <HelpTOCNode Title="userId Property " Url="html/917671539.htm" />
+        <HelpTOCNode Title="password Property " Url="html/93247971.htm" />
+        <HelpTOCNode Title="scrtqstn Property " Url="html/550877144.htm" />
+        <HelpTOCNode Title="scrtans Property " Url="html/1276062659.htm" />
+        <HelpTOCNode Title="otherInfo Property " Url="html/7309108.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="03d73936-b167-4fc8-9e90-04a7e63c3134" Title="TaskInfo Class" Url="html/587396673.htm">
+      <HelpTOCNode Title="TaskInfo Members" Url="html/1617944330.htm" />
+      <HelpTOCNode Id="6ce6127b-5325-46ca-8134-fa9a9cabc2d0" Title="TaskInfo Properties" Url="html/929890543.htm">
+        <HelpTOCNode Title="id Property " Url="html/1626242569.htm" />
+        <HelpTOCNode Title="value Property " Url="html/921889588.htm" />
+        <HelpTOCNode Title="taskDetails Property " Url="html/1777960103.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="ac636402-0be6-4f08-bd3a-0c8975b52152" Title="UserInfo Class" Url="html/1834352958.htm">
+      <HelpTOCNode Title="UserInfo Members" Url="html/35128919.htm" />
+      <HelpTOCNode Id="cb905453-19b7-4fb8-ac46-919945286fc4" Title="UserInfo Properties" Url="html/287569990.htm">
+        <HelpTOCNode Title="id Property " Url="html/50982028.htm" />
+        <HelpTOCNode Title="userId Property " Url="html/1421849890.htm" />
+        <HelpTOCNode Title="pass Property " Url="html/1809066648.htm" />
+        <HelpTOCNode Title="hints Property " Url="html/566527419.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Title="ReportType Enumeration" Url="html/1506293312.htm" />
+  </HelpTOCNode>
+  <HelpTOCNode Id="9745e5d4-a164-445a-8f62-cd37e3dcfb15" Title="DNBSNGUI Namespace" Url="html/795111374.htm">
+    <HelpTOCNode Id="4aaf5fd8-6961-4c3a-9f6f-d73786e959ac" Title="App Class" Url="html/521639525.htm">
+      <HelpTOCNode Title="App Members" Url="html/1571504717.htm" />
+      <HelpTOCNode Title="App Members" Url="html/1571504717.htm" />
+      <HelpTOCNode Title="App Constructor " Url="html/1405751170.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="5efd76e1-9742-4471-a6a2-2f8b743435fd" Title="App Class" Url="html/521639525.htm">
+      <HelpTOCNode Title="App Members" Url="html/1571504717.htm" />
+      <HelpTOCNode Title="App Members" Url="html/1571504717.htm" />
+      <HelpTOCNode Title="App Constructor " Url="html/1405751170.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="89deeea5-8425-4323-ae54-da92668fd149" Title="MainWindow Class" Url="html/494305234.htm">
+      <HelpTOCNode Title="MainWindow Members" Url="html/637454948.htm" />
+      <HelpTOCNode Title="MainWindow Members" Url="html/637454948.htm" />
+      <HelpTOCNode Title="MainWindow Constructor " Url="html/1725749436.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="5cd3cb05-59d7-451a-aa69-5b1a93c09f5c" Title="MainWindow Class" Url="html/494305234.htm">
+      <HelpTOCNode Title="MainWindow Members" Url="html/637454948.htm" />
+      <HelpTOCNode Title="MainWindow Members" Url="html/637454948.htm" />
+      <HelpTOCNode Title="MainWindow Constructor " Url="html/1725749436.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="c4d6e537-aff5-43e0-9feb-859dc4d2627f" Title="ShowEvent Class" Url="html/481492962.htm">
+      <HelpTOCNode Title="ShowEvent Members" Url="html/1944600077.htm" />
+      <HelpTOCNode Title="ShowEvent Members" Url="html/1944600077.htm" />
+      <HelpTOCNode Title="ShowEvent Constructor " Url="html/368507140.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="898150c6-640d-4aab-982f-8ab6fdc71af2" Title="ShowEvent Class" Url="html/481492962.htm">
+      <HelpTOCNode Title="ShowEvent Members" Url="html/1944600077.htm" />
+      <HelpTOCNode Title="ShowEvent Members" Url="html/1944600077.htm" />
+      <HelpTOCNode Title="ShowEvent Constructor " Url="html/368507140.htm" />
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="69e53449-0e76-428d-9cbf-75d268661182" Title="DNBSNGUI.Properties Namespace" Url="html/1527982232.htm">
+    <HelpTOCNode Id="3c082ea6-07af-4d1d-ae53-b17ee27dbc3d" Title="Resources Class" Url="html/1102861162.htm">
+      <HelpTOCNode Title="Resources Members" Url="html/401612672.htm" />
+      <HelpTOCNode Title="Resources Constructor " Url="html/1045089246.htm" />
+      <HelpTOCNode Id="7e6a5406-3f6f-4bfd-b10b-eacd67bda5ae" Title="Resources Fields" Url="html/1487436005.htm">
+        <HelpTOCNode Title="resourceMan Field" Url="html/868969537.htm" />
+        <HelpTOCNode Title="resourceCulture Field" Url="html/1754496656.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="0a280387-d3b7-4847-8dbe-57dd6a266e0d" Title="Resources Properties" Url="html/348718357.htm">
+        <HelpTOCNode Title="ResourceManager Property " Url="html/1924941832.htm" />
+        <HelpTOCNode Title="Culture Property " Url="html/1497423685.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="cdde9cdf-5a34-43dc-9fb2-c1d32e2c79d7" Title="Settings Class" Url="html/1271527439.htm">
+      <HelpTOCNode Title="Settings Members" Url="html/1768986549.htm" />
+      <HelpTOCNode Id="ff136030-686a-456c-9f9e-1c409c4d3e05" Title="Settings Fields" Url="html/1498091790.htm">
+        <HelpTOCNode Title="defaultInstance Field" Url="html/590947203.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="627e5b3a-4986-4c24-b977-1c586a1726ff" Title="Settings Properties" Url="html/1369451628.htm">
+        <HelpTOCNode Title="Default Property " Url="html/70014922.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="d549413e-b85d-4259-b71e-4e292a74e0e3" Title="DNBSNDb Namespace" Url="html/782602235.htm">
+    <HelpTOCNode Id="7363ed61-6b18-4da9-a04e-2feb71aae1f6" Title="DbInteraction Class" Url="html/1627713688.htm">
+      <HelpTOCNode Title="DbInteraction Members" Url="html/2047657.htm" />
+      <HelpTOCNode Id="3feb59f6-5690-42d5-8324-58bb5564d6ad" Title="DbInteraction Fields" Url="html/667082227.htm">
+        <HelpTOCNode Title="passwordCurrent Field" Url="html/49873173.htm" />
+        <HelpTOCNode Title="dbmsCurrent Field" Url="html/2109748905.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="928cb881-4c0f-4ffa-9414-5f673c1d367e" Title="DbInteraction Methods" Url="html/1287749225.htm">
+        <HelpTOCNode Title="GetAllNoteList Method " Url="html/1403680225.htm" />
+        <HelpTOCNode Title="QueryAllNoteList Method " Url="html/765771131.htm" />
+        <HelpTOCNode Title="GetAllContactList Method " Url="html/887424109.htm" />
+        <HelpTOCNode Title="QueryAllContactList Method " Url="html/316657709.htm" />
+        <HelpTOCNode Title="GetAllTaskList Method " Url="html/2119059406.htm" />
+        <HelpTOCNode Title="QueryAllTaskList Method " Url="html/133899470.htm" />
+        <HelpTOCNode Title="GetAllPasswordsList Method " Url="html/153145108.htm" />
+        <HelpTOCNode Title="QueryAllPasswordList Method " Url="html/1837333486.htm" />
+        <HelpTOCNode Title="searchNoteList Method " Url="html/1425956501.htm" />
+        <HelpTOCNode Title="searchAllNoteList Method " Url="html/330071880.htm" />
+        <HelpTOCNode Title="searchMnthlyNoteList Method " Url="html/452940114.htm" />
+        <HelpTOCNode Title="DoRegisterNewUser Method " Url="html/524255275.htm" />
+        <HelpTOCNode Title="DoRegisterNewuserindb Method " Url="html/1678125376.htm" />
+        <HelpTOCNode Title="DoEnterNewNote Method " Url="html/1845869043.htm" />
+        <HelpTOCNode Title="DoEnterNewNoteindb Method " Url="html/1105301745.htm" />
+        <HelpTOCNode Title="DoRegisterNewContact Method " Url="html/1293621531.htm" />
+        <HelpTOCNode Title="DoRegisterNewTask Method " Url="html/680864485.htm" />
+        <HelpTOCNode Title="DoRegisterNewPassword Method " Url="html/1434958201.htm" />
+        <HelpTOCNode Title="OpenDbConnection Method " Url="html/378942369.htm" />
+        <HelpTOCNode Title="FetcheId Method " Url="html/555544443.htm" />
+        <HelpTOCNode Title="FetchePassword Method " Url="html/2107189566.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>

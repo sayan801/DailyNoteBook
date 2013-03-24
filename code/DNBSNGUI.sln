@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual C# Express 2010
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNBSNGUI", "DNBSNGUI\DNBSNGUI.csproj", "{92A18F75-332A-4E06-AC21-D1195A61075D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNBSNStyles", "DNBSNStyles\DNBSNStyles.csproj", "{20AEEBC4-15DE-4D4A-ADB6-DA959E61A98A}"
@@ -8,6 +8,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNBSNData", "DNBData\DNBSNData.csproj", "{9CA46215-E2BC-4D8B-A42D-748A897840A5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNBSNDb", "DNBSNDb\DNBSNDb.csproj", "{1927B753-C125-45EC-981D-D178F294E23C}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "DNBSNSetup", "DNBSNSetup\DNBSNSetup.vdproj", "{461E1C0E-EEB7-43EF-B7E2-C09269ED5DF4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +61,12 @@ Global
 		{1927B753-C125-45EC-981D-D178F294E23C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{1927B753-C125-45EC-981D-D178F294E23C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{1927B753-C125-45EC-981D-D178F294E23C}.Release|x86.ActiveCfg = Release|Any CPU
+		{461E1C0E-EEB7-43EF-B7E2-C09269ED5DF4}.Debug|Any CPU.ActiveCfg = Debug
+		{461E1C0E-EEB7-43EF-B7E2-C09269ED5DF4}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{461E1C0E-EEB7-43EF-B7E2-C09269ED5DF4}.Debug|x86.ActiveCfg = Debug
+		{461E1C0E-EEB7-43EF-B7E2-C09269ED5DF4}.Release|Any CPU.ActiveCfg = Release
+		{461E1C0E-EEB7-43EF-B7E2-C09269ED5DF4}.Release|Mixed Platforms.ActiveCfg = Release
+		{461E1C0E-EEB7-43EF-B7E2-C09269ED5DF4}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
