@@ -29,7 +29,6 @@
                 <UniformGrid DockPanel.Dock="Right" HorizontalAlignment="Right" Rows="1">
 
                     <Button Width="30" Height="30" Name="minimizeBtn" ToolTip="minimize" Style="{StaticResource TitlebarBTN}" Click="minimizeBtn_Click">_</Button>
-                    <!--<Button Margin="0" Width="30" Height="30" Name="maximizeBtn" ToolTip="maximize" Style="{StaticResource TitlebarBTN}" Click="maximizeBtn_Click">👉</Button>-->
                     <Button Width="30" Height="30" Name="closeBtn" ToolTip="close" Style="{StaticResource TitlebarBTN}" Click="closeBtn_Click">X</Button>
                 </UniformGrid>
                 <UniformGrid DockPanel.Dock="Right" HorizontalAlignment="Right">
@@ -70,10 +69,6 @@
                                         <Label Name="hintsMsgLbl" Foreground="Red"></Label>
                                     </UniformGrid>
                                 </DockPanel>
-                                    
-                                
-                                
-                                
                             </DockPanel>
                         </UniformGrid>
                     </Expander>
@@ -109,9 +104,6 @@
                                     <Label Name="createErrorMsgLbl" Foreground="Red"></Label>
 
                                 </DockPanel>
-
-
-
 
                             </DockPanel>
                         </UniformGrid>
@@ -210,9 +202,6 @@
                                 <DockPanel DockPanel.Dock="Bottom" LastChildFill="True">
                                     
                                     <UniformGrid Rows="1" >
-
-
-
                                         <DatePicker ToolTip="today" Margin="10" Name="noteDateDP" SelectedDate="{x:Static sys:DateTime.Now}" Style="{StaticResource DatepkrStyle}"></DatePicker>
                                         <Label Name="noteSuccessMsgLvl" Foreground="Red" Style="{StaticResource LblStyle}"></Label>
                                         <Button Name="clearFieldsBtn"  Content="Clear Fields"  Style="{StaticResource PlainBtnStyle}" Click="clearFieldsBtn_Click" />
@@ -335,14 +324,6 @@
                                     
                                 </TabControl>
                             </DockPanel>
-                            
-
-                           
-
-
-
-                           
-
                         </DockPanel>
 
                     </TabItem>
@@ -363,9 +344,6 @@
                                                         <Label></Label>
 
                                                         <TextBox Margin="10" Width="150" Tag="enter user name" Style="{StaticResource commonTBtyle}" />
-
-
-
                                                         <PasswordBox Name="fbPB" Tag="••••••" Style="{StaticResource pBstyle}" Width="150" Margin="10"></PasswordBox>
                                                         <Button Name="fbLoginBtn" Width="100" ToolTip="login" Style="{StaticResource PlainBtnStyle}">Login</Button>
                                                         <Label></Label>
@@ -394,11 +372,7 @@
                                                     
                                                 </DockPanel>
                                             </UniformGrid>
-                                            
-                                           
                                         </Expander>
-                                        
-
                                     </StackPanel>
                                     <TextBlock   Name="tweetsTextBlock" Foreground="#FF8E6A6A" Background="#FFD06D6D" OpacityMask="#FF2F545F" />
                                 </DockPanel>
@@ -613,8 +587,6 @@
                                         </DockPanel>
                                     </UniformGrid>
                                 </Expander>
-
-
                             </StackPanel>
                             <DockPanel Name="mainPassDP" IsEnabled="False" LastChildFill="True">
 
@@ -724,8 +696,6 @@
                                                 </DockPanel>
                                             </UniformGrid>
                                         </Expander>
-
-
                                     </StackPanel>
                                     <DockPanel DockPanel.Dock="Bottom">
                                         <UniformGrid Rows="1">
@@ -742,31 +712,20 @@
                                             <GridView>
                                                 <GridViewColumn Width="100" Header="Value" DisplayMemberBinding="{Binding value}"/>
                                                 <GridViewColumn Width="650" Header="Task" DisplayMemberBinding="{Binding taskDetails}" />
-                                                <!--<GridViewColumn Width="100" Header="Status"   />-->
                                             </GridView>
                                         </ListView.View>
                                     </ListView>
                                 </DockPanel>
                             </TabItem>
                             <TabItem Name="expenseTabItem"  Style="{StaticResource TItemStyle}" Header="Expense" ToolTip="expense">
-
-
                             </TabItem>
-
                         </TabControl>
 
-
                     </TabItem>
-
-
-
 
                 </TabControl>
             </DockPanel>
         </DockPanel>
 
-
     </Border>
-
-    
 </Window>
