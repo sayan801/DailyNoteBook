@@ -266,7 +266,7 @@
                                         <TextBlock Style="{StaticResource TxtblkStyle}"  DockPanel.Dock="Top" Text="{Binding Source={x:Static sys:DateTime.Today}, StringFormat='{}{0:MMMM  yyyy}'}" FontSize="18"></TextBlock>
                                     </DockPanel>
                                     <Button Name="rewriBtnBtn" ToolTip="save to cxcel" Style="{StaticResource PlainBtnStyle}">Rewrite Event</Button>
-                                    <Button Name="dltevntBtnBtn" ToolTip="save to cxcel" Style="{StaticResource PlainBtnStyle}">Delete Event</Button>
+                                    <Button Name="dltevntBtnBtn" ToolTip="save to cxcel" Style="{StaticResource PlainBtnStyle}" Click="dltevntBtnBtn_Click">Delete Event</Button>
                                     <Button Name="saveToExcelBtn" ToolTip="save to cxcel" Style="{StaticResource PlainBtnStyle}">Save To Excel</Button>
                                     <DatePicker ToolTip="select a date" Margin="10" Name="goToDateDP" SelectedDate="{x:Static sys:DateTime.Now}" Style="{StaticResource DatepkrStyle}" ></DatePicker>
                                     <Button Name="goToDateBtn" ToolTip="go to date" Style="{StaticResource PlainBtnStyle}" Click="goToDateBtn_Click">Go To Date</Button>
