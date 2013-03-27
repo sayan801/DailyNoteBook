@@ -257,10 +257,10 @@ namespace DNBSNDb
                 //define the connection used by the command object
                 msqlCommand.Connection = msqlConnection;
 
-                msqlCommand.CommandText = "INSERT INTO contact(contactId,name,mobile,homePhone,officePhone,email,address,faxNumber,remark) "
-                                                   + "VALUES(@contactId,@name,@mobile,@homePhone,@officePhone,@email,@address,@faxNumber,@remark)";
+                msqlCommand.CommandText = "INSERT INTO contact(id,name,mobile,homePhone,officePhone,email,address,faxNumber,remark) "
+                                                   + "VALUES(@id,@name,@mobile,@homePhone,@officePhone,@email,@address,@faxNumber,@remark)";
 
-                msqlCommand.Parameters.AddWithValue("@contactId", contactDetails.id);
+                msqlCommand.Parameters.AddWithValue("@id", contactDetails.id);
                 msqlCommand.Parameters.AddWithValue("@name", contactDetails.name);
                 msqlCommand.Parameters.AddWithValue("@mobile", contactDetails.mobileno);
                 msqlCommand.Parameters.AddWithValue("@homePhone", contactDetails.homeno);
@@ -309,7 +309,7 @@ namespace DNBSNDb
                 {
                     ContactInfo Contact = new ContactInfo();
 
-                    Contact.id = msqlReader.GetString("contactId");
+                    Contact.id = msqlReader.GetString("id");
                     Contact.name = msqlReader.GetString("name");
                     Contact.mobileno = msqlReader.GetString("mobile");
                     Contact.homeno = msqlReader.GetString("homePhone");
