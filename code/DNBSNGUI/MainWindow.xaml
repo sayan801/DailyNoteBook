@@ -510,7 +510,7 @@
                     </TabItem>
                     <TabItem Name="contactBookTabItem" Style="{StaticResource TItemStyle}" Header="Contacts"  >
                         <DockPanel LastChildFill="True">
-                            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+                            
                                 <Expander Name="contacXpndr"  DockPanel.Dock="Top" ExpandDirection="Down" IsExpanded="False" Header="Add Contact" VerticalAlignment="Center" >
                                     <UniformGrid Columns="1">
                                         <DockPanel Width="650" >
@@ -539,15 +539,15 @@
                                         </DockPanel>
                                     </UniformGrid>
                                 </Expander>
-                            </StackPanel>
+                            
                             <DockPanel DockPanel.Dock="Bottom">
                                 <UniformGrid Rows="1">
                                     <Label></Label>
                                     <Label></Label>
                                     <Label></Label>
                                     <Button Name="contactrfrshBtn" Content="Refresh" ToolTip="Refresh details" Style="{StaticResource PlainBtnStyle}" Click="contactrfrshBtn_Click" />
-                                    <Button Content="Edit Contacts" ToolTip="edit selected contact details" Style="{StaticResource PlainBtnStyle}" />
-                                    <Button Content="Delete Contact" ToolTip="delete selected contact details" Style="{StaticResource PlainBtnStyle}" />
+                                    <Button Name="contactEditBtn" Content="Edit Contacts" ToolTip="edit selected contact details" Style="{StaticResource PlainBtnStyle}" />
+                                    <Button Name="contactDelBtn" Content="Delete Contact" ToolTip="delete selected contact details" Style="{StaticResource PlainBtnStyle}" Click="contactDelBtn_Click" />
                                 </UniformGrid>
                             </DockPanel>
                             <ListView Name="contactView" HorizontalAlignment="Stretch" ItemsSource="{Binding contactCollection}">
@@ -569,7 +569,7 @@
                     <TabItem Name="passTabItem" Style="{StaticResource TItemStyle}" Header="Password">
                        
                         <DockPanel LastChildFill="True">
-                            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+                            
                                 <Expander Name="loginpassPassExpndr" DockPanel.Dock="Top" ExpandDirection="Down" IsExpanded="True" Header="Login" VerticalAlignment="Center" >
                                     <UniformGrid Columns="1">
 
@@ -587,7 +587,6 @@
                                         </DockPanel>
                                     </UniformGrid>
                                 </Expander>
-                            </StackPanel>
                             <DockPanel Name="mainPassDP" IsEnabled="False" LastChildFill="True">
 
                                 <Expander Header="Login To Add Info" Name="addpassInfoExpndr" DockPanel.Dock="Top">
@@ -649,65 +648,61 @@
                             <TabItem Name="taskTabItem"  Style="{StaticResource TItemStyle}" Header="Task" ToolTip="task">
 
                                 <DockPanel LastChildFill="True">
-                                    <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
-                                        <Expander Name="tskxpndr" DockPanel.Dock="Top" ExpandDirection="Down" IsExpanded="False" Header="Add Task" VerticalAlignment="Center">
-                                            <UniformGrid Columns="1">
+                                    <Expander Name="tskxpndr" DockPanel.Dock="Top" ExpandDirection="Down" IsExpanded="False" Header="Add Task" >
+                                        <UniformGrid Columns="1">
 
-                                                <DockPanel Width="650" Height="197">
+                                            <DockPanel>
 
-                                                    <UniformGrid Columns="4"  DockPanel.Dock="Left" Width="647" Height="198">
-                                                        <Label Margin="10" Width="150" VerticalAlignment="Center">Task Value</Label>
-                                                        <ComboBox Name="taskValueCB" Margin="10" Width="142" Height="30" ToolTip="task value" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" SelectedIndex="0">
-                                                            <ComboBoxItem>High</ComboBoxItem>
-                                                            <ComboBoxItem>Medium</ComboBoxItem>
-                                                            <ComboBoxItem>Low</ComboBoxItem>
-                                                        </ComboBox>
+                                                <UniformGrid Columns="4"  DockPanel.Dock="Left" Width="844">
+                                                    <Label Margin="10" Width="150" VerticalAlignment="Center">Task Value</Label>
+                                                    <ComboBox Name="taskValueCB" Margin="10" Width="142" Height="30" ToolTip="task value" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" SelectedIndex="0">
+                                                        <ComboBoxItem>High</ComboBoxItem>
+                                                        <ComboBoxItem>Medium</ComboBoxItem>
+                                                        <ComboBoxItem>Low</ComboBoxItem>
+                                                    </ComboBox>
 
-                                                        <Label Margin="10" Width="150" VerticalAlignment="Center">About Task</Label>
-                                                        <TextBox Name="taskDetailsTB" Height="100" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" SpellCheck.IsEnabled="True">
-                                                            <TextBox.Style>
-                                                                <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-                                                                    <Style.Resources>
-                                                                        <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Top" Stretch="None">
-                                                                            <VisualBrush.Visual>
-                                                                                <Label Content="what to do?" Foreground="LightGray" />
-                                                                            </VisualBrush.Visual>
-                                                                        </VisualBrush>
-                                                                    </Style.Resources>
-                                                                    <Style.Triggers>
-                                                                        <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
-                                                                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
-                                                                        </Trigger>
-                                                                        <Trigger Property="Text" Value="{x:Null}">
-                                                                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
-                                                                        </Trigger>
-                                                                        <Trigger Property="IsKeyboardFocused" Value="True">
-                                                                            <Setter Property="Background" Value="White" />
-                                                                        </Trigger>
-                                                                    </Style.Triggers>
-                                                                </Style>
-                                                            </TextBox.Style>
-                                                        </TextBox>
-                                                        <Label></Label>
-                                                        <Label></Label>
-                                                        <Button Content="Clear" ToolTip="clear field" Style="{StaticResource PlainBtnStyle}" Height="25" Width="130" />
-                                                        <Button Name="addTaskBtn" Content="Save" ToolTip="save task" Style="{StaticResource PlainBtnStyle}" Height="25" Width="130" Click="addTaskBtn_Click" />
-                                                    </UniformGrid>
-                                                </DockPanel>
-                                            </UniformGrid>
-                                        </Expander>
-                                    </StackPanel>
-                                    <DockPanel DockPanel.Dock="Bottom">
-                                        <UniformGrid Rows="1">
-                                            <Label></Label>
-                                            <Label></Label>
-                                            <Label></Label>
-                                            <Button Content="Refresh" Name="refrshTskBtn" ToolTip="refresh task" Style="{StaticResource PlainBtnStyle}" Click="contactrfrshBtn_Click" />
-                                            <Button Content="Edit Task" ToolTip="edit selected task" Style="{StaticResource PlainBtnStyle}" />
-                                            <Button Content="Delete Task" ToolTip="delete selected task" Style="{StaticResource PlainBtnStyle}" />
+                                                    <Label Margin="10" Width="150" VerticalAlignment="Center">About Task</Label>
+                                                    <TextBox Name="taskDetailsTB" Height="100" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" SpellCheck.IsEnabled="True">
+                                                        <TextBox.Style>
+                                                            <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                                                                <Style.Resources>
+                                                                    <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Top" Stretch="None">
+                                                                        <VisualBrush.Visual>
+                                                                            <Label Content="what to do?" Foreground="LightGray" />
+                                                                        </VisualBrush.Visual>
+                                                                    </VisualBrush>
+                                                                </Style.Resources>
+                                                                <Style.Triggers>
+                                                                    <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                                                                        <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                                                                    </Trigger>
+                                                                    <Trigger Property="Text" Value="{x:Null}">
+                                                                        <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                                                                    </Trigger>
+                                                                    <Trigger Property="IsKeyboardFocused" Value="True">
+                                                                        <Setter Property="Background" Value="White" />
+                                                                    </Trigger>
+                                                                </Style.Triggers>
+                                                            </Style>
+                                                        </TextBox.Style>
+                                                    </TextBox>
+                                                    <Label></Label>
+                                                    <Label></Label>
+                                                    <Button Content="Clear" ToolTip="clear field" Style="{StaticResource PlainBtnStyle}" Height="25" Width="130" />
+                                                    <Button Name="addTaskBtn" Content="Save" ToolTip="save task" Style="{StaticResource PlainBtnStyle}" Height="25" Width="130" Click="addTaskBtn_Click" />
+                                                </UniformGrid>
+                                            </DockPanel>
                                         </UniformGrid>
-                                    </DockPanel>
-                                    <ListView Name="taskView" HorizontalAlignment="Stretch" ItemsSource="{Binding taskCollection}">
+                                    </Expander>
+                                    <UniformGrid DockPanel.Dock="Bottom" Rows="1">
+                                        <Label></Label>
+                                        <Label></Label>
+                                        <Label></Label>
+                                        <Button Content="Refresh" Name="refrshTskBtn" ToolTip="refresh task" Style="{StaticResource PlainBtnStyle}" Click="contactrfrshBtn_Click" />
+                                        <Button Content="Edit Task" ToolTip="edit selected task" Style="{StaticResource PlainBtnStyle}" />
+                                        <Button Content="Delete Task" ToolTip="delete selected task" Style="{StaticResource PlainBtnStyle}" />
+                                    </UniformGrid>
+                                    <ListView DockPanel.Dock="Top" Name="taskView" HorizontalAlignment="Stretch" ItemsSource="{Binding taskCollection}">
                                         <ListView.View>
                                             <GridView>
                                                 <GridViewColumn Width="100" Header="Value" DisplayMemberBinding="{Binding value}"/>

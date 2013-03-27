@@ -336,6 +336,36 @@ namespace DNBSNDb
             return ContactList;
         }
 
+
+        #region delete Contact
+
+        public static void DeleteContact(string contactToDelete)
+        {
+            MySql.Data.MySqlClient.MySqlConnection msqlConnection = OpenDbConnection();
+
+            try
+            {   //define the command reference
+                MySql.Data.MySqlClient.MySqlCommand msqlCommand = new MySql.Data.MySqlClient.MySqlCommand();
+                msqlCommand.Connection = msqlConnection;
+
+                msqlCommand.CommandText = "DELETE FROM contact WHERE id=@contactToDelete";
+                msqlCommand.Parameters.AddWithValue("@contactToDelete", contactToDelete);
+
+                MySql.Data.MySqlClient.MySqlDataReader msqlReader = msqlCommand.ExecuteReader();
+
+            }
+            catch (Exception er)
+            {
+            }
+            finally
+            {
+                //always close the connection
+                msqlConnection.Close();
+            }
+        }
+
+        #endregion
+
         #endregion
 
         #region Task

@@ -368,9 +368,7 @@ namespace DNBSNGUI
 
 
         #endregion
-
-
-
+        
         #region Password
 
         private void paswrdSave_Click(object sender, RoutedEventArgs e)
@@ -480,6 +478,7 @@ namespace DNBSNGUI
 
         #region Contact
 
+        #region Add Contact
         private void saveContactBtn_Click(object sender, RoutedEventArgs e)
         {
             DNBSNData.ContactInfo newContact = new DNBSNData.ContactInfo();
@@ -502,6 +501,9 @@ namespace DNBSNGUI
 
         }
 
+        #endregion
+
+        #region View Contact
         ObservableCollection<ContactInfo> _contactCollection = new ObservableCollection<ContactInfo>();
 
 
@@ -529,6 +531,39 @@ namespace DNBSNGUI
         {
             fetchContactData();
         }
+
+        #endregion
+
+        private ContactInfo GetSelectedItem()
+        {
+
+            ContactInfo contactToDelete = null;
+
+            if (contactView.SelectedIndex == -1)
+                MessageBox.Show("Please Select an Item");
+            else
+            {
+                ContactInfo i = (ContactInfo)contactView.SelectedItem;
+
+                contactToDelete = _contactCollection.Where(item => item.id.Equals(i.id)).First();
+            }
+
+            return contactToDelete;
+        }
+
+        #region Delete Contact
+        private void contactDelBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ContactInfo contactToDelete = GetSelectedItem();
+            if (contactToDelete != null)
+            {
+                _contactCollection.Remove(contactToDelete);
+                DNBSNDb.DbInteraction.DeleteContact(contactToDelete.id);
+                fetchContactData();
+
+            }
+        }
+        #endregion
 
         #endregion
 
@@ -562,6 +597,8 @@ namespace DNBSNGUI
                 _allnoteCollection.Add(note);
             }
         }
+
+        
 
     }
 
