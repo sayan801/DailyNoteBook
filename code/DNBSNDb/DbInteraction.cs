@@ -473,10 +473,10 @@ namespace DNBSNDb
                 //define the connection used by the command object
                 msqlCommand.Connection = msqlConnection;
 
-                msqlCommand.CommandText = "INSERT INTO password(passwordId,name,email,userId,password,secretQuestion,secretAnswer,otherInfo) "
-                                                   + "VALUES(@passwordId,@name,@email,@userId,@password,@secretQuestion,@secretAnswer,@otherInfo)";
+                msqlCommand.CommandText = "INSERT INTO password(id,name,email,userId,password,secretQuestion,secretAnswer,otherInfo) "
+                                                   + "VALUES(@id,@name,@email,@userId,@password,@secretQuestion,@secretAnswer,@otherInfo)";
 
-                msqlCommand.Parameters.AddWithValue("@passwordId", passwordDetails.id);
+                msqlCommand.Parameters.AddWithValue("@id", passwordDetails.id);
                 msqlCommand.Parameters.AddWithValue("@name", passwordDetails.name);
                 msqlCommand.Parameters.AddWithValue("@email", passwordDetails.email);
                 msqlCommand.Parameters.AddWithValue("@userId", passwordDetails.userId);
@@ -524,7 +524,7 @@ namespace DNBSNDb
                 {
                     PasswordInfo Password = new PasswordInfo();
 
-                    Password.id = msqlReader.GetString("passwordId");
+                    Password.id = msqlReader.GetString("id");
                     Password.name = msqlReader.GetString("name");
                     Password.email = msqlReader.GetString("email");
                     Password.userId = msqlReader.GetString("userId");
@@ -551,6 +551,34 @@ namespace DNBSNDb
 
             return PasswordList;
         }
+
+        #region Delete Password
+        public static void DeletePassword(string passwordToDelete)
+        {
+            MySql.Data.MySqlClient.MySqlConnection msqlConnection = OpenDbConnection();
+
+            try
+            {   //define the command reference
+                MySql.Data.MySqlClient.MySqlCommand msqlCommand = new MySql.Data.MySqlClient.MySqlCommand();
+                msqlCommand.Connection = msqlConnection;
+
+                msqlCommand.CommandText = "DELETE FROM password WHERE id=@passwordToDelete";
+                msqlCommand.Parameters.AddWithValue("@passwordToDelete", passwordToDelete);
+
+                MySql.Data.MySqlClient.MySqlDataReader msqlReader = msqlCommand.ExecuteReader();
+
+            }
+            catch (Exception er)
+            {
+            }
+            finally
+            {
+                //always close the connection
+                msqlConnection.Close();
+            }
+        }
+
+        #endregion
 
         #endregion
 

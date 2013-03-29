@@ -532,8 +532,8 @@
                                                 <Label Margin="10" Width="150">Fax Number</Label>
                                                 <TextBox Name="faxNoTb" Margin="10" Width="140" Tag="enter fax number" Style="{StaticResource commonTBtyle}" />
                                                 <Label></Label>
-                                                <Label></Label>
-                                                <Button Content="Clear Fields" ToolTip="clear fields" Style="{StaticResource PlainBtnStyle}" />
+                                            <Label Name="errorContactmsgLbl" Foreground="Red"></Label>
+                                                <Button Content="Clear Fields" ToolTip="clear fields" Style="{StaticResource PlainBtnStyle}" Name="clearContactFieldBtn" Click="clearContactFieldBtn_Click" />
                                                 <Button Content="Save" ToolTip="save info" Style="{StaticResource PlainBtnStyle}" Name="saveContactBtn"  Click="saveContactBtn_Click" />
                                             </UniformGrid>
                                         </DockPanel>
@@ -618,7 +618,7 @@
                                     <Label></Label>
                                     <Button Content="Refresh" Name="refrshpsdwBtn" ToolTip="refresh details" Style="{StaticResource PlainBtnStyle}" Click="refrshpsdwBtn_Click" />
                                     <Button Content="Edit Details" ToolTip="edit selected details" Style="{StaticResource PlainBtnStyle}" />
-                                    <Button Content="Delete Details" ToolTip="delete selected details" Style="{StaticResource PlainBtnStyle}" />
+                                    <Button Content="Delete Details" Name="delPassBtn" ToolTip="delete selected details" Style="{StaticResource PlainBtnStyle}" Click="delPassBtn_Click" />
                                     <Button Content="Please Log In First" Name="logoutPassBtn"  IsEnabled="False" ToolTip="logout" Style="{StaticResource PlainBtnStyle}" Click="logoutPassBtn_Click" />
                                 </UniformGrid>
                                 <UniformGrid DockPanel.Dock="Top">

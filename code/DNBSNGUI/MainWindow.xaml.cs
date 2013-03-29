@@ -435,6 +435,36 @@ namespace DNBSNGUI
         }
 
 
+        private PasswordInfo GetSelectedPassItem()
+        {
+
+            PasswordInfo passwordToDelete = null;
+
+            if (passView.SelectedIndex == -1)
+                MessageBox.Show("Please Select an Item");
+            else
+            {
+                PasswordInfo i = (PasswordInfo)passView.SelectedItem;
+
+                passwordToDelete = _passwordCollection.Where(item => item.id.Equals(i.id)).First();
+            }
+
+            return passwordToDelete;
+        }
+        #region Delete Password
+        private void delPassBtn_Click(object sender, RoutedEventArgs e)
+        {
+            PasswordInfo passwordToDelete = GetSelectedPassItem();
+            if (passwordToDelete != null)
+            {
+                _passwordCollection.Remove(passwordToDelete);
+                DNBSNDb.DbInteraction.DeletePassword(passwordToDelete.id);
+                fetchContactData();
+
+            }
+        }
+
+        #endregion
         #endregion
 
         #region Task
@@ -490,24 +520,35 @@ namespace DNBSNGUI
         #region Add Contact
         private void saveContactBtn_Click(object sender, RoutedEventArgs e)
         {
-            DNBSNData.ContactInfo newContact = new DNBSNData.ContactInfo();
+            if (!contactnameTB.Text.Equals(""))
+            {
+                DNBSNData.ContactInfo newContact = new DNBSNData.ContactInfo();
 
-            newContact.id = GenerateId();
-            newContact.name = contactnameTB.Text;
-            newContact.mobileno = mobnoTB.Text;
-            newContact.homeno = homnoTB.Text;
-            newContact.oficeno = ofcNoTb.Text;
-            newContact.faxno = faxNoTb.Text;
-            newContact.address = addressTB.Text;
-            newContact.remark = remrkTB.Text;
-            newContact.email = emailTb.Text;
+                newContact.id = GenerateId();
+                newContact.name = contactnameTB.Text;
+                newContact.mobileno = mobnoTB.Text;
+                newContact.homeno = homnoTB.Text;
+                newContact.oficeno = ofcNoTb.Text;
+                newContact.faxno = faxNoTb.Text;
+                newContact.address = addressTB.Text;
+                newContact.remark = remrkTB.Text;
+                newContact.email = emailTb.Text;
 
 
-            DNBSNDb.DbInteraction.DoRegisterNewContact(newContact);
+                DNBSNDb.DbInteraction.DoRegisterNewContact(newContact);
+                contactnameTB.Text = mobnoTB.Text = homnoTB.Text = ofcNoTb.Text = faxNoTb.Text = addressTB.Text = remrkTB.Text = emailTb.Text = "";
+                fetchContactData();
+                contacXpndr.IsExpanded = false;
+            }
+            else
+                errorContactmsgLbl.Content = "Enter Proper Info";
+
+        }
+
+        private void clearContactFieldBtn_Click(object sender, RoutedEventArgs e)
+        {
             contactnameTB.Text = mobnoTB.Text = homnoTB.Text = ofcNoTb.Text = faxNoTb.Text = addressTB.Text = remrkTB.Text = emailTb.Text = "";
-            fetchContactData();
-            contacXpndr.IsExpanded = true;
-
+            errorContactmsgLbl.Content = "FIeld Cleared";
         }
 
         #endregion
@@ -606,6 +647,10 @@ namespace DNBSNGUI
                 _allnoteCollection.Add(note);
             }
         }
+
+       
+
+        
 
        
         
