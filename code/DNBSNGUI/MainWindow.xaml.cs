@@ -681,6 +681,32 @@ namespace DNBSNGUI
         }
         #endregion
 
+        #region search contact
+        private void contactSearchBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (searchContactTB.Text == "")
+                fetchContactData();
+            else
+            {
+                ContactInfo contactinfo = new ContactInfo();
+                contactinfo.name = searchContactTB.Text;
+
+
+                
+
+                List<ContactInfo> contacts = DbInteraction.searchContactList(contactinfo);
+
+                _contactCollection.Clear();
+
+                foreach (ContactInfo Contacts in contacts)
+                {
+                    _contactCollection.Add(Contacts);
+                }
+            }
+
+        }
+        #endregion
+
         #endregion
 
         #region Go to Date
@@ -713,6 +739,8 @@ namespace DNBSNGUI
                 _allnoteCollection.Add(note);
             }
         }
+
+        
   
             
               

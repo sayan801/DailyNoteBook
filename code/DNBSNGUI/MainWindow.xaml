@@ -542,10 +542,11 @@
                             
                             <DockPanel DockPanel.Dock="Bottom">
                                 <UniformGrid Rows="1">
-                                    <Label></Label>
-                                    <Label></Label>
-                                    <Label></Label>
-                                    <Button Name="contactrfrshBtn" Content="Refresh" ToolTip="Refresh details" Style="{StaticResource PlainBtnStyle}" Click="contactrfrshBtn_Click" />
+                                    
+                                    <TextBox Name="searchContactTB" Margin="10" Width="140" Tag="enter keyword" Style="{StaticResource commonTBtyle}" />
+                                    <Button Name="contactSearchBtn" Content="Search" ToolTip="search contact" Style="{StaticResource PlainBtnStyle}" Click="contactSearchBtn_Click" />
+                                    <Label Name="contectErrorMsgLbl"></Label>
+                                    <Button Name="contactrfrshBtn" Content="Refresh" ToolTip="refresh details" Style="{StaticResource PlainBtnStyle}" Click="contactrfrshBtn_Click" />
                                     <Button Name="contactEditBtn" Content="Edit Contacts" ToolTip="edit selected contact details" Style="{StaticResource PlainBtnStyle}" />
                                     <Button Name="contactDelBtn" Content="Delete Contact" ToolTip="delete selected contact details" Style="{StaticResource PlainBtnStyle}" Click="contactDelBtn_Click" />
                                 </UniformGrid>
@@ -613,9 +614,10 @@
                                     </UniformGrid>
                                 </Expander>
 
-                                <UniformGrid DockPanel.Dock="Bottom" Columns="6" Name="logoutDP">
-                                    <Label></Label>
-                                    <Label></Label>
+                                <UniformGrid DockPanel.Dock="Bottom" Rows="1" Name="logoutDP">
+                                    <TextBox Name="passContactTB" Margin="10" Width="140" Tag="enter keyword" Style="{StaticResource commonTBtyle}" />
+                                    <Button Name="passSearchBtn" Content="Search" ToolTip="search contact" Style="{StaticResource PlainBtnStyle}"/>
+                                    <Label Name="passErrorMsgLbl"></Label>
                                     <Button Content="Refresh" Name="refrshpsdwBtn" ToolTip="refresh details" Style="{StaticResource PlainBtnStyle}" Click="refrshpsdwBtn_Click" />
                                     <Button Content="Edit Details" ToolTip="edit selected details" Style="{StaticResource PlainBtnStyle}" />
                                     <Button Content="Delete Details" Name="delPassBtn" ToolTip="delete selected details" Style="{StaticResource PlainBtnStyle}" Click="delPassBtn_Click" />

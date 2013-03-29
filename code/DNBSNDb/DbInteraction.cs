@@ -395,6 +395,65 @@ namespace DNBSNDb
 
         #endregion
 
+        #region search Contact
+
+        public static List<ContactInfo> searchContactList(ContactInfo contactinfo)
+        {
+            return searchAllContactList(contactinfo);
+        }
+
+        private static List<ContactInfo> searchAllContactList(ContactInfo contactinfo)
+        {
+            List<ContactInfo> ContactList = new List<ContactInfo>();
+
+            MySql.Data.MySqlClient.MySqlConnection msqlConnection = OpenDbConnection();
+
+            try
+            {   //define the command reference
+                MySql.Data.MySqlClient.MySqlCommand msqlCommand = new MySql.Data.MySqlClient.MySqlCommand();
+                msqlCommand.Connection = msqlConnection;
+
+               // msqlCommand.CommandText = "Select * From contact where id = @input name = @input or mobile = @input or homePhone = @input or officePhone = @input or email = @input  address = @input or faxNumber = @input or officePhone = @input or remark = @input ; ";
+                msqlCommand.CommandText = "Select * From contact where name = @input; ";
+
+                msqlCommand.Parameters.AddWithValue("@input", contactinfo.name);
+                MySql.Data.MySqlClient.MySqlDataReader msqlReader = msqlCommand.ExecuteReader();
+
+                while (msqlReader.Read())
+                {
+                    ContactInfo Contact = new ContactInfo();
+
+                    //Contact.id = msqlReader.GetString("id");
+                    Contact.name = msqlReader.GetString("name");
+                    //Contact.mobileno = msqlReader.GetString("mobile");
+                    //Contact.homeno = msqlReader.GetString("homePhone");
+                    //Contact.oficeno = msqlReader.GetString("officePhone");
+                    //Contact.email = msqlReader.GetString("email");
+                    //Contact.address = msqlReader.GetString("address");
+                    //Contact.faxno = msqlReader.GetString("faxNumber");
+                    //Contact.remark = msqlReader.GetString("remark");
+                    ContactList.Add(Contact);
+
+
+
+                   
+                }
+
+            }
+            catch (Exception er)
+            {
+            }
+            finally
+            {
+                //always close the connection
+                msqlConnection.Close();
+            }
+
+            return ContactList;
+        }
+
+        #endregion
+
         #endregion
 
         #region Task

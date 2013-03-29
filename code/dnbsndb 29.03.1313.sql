@@ -31,7 +31,7 @@ DROP TABLE IF EXISTS `contact`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `contact` (
-  `contactId` varchar(100) NOT NULL,
+  `id` varchar(100) NOT NULL,
   `name` varchar(145) NOT NULL,
   `mobile` varchar(45) DEFAULT 'N/A',
   `homePhone` varchar(45) DEFAULT 'N/A',
@@ -40,7 +40,7 @@ CREATE TABLE `contact` (
   `address` varchar(45) DEFAULT 'N/A',
   `faxNumber` varchar(45) DEFAULT 'N/A',
   `remark` varchar(245) DEFAULT 'N/A',
-  PRIMARY KEY (`contactId`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -50,6 +50,7 @@ CREATE TABLE `contact` (
 
 LOCK TABLES `contact` WRITE;
 /*!40000 ALTER TABLE `contact` DISABLE KEYS */;
+INSERT INTO `contact` VALUES ('41357.0306937384','Amit Paul','9804567830','033-09871381','033-48768767','amit.paul23@gmail.com','Kolkata','033-02287698','Friends'),('41362.7815689005','Anirban','jkkk','kkk','kk','k','k','kk','k');
 /*!40000 ALTER TABLE `contact` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -75,7 +76,7 @@ CREATE TABLE `note` (
 
 LOCK TABLES `note` WRITE;
 /*!40000 ALTER TABLE `note` DISABLE KEYS */;
-INSERT INTO `note` VALUES ('41356.7216594907','Enjoying good time with Technicise ...','2013-03-23 00:00:00',NULL);
+INSERT INTO `note` VALUES ('41356.9970790625','Buy a Wrist Watch  ','2013-03-23 00:00:00','\"N/A\''),('41362.53521875','hi all ','2013-03-29 00:00:00','\"N/A\'');
 /*!40000 ALTER TABLE `note` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -87,7 +88,7 @@ DROP TABLE IF EXISTS `password`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `password` (
-  `passwordId` varchar(100) NOT NULL,
+  `id` varchar(100) NOT NULL,
   `name` varchar(100) NOT NULL,
   `password` varchar(45) NOT NULL,
   `email` varchar(100) NOT NULL,
@@ -95,7 +96,7 @@ CREATE TABLE `password` (
   `secretQuestion` varchar(200) DEFAULT 'N/A',
   `secretAnswer` varchar(200) DEFAULT 'N/A',
   `otherInfo` varchar(200) DEFAULT 'N/A',
-  PRIMARY KEY (`passwordId`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -105,6 +106,7 @@ CREATE TABLE `password` (
 
 LOCK TABLES `password` WRITE;
 /*!40000 ALTER TABLE `password` DISABLE KEYS */;
+INSERT INTO `password` VALUES ('41357.0330223032','Google Mail','idanir34ban','anirban.nandy38@gmail.com','anirban.nandy38','Nick Name','Suman','NOthing');
 /*!40000 ALTER TABLE `password` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -168,4 +170,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-03-23 17:32:35
+-- Dump completed on 2013-03-29 19:01:28
