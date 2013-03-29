@@ -700,7 +700,7 @@
                                         <Label></Label>
                                         <Button Content="Refresh" Name="refrshTskBtn" ToolTip="refresh task" Style="{StaticResource PlainBtnStyle}" Click="contactrfrshBtn_Click" />
                                         <Button Content="Edit Task" ToolTip="edit selected task" Style="{StaticResource PlainBtnStyle}" />
-                                        <Button Content="Delete Task" ToolTip="delete selected task" Style="{StaticResource PlainBtnStyle}" />
+                                        <Button Name="delTask" Content="Delete Task" ToolTip="delete selected task" Style="{StaticResource PlainBtnStyle}" Click="delTask_Click" />
                                     </UniformGrid>
                                     <ListView DockPanel.Dock="Top" Name="taskView" HorizontalAlignment="Stretch" ItemsSource="{Binding taskCollection}">
                                         <ListView.View>

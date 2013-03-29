@@ -452,8 +452,35 @@ namespace DNBSNDb
             return TaskList;
         }
 
-        
 
+        #region delete Task
+
+        public static void DeleteTask(string taskToDelete)
+        {
+            MySql.Data.MySqlClient.MySqlConnection msqlConnection = OpenDbConnection();
+
+            try
+            {   //define the command reference
+                MySql.Data.MySqlClient.MySqlCommand msqlCommand = new MySql.Data.MySqlClient.MySqlCommand();
+                msqlCommand.Connection = msqlConnection;
+
+                msqlCommand.CommandText = "DELETE FROM task WHERE taskId=@taskToDelete";
+                msqlCommand.Parameters.AddWithValue("@taskToDelete", taskToDelete);
+
+                MySql.Data.MySqlClient.MySqlDataReader msqlReader = msqlCommand.ExecuteReader();
+
+            }
+            catch (Exception er)
+            {
+            }
+            finally
+            {
+                //always close the connection
+                msqlConnection.Close();
+            }
+        }
+
+        #endregion
 
         #endregion
 

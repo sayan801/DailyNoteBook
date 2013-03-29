@@ -513,6 +513,43 @@ namespace DNBSNGUI
             fetchContactData();
         }
 
+
+
+
+
+        
+
+        private TaskInfo GetSelectedTaskItem()
+        {
+
+            TaskInfo taskToDelete = null;
+
+            if (taskView.SelectedIndex == -1)
+                MessageBox.Show("Please Select an Item");
+            else
+            {
+                TaskInfo i = (TaskInfo)taskView.SelectedItem;
+
+                taskToDelete = _taskCollection.Where(item => item.id.Equals(i.id)).First();
+            }
+
+            return taskToDelete;
+        }
+
+        #region  Delete Task
+        private void delTask_Click(object sender, RoutedEventArgs e)
+        {
+            TaskInfo taskToDelete = GetSelectedTaskItem();
+            if (taskToDelete != null)
+            {
+                _taskCollection.Remove(taskToDelete);
+                DNBSNDb.DbInteraction.DeleteTask(taskToDelete.id);
+                fetchContactData();
+
+            }
+        }
+        #endregion
+
         #endregion
 
         #region Contact
@@ -584,7 +621,7 @@ namespace DNBSNGUI
 
         #endregion
 
-        private ContactInfo GetSelectedItem()
+        private ContactInfo GetSelectedContactItem()
         {
 
             ContactInfo contactToDelete = null;
@@ -604,7 +641,7 @@ namespace DNBSNGUI
         #region Delete Contact
         private void contactDelBtn_Click(object sender, RoutedEventArgs e)
         {
-            ContactInfo contactToDelete = GetSelectedItem();
+            ContactInfo contactToDelete = GetSelectedContactItem();
             if (contactToDelete != null)
             {
                 _contactCollection.Remove(contactToDelete);
@@ -647,14 +684,10 @@ namespace DNBSNGUI
                 _allnoteCollection.Add(note);
             }
         }
-
-       
-
+  
+            
+              
         
-
-       
-        
-
     }
 
 
