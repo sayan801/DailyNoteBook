@@ -366,17 +366,45 @@ namespace DNBSNGUI
         }
 
 
-        private void dltevntBtnBtn_Click(object sender, RoutedEventArgs e)
+
+        private NoteInfo GetSelectedEventItem()
         {
 
+            NoteInfo noteToDelete = null;
+
+            if (allnoteView.SelectedIndex == -1)
+                MessageBox.Show("Please Select an Item");
+            else
+            {
+                NoteInfo i = (NoteInfo)passView.SelectedItem;
+
+                noteToDelete = _allnoteCollection.Where(item => item.id.Equals(i.id)).First();
+            }
+
+            return noteToDelete;
+        }
+        #region Delete note
+        private void dltevntBtnBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NoteInfo noteToDelete = GetSelectedEventItem();
+            if (noteToDelete != null)
+            {
+                _allnoteCollection.Remove(noteToDelete);
+                DNBSNDb.DbInteraction.DeleteNote(noteToDelete.id);
+                fetchNoteData();
+
+            }
         }
 
-         
+        #endregion
+
+     
+        #endregion
 
        
 
 
-        #endregion
+       
         
         #region Password
 
@@ -510,7 +538,7 @@ namespace DNBSNGUI
 
         private void refrshTskBtn_Click(object sender, RoutedEventArgs e)
         {
-            fetchContactData();
+            fetchTaskData();
         }
 
 
@@ -544,7 +572,8 @@ namespace DNBSNGUI
             {
                 _taskCollection.Remove(taskToDelete);
                 DNBSNDb.DbInteraction.DeleteTask(taskToDelete.id);
-                fetchContactData();
+                fetchTaskData();
+              
 
             }
         }

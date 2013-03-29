@@ -155,7 +155,36 @@ namespace DNBSNDb
 
             return NoteList;
         }
-        
+
+
+        #region delete Note
+
+        public static void DeleteNote(string noteToDelete)
+        {
+            MySql.Data.MySqlClient.MySqlConnection msqlConnection = OpenDbConnection();
+
+            try
+            {   //define the command reference
+                MySql.Data.MySqlClient.MySqlCommand msqlCommand = new MySql.Data.MySqlClient.MySqlCommand();
+                msqlCommand.Connection = msqlConnection;
+
+                msqlCommand.CommandText = "DELETE FROM note WHERE id=@noteToDelete";
+                msqlCommand.Parameters.AddWithValue("@noteToDelete", noteToDelete);
+
+                MySql.Data.MySqlClient.MySqlDataReader msqlReader = msqlCommand.ExecuteReader();
+
+            }
+            catch (Exception er)
+            {
+            }
+            finally
+            {
+                //always close the connection
+                msqlConnection.Close();
+            }
+        }
+
+        #endregion
         #endregion
 
         #region ID password
