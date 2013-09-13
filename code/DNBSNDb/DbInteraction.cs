@@ -8,7 +8,7 @@ namespace DNBSNDb
 {
     public class DbInteraction
     {
-        static string passwordCurrent = "technicise";
+        static string passwordCurrent = "";
         static string dbmsCurrent = "dnbsndb";
 
         private static MySql.Data.MySqlClient.MySqlConnection OpenDbConnection()
